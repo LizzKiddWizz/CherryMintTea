@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Project Title</title>
+
+    <!-- Project-specific CSS (themeable) -->
+    <link rel="stylesheet" href="../CSS/meltdown.css" />
+</head>
+
+<body class="project-theme">
+    <!-- 1) PROJECT TITLE -->
+    <header class="project-header">
+        <div class="project-title-wrap">
+            <h1 class="project-title">Project Title</h1>
+            <p class="project-subtitle">A short, punchy one-liner for the project.</p>
+        </div>
+    </header>
+
+    <!-- 2) BANNER -->
+    <section class="banner" aria-label="Project banner">
+        <!-- Option A: Background image in CSS (recommended) -->
+        <div class="banner-overlay">
+            <div class="banner-inner">
+                <p class="banner-kicker">Status: <span class="chip">In Progress</span></p>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="page">
+        <!-- 3) SIDE BAR NAV (LEFT) -->
+        <aside class="sidebar">
+            <nav class="side-nav" aria-label="Project page navigation">
+                <a class="side-link" href="#cover">Intro</a>
+                <a class="side-link" href="#philosophy">Design Philosophy</a>
+                <a class="side-link" href="#bible">Game Bible</a>
+                <a class="side-link" href="#links">Links</a>
+
+                <div class="side-divider"></div>
+
+                <a class="side-link side-link--muted" href="../../index.html">← Back Home</a>
+                <a class="side-link side-link--muted" href="../index.html">← Projects Index</a>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <!-- 4) SECTION 1: Project Cover Page sharing same container as detailed introduction -->
+            <section id="cover" class="section">
+                <div class="cover-intro">
+                    <div class="cover-card">
+                        <img src="images/cover.jpg" alt="Project cover image" class="cover-img" />
+                    </div>
+
+                    <div class="intro-card">
+                        <h2>Detailed Introduction</h2>
+                        <p>
+                            Introduction
+                        </p>
+                        <p>
+                            Second Paragraph
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5) SECTION 2: Design Philosophy (several paragraphs) -->
+            <section id="philosophy" class="section">
+                <h2>Design Philosophy</h2>
+                <p>
+                    Paragraph 1:
+                    The “why” behind the systems.
+                </p>
+                <p>
+                    Paragraph 2: Priorities
+                </p>
+                <p>
+                    Paragraph 3: Boundaries / constraints + guiding principles
+                </p>
+                <a class="button" href="docs/game-bible.html">Devlog →</a>
+            </section>
+
+            <!-- 6) SECTION 3: Portion of the Game Bible (+ link to full version) -->
+            <section id="bible" class="section">
+                <h2>Game Bible (Excerpt)</h2>
+
+                <div class="bible-excerpt">
+                    <h3>Core Loop</h3>
+                    <ul>
+                        <li>What the player does moment-to-moment</li>
+                        <li>How the game rewards learning / mastery</li>
+                        <li>What creates tension or stakes</li>
+                    </ul>
+
+                    <h3>Key Pillars</h3>
+                    <ol>
+                        <li>Atmosphere / Mood</li>
+                        <li>Meaningful Choices</li>
+                        <li>Progression & Consequence</li>
+                    </ol>
+
+                    <h3>Notes</h3>
+                    <p>
+                        Include a short excerpt that demonstrates clarity of vision—systems, lore rules,
+                        or a design manifesto section.
+                    </p>
+                    <ul>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                    </ul>
+                </div>
+
+                <a class="button" href="docs/game-bible.html">Read the full Game Bible →</a>
+            </section>
+
+            <!-- 7) SECTION 4: 3 columns (image cards) w/ hover overlay text linking out -->
+            <section id="links" class="section">
+                <h2>Explore</h2>
+
+                <div class="tri-grid">
+                    <a class="tri-card" href="CharacterCompendium/index.html">
+                        <img class="tri-img" src="images/characters.jpg" alt="Character Compendium preview">
+                        <div class="tri-overlay">
+                            <div class="tri-text">
+                                <h3>Character Compendium</h3>
+                                <p>Profiles, arcs, relationships, ranks, and dossier pages.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="tri-card" href="VaultLink/index.html">
+                        <img class="tri-img" src="images/vault.jpg" alt="Vault link preview">
+                        <div class="tri-overlay">
+                            <div class="tri-text">
+                                <h3>Vault Link</h3>
+                                <p>World rules, lore entries, maps, and structured indices.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="tri-card" href="Demo/index.html">
+                        <img class="tri-img" src="images/demo.jpg" alt="Demo preview">
+                        <div class="tri-overlay">
+                            <div class="tri-text">
+                                <h3>Demo</h3>
+                                <p>Playable build, screenshots, or final release.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>© <span id="year"></span> LizzKiddWizz • <a href="../../../Home.html#contact">Contact</a></p>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
