@@ -1,0 +1,15 @@
+<div class="notice-strip notice-review" role="status" aria-live="polite">
+  <strong>Under Review</strong>
+  <span>— Portions of this page may change as I revise and expand it.</span>
+</div>
+
+<div class="notice-strip notice-wip">
+  <strong>Work in Progress</strong>
+  <span>— Content is being actively developed and may shift.</span>
+</div>
+
+<div class="notice-strip notice-archived">
+  <strong>Archived</strong>
+  <span>— This page is retained for reference and may be outdated.</span>
+</div>
+

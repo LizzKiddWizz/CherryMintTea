@@ -632,6 +632,136 @@ details p {
 }
 
 /* =========================================================
+   GLOBAL BUTTON (used by forms, links, CTAs)
+   ========================================================= */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+    border-radius: 999px;
+
+    background: var(--brown);
+    color: var(--cream);
+
+    border: 1px solid rgba(255, 242, 223, .35);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .04em;
+
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background: var(--brown-2);
+    text-decoration: none;
+}
+
+.button:active {
+    transform: translateY(1px);
+}
+
+/* =========================================================
+   Ask Form
+   ========================================================= */
+
+.ask-form {
+    margin-top: 14px;
+    display: grid;
+    gap: 12px;
+}
+
+.ask-form label {
+    display: grid;
+    gap: 6px;
+    font-size: 13px;
+    color: rgba(42, 27, 20, .85);
+    font-weight: 700;
+}
+
+.ask-form input,
+.ask-form select,
+.ask-form textarea {
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(42, 27, 20, .18);
+    background: rgba(255, 255, 255, .55);
+    color: var(--text);
+    font: inherit;
+}
+
+.ask-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.ask-form input:focus-visible,
+.ask-form select:focus-visible,
+.ask-form textarea:focus-visible {
+    outline: 3px solid rgba(71, 194, 163, .45);
+    outline-offset: 2px;
+}
+
+/* =========================================================
+   Global Notice Strip (Under Review / WIP / Archived)
+   ========================================================= */
+
+.notice-strip {
+    margin: 14px 0;
+    padding: 10px 14px;
+
+    border-radius: 16px;
+    border: 1px solid rgba(42, 27, 20, .14);
+
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+
+    box-shadow: var(--shadow-soft);
+    background: rgba(255, 255, 255, .45);
+    color: var(--text);
+}
+
+.notice-strip strong {
+    font-weight: 900;
+    letter-spacing: .04em;
+}
+
+/* Default “Under Review” look (raspberry accent) */
+.notice-review {
+    border-color: rgba(217, 72, 98, .45);
+    background: linear-gradient(90deg, rgba(217, 72, 98, .18), rgba(255, 255, 255, .45));
+}
+
+.notice-review strong {
+    color: var(--rasp);
+}
+
+/* Optional other states you can reuse */
+.notice-wip {
+    border-color: rgba(71, 194, 163, .45);
+    background: linear-gradient(90deg, rgba(71, 194, 163, .18), rgba(255, 255, 255, .45));
+}
+
+.notice-wip strong {
+    color: var(--mint);
+}
+
+.notice-archived {
+    border-color: rgba(42, 27, 20, .20);
+    background: linear-gradient(90deg, rgba(42, 27, 20, .10), rgba(255, 255, 255, .45));
+}
+
+.notice-archived strong {
+    color: var(--brown-2);
+}
+
+/* =========================================================
    Colors
    ========================================================= */
 .rasp {

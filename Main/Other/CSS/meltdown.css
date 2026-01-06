@@ -1,28 +1,31 @@
 /* =========================================================
-   Project Page CSS — Theme Variables (EDIT THESE PER PROJECT)
+   Project Page CSS — Red / Purple / Blue Theme (FULL FILE)
    ========================================================= */
-:root {
-    --bg: #20140f;
-    /* page background */
-    --panel: #fff2df;
-    /* main surfaces */
-    --panel-2: #ffe6c8;
-    /* secondary surfaces */
-    --text: #2a1b14;
-    /* main text */
-    --muted: rgba(42, 27, 20, .72);
-    --line: rgba(42, 27, 20, .14);
 
-    /* main color */
-    --main: #7a4a2b;
-    /* darker main */
-    --main-2: #5b341f;
+:root {
+    /* Core theme */
+    --bg: #0f1020;
+    /* deep night */
+    --panel: #f3ecff;
+    /* soft lavender */
+    --panel-2: #e7dcff;
+    /* deeper lavender */
+    --text: #14172a;
+    /* ink */
+    --muted: rgba(20, 23, 42, .72);
+    --line: rgba(20, 23, 42, .14);
+
+    --main: #5037ca;
+    /* purple-blue */
+    --main-2: #2b1f6e;
+    /* deep purple */
+    --cream: #f7f3ff;
     /* light text on dark */
-    --cream: #fff2df;
-    /* Accent Light */
-    --accent: #47c2a3;
-    /* Accent Dark */
-    --danger: #d94862;
+
+    --accent: #132097;
+    /* blue */
+    --danger: #9e1437;
+    /* red */
 
     --radius: 18px;
     --radius-sm: 12px;
@@ -36,14 +39,13 @@
     --banner-image: url("images/banner.jpg");
 
     /* Layout vars used by nav + sidebar (MISSING before) */
-    --topbar-h: 68px;
-    --side-w: 260px;
-
-    /* Sidebar surfaces (theme-aligned) */
-    --nav-surface: rgba(243, 236, 255, .92);
-    --nav-surface-2: rgba(231, 220, 255, .86);
-    --nav-border: rgba(20, 23, 42, .14);
-
+        --topbar-h: 68px;
+        --side-w: 260px;
+    
+        /* Sidebar surfaces (theme-aligned) */
+        --nav-surface: rgba(243, 236, 255, .92);
+        --nav-surface-2: rgba(231, 220, 255, .86);
+        --nav-border: rgba(20, 23, 42, .14);
 }
 
 /* =========================================================
@@ -62,9 +64,12 @@ body {
     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
     color: var(--text);
     background:
-        radial-gradient(900px 600px at 20% 0%, rgba(255, 230, 200, .18), transparent 55%),
-        radial-gradient(900px 600px at 80% 25%, rgba(71, 194, 163, .12), transparent 58%),
-        radial-gradient(900px 600px at 55% 90%, rgba(217, 72, 98, .10), transparent 55%),
+        radial-gradient(900px 600px at 18% 0%, rgba(107, 77, 255, .20), transparent 55%),
+        /* purple */
+        radial-gradient(900px 600px at 82% 22%, rgba(47, 139, 255, .16), transparent 58%),
+        /* blue */
+        radial-gradient(900px 600px at 55% 92%, rgba(255, 61, 110, .14), transparent 55%),
+        /* red */
         var(--bg);
     line-height: 1.55;
 }
@@ -81,8 +86,8 @@ a:hover {
 
 .section {
     border-radius: var(--radius);
-    border: 1px solid rgba(255, 242, 223, .20);
-    background: linear-gradient(180deg, rgba(255, 242, 223, .96), rgba(255, 230, 200, .90));
+    border: 1px solid rgba(247, 243, 255, .18);
+    background: linear-gradient(180deg, rgba(243, 236, 255, .96), rgba(231, 220, 255, .90));
     box-shadow: var(--shadow-soft);
     padding: 18px;
     margin-bottom: 18px;
@@ -113,95 +118,93 @@ ol {
 /* =========================================================
    TOP NAV (Theme-aligned)
    ========================================================= */
-.top-nav{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  height: var(--topbar-h);
-  backdrop-filter: blur(10px);
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: var(--topbar-h);
+    backdrop-filter: blur(10px);
 
-  background: linear-gradient(to bottom,
-    rgba(15, 16, 32, .86),
-    rgba(15, 16, 32, .62)
-  );
+    background: linear-gradient(to bottom,
+            rgba(15, 16, 32, .86),
+            rgba(15, 16, 32, .62));
 
-  border-bottom: 1px solid rgba(247, 243, 255, .16);
+    border-bottom: 1px solid rgba(247, 243, 255, .16);
 }
 
-.nav-inner{
-  height: 100%;
-  max-width: calc(var(--max) + var(--side-w));
-  margin: 0 auto;
-  padding: 0 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+.nav-inner {
+    height: 100%;
+    max-width: calc(var(--max) + var(--side-w));
+    margin: 0 auto;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
 }
 
-.brand{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 200px;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 200px;
 }
 
-.logo{
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(247,243,255,.92), rgba(231,220,255,.82));
-  box-shadow:
-    0 0 0 3px rgba(80, 55, 202, .28),
-    0 10px 24px rgba(0, 0, 0, .25);
+.logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(247, 243, 255, .92), rgba(231, 220, 255, .82));
+    box-shadow:
+        0 0 0 3px rgba(80, 55, 202, .28),
+        0 10px 24px rgba(0, 0, 0, .25);
 }
 
-.brand-text h1{
-  margin: 0;
-  color: var(--cream);
-  font-size: 14px;
-  letter-spacing: .3px;
+.brand-text h1 {
+    margin: 0;
+    color: var(--cream);
+    font-size: 14px;
+    letter-spacing: .3px;
 }
 
-.brand-text p{
-  margin: 0;
-  font-size: 12px;
-  color: rgba(247, 243, 255, .72);
+.brand-text p {
+    margin: 0;
+    font-size: 12px;
+    color: rgba(247, 243, 255, .72);
 }
 
-.nav-links{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-.nav-links a{
-  color: var(--cream);
-  font-size: 13px;
-  font-weight: 650;
-  padding: 9px 12px;
-  border-radius: 999px;
+.nav-links a {
+    color: var(--cream);
+    font-size: 13px;
+    font-weight: 650;
+    padding: 9px 12px;
+    border-radius: 999px;
 
-  border: 1px solid rgba(247, 243, 255, .18);
-  background: rgba(247, 243, 255, .07);
+    border: 1px solid rgba(247, 243, 255, .18);
+    background: rgba(247, 243, 255, .07);
 
-  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    transition: transform .12s ease, background .12s ease, border-color .12s ease;
 }
 
-.nav-links a:hover{
-  text-decoration: none;
-  background: rgba(247, 243, 255, .12);
-  border-color: rgba(247, 243, 255, .28);
-  transform: translateY(-1px);
+.nav-links a:hover {
+    text-decoration: none;
+    background: rgba(247, 243, 255, .12);
+    border-color: rgba(247, 243, 255, .28);
+    transform: translateY(-1px);
 }
 
-.nav-links a.active{
-  background: rgba(80, 55, 202, .22);
-  border-color: rgba(80, 55, 202, .45);
+.nav-links a.active {
+    background: rgba(80, 55, 202, .22);
+    border-color: rgba(80, 55, 202, .45);
 }
-
 
 /* =========================================================
    LAYOUT
@@ -218,74 +221,75 @@ ol {
 /* =========================================================
    SIDE MENU (Sticky + Theme-aligned)
    ========================================================= */
-.side-menu{ position: relative; }
-
-/* This fixes “wrong place” by correctly offsetting sticky below top nav */
-.side-menu nav{
-  position: sticky;
-  top: calc(var(--topbar-h) + 18px);
-
-  border-radius: var(--radius);
-  padding: 14px;
-
-  background: linear-gradient(180deg, var(--nav-surface), var(--nav-surface-2));
-  border: 1px solid var(--nav-border);
-  box-shadow: var(--shadow);
+.side-menu {
+    position: relative;
 }
 
-.side-menu ul{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+/* This fixes “wrong place” by correctly offsetting sticky below top nav */
+.side-menu nav {
+    position: sticky;
+    top: calc(var(--topbar-h) + 18px);
+
+    border-radius: var(--radius);
+    padding: 14px;
+
+    background: linear-gradient(180deg, var(--nav-surface), var(--nav-surface-2));
+    border: 1px solid var(--nav-border);
+    box-shadow: var(--shadow);
+}
+
+.side-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 /* regular links */
-.side-menu a{
-  display: block;
-  padding: 10px 12px;
-  border-radius: 14px;
-  font-size: 13px;
+.side-menu a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 14px;
+    font-size: 13px;
 
-  color: var(--main-2);
-  border: 1px solid rgba(20, 23, 42, .10);
-  background: rgba(80, 55, 202, .06);
+    color: var(--main-2);
+    border: 1px solid rgba(20, 23, 42, .10);
+    background: rgba(80, 55, 202, .06);
 
-  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+    transition: transform .12s ease, background .12s ease, border-color .12s ease;
 }
 
-.side-menu a:hover{
-  text-decoration: none;
-  background: rgba(19, 32, 151, .10);
-  border-color: rgba(19, 32, 151, .22);
-  transform: translateY(-1px);
+.side-menu a:hover {
+    text-decoration: none;
+    background: rgba(19, 32, 151, .10);
+    border-color: rgba(19, 32, 151, .22);
+    transform: translateY(-1px);
 }
 
 /* heading links (the “pills”) */
-.side-menu a.nav-heading-link{
-  background: linear-gradient(90deg, var(--danger), var(--main), var(--accent));
-  color: var(--cream);
+.side-menu a.nav-heading-link {
+    background: linear-gradient(90deg, var(--danger), var(--main), var(--accent));
+    color: var(--cream);
 
-  border: 1px solid rgba(247, 243, 255, .22);
-  text-decoration: none;
+    border: 1px solid rgba(247, 243, 255, .22);
+    text-decoration: none;
 
-  display: block;
-  padding: 10px 14px;
-  border-radius: 999px;
+    display: block;
+    padding: 10px 14px;
+    border-radius: 999px;
 
-  text-align: center;
-  font-weight: 800;
-  letter-spacing: .08em;
-  text-transform: uppercase;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
 }
 
-.side-menu a.nav-heading-link:hover{
-  filter: brightness(1.05);
-  text-decoration: none;
+.side-menu a.nav-heading-link:hover {
+    filter: brightness(1.05);
+    text-decoration: none;
 }
-
 
 /* =========================================================
    Title
@@ -298,8 +302,8 @@ ol {
 
 .project-title-wrap {
     border-radius: var(--radius);
-    border: 1px solid rgba(255, 242, 223, .20);
-    background: linear-gradient(180deg, rgba(255, 242, 223, .92), rgba(255, 230, 200, .84));
+    border: 1px solid rgba(247, 243, 255, .18);
+    background: linear-gradient(180deg, rgba(243, 236, 255, .92), rgba(231, 220, 255, .84));
     box-shadow: var(--shadow-soft);
     padding: 18px;
 }
@@ -326,10 +330,10 @@ ol {
 .banner-overlay {
     border-radius: var(--radius);
     overflow: hidden;
-    border: 1px solid rgba(255, 242, 223, .20);
+    border: 1px solid rgba(247, 243, 255, .18);
     box-shadow: var(--shadow);
     background:
-        linear-gradient(90deg, rgba(32, 20, 15, .72), rgba(32, 20, 15, .35)),
+        linear-gradient(90deg, rgba(15, 16, 32, .74), rgba(15, 16, 32, .36)),
         var(--banner-image);
     background-size: cover;
     background-position: center;
@@ -345,7 +349,7 @@ ol {
 
 .banner-kicker,
 .banner-blurb {
-    color: rgba(255, 242, 223, .92);
+    color: rgba(247, 243, 255, .92);
 }
 
 /* =========================================================
@@ -368,8 +372,8 @@ ol {
     position: sticky;
     top: 18px;
     border-radius: var(--radius);
-    border: 1px solid rgba(255, 242, 223, .20);
-    background: linear-gradient(180deg, rgba(255, 242, 223, .92), rgba(255, 230, 200, .84));
+    border: 1px solid rgba(247, 243, 255, .18);
+    background: linear-gradient(180deg, rgba(243, 236, 255, .92), rgba(231, 220, 255, .84));
     box-shadow: var(--shadow-soft);
     padding: 12px;
     display: flex;
@@ -380,26 +384,26 @@ ol {
 .side-link {
     padding: 10px 12px;
     border-radius: 999px;
-    border: 1px solid rgba(42, 27, 20, .14);
-    background: rgba(122, 74, 43, .08);
+    border: 1px solid rgba(20, 23, 42, .14);
+    background: rgba(107, 77, 255, .10);
     color: var(--main-2);
     text-decoration: none;
 }
 
 .side-link:hover {
-    background: rgba(122, 74, 43, .12);
+    background: rgba(47, 139, 255, .14);
     text-decoration: none;
 }
 
 .side-link--muted {
-    background: rgba(42, 27, 20, .06);
-    color: rgba(42, 27, 20, .78);
+    background: rgba(20, 23, 42, .06);
+    color: rgba(20, 23, 42, .78);
     font-weight: 600;
 }
 
 .side-divider {
     height: 1px;
-    background: rgba(42, 27, 20, .14);
+    background: rgba(20, 23, 42, .14);
     margin: 6px 2px;
 }
 
@@ -420,7 +424,7 @@ ol {
 .cover-card,
 .intro-card {
     border-radius: var(--radius);
-    border: 1px solid rgba(42, 27, 20, .14);
+    border: 1px solid rgba(20, 23, 42, .14);
     background: rgba(255, 255, 255, .35);
     padding: 14px;
 }
@@ -450,8 +454,9 @@ ol {
     font-weight: 800;
     padding: 4px 10px;
     border-radius: 999px;
-    border: 1px solid rgba(122, 74, 43, .20);
-    background: rgba(122, 74, 43, .08);
+
+    border: 1px solid rgba(107, 77, 255, .28);
+    background: rgba(107, 77, 255, .10);
     color: var(--main-2);
 }
 
@@ -460,15 +465,16 @@ ol {
     font-weight: 800;
     padding: 4px 10px;
     border-radius: 999px;
-    border: 1px solid rgba(255, 242, 223, .35);
-    background: rgba(255, 242, 223, .12);
-    color: rgba(255, 242, 223, .95);
+
+    border: 1px solid rgba(20, 23, 42, .18);
+    background: rgba(255, 255, 255, .30);
+    color: var(--main-2);
 }
 
 .chip--accent {
-    border-color: rgba(71, 194, 163, .45);
-    background: rgba(71, 194, 163, .18);
-    color: #116a56;
+    border-color: rgba(47, 139, 255, .45);
+    background: rgba(47, 139, 255, .16);
+    color: #0b3f8f;
 }
 
 /* =========================================================
@@ -478,7 +484,7 @@ ol {
     margin-top: 10px;
     padding: 14px;
     border-radius: var(--radius);
-    border: 1px solid rgba(42, 27, 20, .14);
+    border: 1px solid rgba(20, 23, 42, .14);
     background: rgba(255, 255, 255, .35);
 }
 
@@ -491,6 +497,7 @@ ol {
     margin-top: 0;
 }
 
+/* Button: red → purple → blue gradient */
 .button {
     display: inline-flex;
     align-items: center;
@@ -499,14 +506,16 @@ ol {
     margin-top: 12px;
     padding: 10px 14px;
     border-radius: 999px;
-    background: var(--main);
+
+    background: linear-gradient(90deg, var(--danger), var(--main), var(--accent));
     color: var(--cream);
-    border: 1px solid rgba(255, 242, 223, .35);
+
+    border: 1px solid rgba(247, 243, 255, .28);
     text-decoration: none;
 }
 
 .button:hover {
-    background: var(--main-2);
+    filter: brightness(1.05);
     text-decoration: none;
 }
 
@@ -524,7 +533,7 @@ ol {
     position: relative;
     border-radius: var(--radius);
     overflow: hidden;
-    border: 1px solid rgba(42, 27, 20, .14);
+    border: 1px solid rgba(20, 23, 42, .14);
     box-shadow: var(--shadow-soft);
     min-height: 220px;
     text-decoration: none;
@@ -544,7 +553,7 @@ ol {
     inset: 0;
     display: flex;
     align-items: flex-end;
-    background: linear-gradient(180deg, rgba(32, 20, 15, .05), rgba(32, 20, 15, .78));
+    background: linear-gradient(180deg, rgba(15, 16, 32, .06), rgba(15, 16, 32, .82));
     opacity: 0;
     transition: opacity .18s ease;
 }
@@ -561,7 +570,7 @@ ol {
 
 .tri-text p {
     margin: 0;
-    color: rgba(255, 242, 223, .88);
+    color: rgba(247, 243, 255, .88);
 }
 
 .tri-card:hover .tri-overlay {
@@ -582,11 +591,11 @@ ol {
 .footer {
     margin-top: 10px;
     padding: 12px 2px 0;
-    color: rgba(255, 242, 223, .80);
+    color: rgba(247, 243, 255, .80);
 }
 
 .footer p {
-    color: var(--cream);
+    color: rgba(247, 243, 255, .86);
 }
 
 /* =========================================================
@@ -618,50 +627,65 @@ ol {
    Global Notice Strip (Under Review / WIP / Archived)
    ========================================================= */
 
-.notice-strip{
-  margin: 14px 0;
-  padding: 10px 14px;
+.notice-strip {
+    margin: 14px 0;
+    padding: 10px 14px;
 
-  border-radius: 16px;
-  border: 1px solid rgba(42,27,20,.14);
+    border-radius: 16px;
+    border: 1px solid rgba(20, 23, 42, .16);
 
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
 
-  box-shadow: var(--shadow-soft);
-  background: rgba(255,255,255,.45);
-  color: var(--text);
+    box-shadow: var(--shadow-soft);
+    background: rgba(255, 255, 255, .35);
+    color: var(--cream);
 }
 
-.notice-strip strong{
-  font-weight: 900;
-  letter-spacing: .04em;
+.notice-strip strong {
+    font-weight: 900;
+    letter-spacing: .04em;
 }
 
-/* Default “Under Review” look (raspberry accent) */
-.notice-review{
-  border-color: rgba(217,72,98,.45);
-  background: linear-gradient(90deg, rgba(217,72,98,.18), rgba(255,255,255,.45));
+/* Under Review (red → purple tint) */
+.notice-review {
+    border-color: rgba(255, 61, 110, .45);
+    background: linear-gradient(90deg,
+            rgba(255, 61, 110, .18),
+            rgba(107, 77, 255, .12),
+            rgba(126, 124, 240, 0.35));
 }
 
-.notice-review strong{
-  color: var(--danger);
+.notice-review strong {
+    color: var(--danger);
 }
 
-/* Optional other states you can reuse */
-.notice-wip{
-  border-color: rgba(71,194,163,.45);
-  background: linear-gradient(90deg, rgba(71,194,163,.18), rgba(255,255,255,.45));
+/* WIP (blue → purple tint) */
+.notice-wip {
+    border-color: rgba(47, 68, 255, .45);
+    background: linear-gradient(90deg,
+            rgba(47, 68, 255, .16),
+            rgba(107, 77, 255, .10),
+            rgba(255, 255, 255, .35));
 }
-.notice-wip strong{ color: var(--accent); }
 
-.notice-archived{
-  border-color: rgba(42,27,20,.20);
-  background: linear-gradient(90deg, rgba(42,27,20,.10), rgba(255,255,255,.45));
+.notice-wip strong {
+    color: var(--accent);
 }
-.notice-archived strong{ color: var(--main-2); }
+
+/* Archived (subtle, neutral) */
+.notice-archived {
+    border-color: rgba(20, 23, 42, .20);
+    background: linear-gradient(90deg,
+            rgba(20, 23, 42, .08),
+            rgba(255, 255, 255, .35));
+}
+
+.notice-archived strong {
+    color: var(--main-2);
+}
 
 /* =========================================================
    Featured cards (Explore-like) for Series Vault pages
@@ -703,7 +727,7 @@ ol {
     inset: 0;
     display: flex;
     align-items: flex-end;
-    background: linear-gradient(180deg, rgba(32, 20, 15, .05), rgba(32, 20, 15, .82));
+    background: linear-gradient(180deg, rgba(35, 22, 151, 0.05), rgba(29, 11, 59, 0.82));
     opacity: 0;
     transition: opacity .18s ease;
 }
