@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Character Profile — Divine Dossier</title>
+
+  <!-- Optional: if you want your site-wide nav styling, include your global CSS first -->
+  <!-- <link rel="stylesheet" href="../style.css"> -->
+
+  <!-- Character profile CSS (this file) -->
+  <link rel="stylesheet" href="../../-CSS/MC.css" />
+</head>
+
+<body>
+  <!-- ======= Optional site nav (remove if you don't want it here) ======= -->
+  <header class="site-top">
+    <div class="site-top__inner">
+      <a class="site-brand" href="../../index.html">Home</a>
+      <nav class="site-links" aria-label="Primary">
+        <a href="../../Other Pages/Vault/index.html">Vault</a>
+        <a href="../../Other Pages/Projects/index.html">Projects</a>
+        <a href="../../Other Pages/Affiliations/index.html">Affiliations</a>
+        <a href="../../Other Pages/FAQ/index.html">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="dd-wrap">
+    <!-- ======= Banner ======= -->
+    <section class="dd-banner" aria-label="Dossier banner">
+      <div class="dd-banner__left">
+        <div class="dd-crest">
+          <img src="images/crest.png" alt="Crest" />
+        </div>
+
+        <div class="dd-banner__text">
+          <div class="dd-kicker">NewAge Athalmial Database</div>
+          <h1 class="dd-title">Character Name</h1>
+          <p class="dd-subtitle">“Short abstract subtitle / epithet / identifier.”</p>
+
+          <div class="dd-chiprow">
+            <span class="chip">Status: Active</span>
+            <span class="chip chip--accent">Choir: ???</span>
+            <span class="chip chip--violet">Realm: ???</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dd-banner__right">
+        <div class="dd-banner__meta">
+          <div class="meta-pair">
+            <div class="meta-label">File</div>
+            <div class="meta-value">ATH-0000</div>
+          </div>
+          <div class="meta-pair">
+            <div class="meta-label">Last Updated</div>
+            <div class="meta-value">YYYY-MM-DD</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Notice Strip (optional reusable) ======= -->
+    <div class="notice-strip notice-review" role="note">
+      <strong>Under Review</strong>
+      <span>Portions of this profile may change as lore solidifies.</span>
+    </div>
+
+    <!-- ======= Layout ======= -->
+    <div class="dd-layout">
+      <!-- ======= Left sticky column ======= -->
+      <aside class="dd-side" aria-label="Profile sidebar">
+        <div class="dd-sticky">
+          <div class="dd-glowbox">
+            <div class="dd-portrait">
+              <div class="dd-glowbox-img">
+                <img src="images/portrait.jpg" alt="Character portrait" />
+              </div>
+            </div>
+
+            <div class="dd-sidecard">
+              <h2 class="h2">At-a-glance</h2>
+
+              <div class="kv">
+                <div class="kv-row"><div class="kv-k">Name</div><div class="kv-v">N</div></div>
+                <div class="kv-row"><div class="kv-k">Alias</div><div class="kv-v">NN</div></div>
+                <div class="kv-row"><div class="kv-k">Age</div><div class="kv-v">A</div></div>
+                <div class="kv-row"><div class="kv-k">Birthday</div><div class="kv-v">B</div></div>
+                <div class="kv-row"><div class="kv-k">Pronouns</div><div class="kv-v">—</div></div>
+              </div>
+
+              <div class="dd-quote">
+                <span class="qmark">“</span>
+                <p>Quote or thesis line that defines them.</p>
+                <span class="qmark qmark--end">”</span>
+              </div>
+
+              <div class="dd-sideactions">
+                <a class="btn" href="../../Other Pages/Vault/index.html">Back to Vault</a>
+                <a class="btn btn--ghost" href="#">Relationship Chart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ======= Main content ======= -->
+      <section class="dd-main" aria-label="Profile content">
+
+        <!-- ======= Tabs Group 1 ======= -->
+        <section class="dd-section">
+          <div class="tabs" data-tabs>
+            <div class="tabbar" role="tablist" aria-label="Profile tabs group 1">
+              <button class="tab is-active" type="button" role="tab" aria-selected="true"
+                      aria-controls="tabA" data-tab="tabA">
+                Basic Information
+              </button>
+              <button class="tab" type="button" role="tab" aria-selected="false"
+                      aria-controls="tabB" data-tab="tabB">
+                Physical Assessment
+              </button>
+              <button class="tab" type="button" role="tab" aria-selected="false"
+                      aria-controls="tabC" data-tab="tabC">
+                Personal Data
+              </button>
+            </div>
+
+            <div class="tabpanes dd-display-top">
+              <div id="tabA" class="tab-panel is-active" role="tabpanel">
+                <div class="panel">
+                  <h2 class="h2">Soul</h2>
+                  <div class="dashgrid">
+                    <div class="dashbox">
+                      <div class="dash-title">Identity</div>
+                      <div class="dash-row"><div class="dash-k">Name</div><div class="dash-v">N</div></div>
+                      <div class="dash-row"><div class="dash-k">Alias</div><div class="dash-v">NN</div></div>
+                      <div class="dash-row"><div class="dash-k">Origin</div><div class="dash-v">—</div></div>
+                    </div>
+
+                    <div class="dashbox">
+                      <div class="dash-title">Roles</div>
+                      <div class="dash-row"><div class="dash-k">Function</div><div class="dash-v">—</div></div>
+                      <div class="dash-row"><div class="dash-k">Affiliation</div><div class="dash-v">—</div></div>
+                      <div class="dash-row"><div class="dash-k">Alignment</div><div class="dash-v">—</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="tabB" class="tab-panel" role="tabpanel" hidden>
+                <div class="panel">
+                  <h2 class="h2">Body</h2>
+                  <div class="dashgrid">
+                    <div class="dashbox">
+                      <div class="dash-title">Vitals</div>
+                      <div class="dash-row"><div class="dash-k">Height</div><div class="dash-v">—</div></div>
+                      <div class="dash-row"><div class="dash-k">Build</div><div class="dash-v">—</div></div>
+                      <div class="dash-row"><div class="dash-k">Marks</div><div class="dash-v">—</div></div>
+                    </div>
+
+                    <div class="dashbox">
+                      <div class="dash-title">Palette</div>
+                      <div class="dash-row"><div class="dash-k">Eyes</div><div class="dash-v">—</div></div>
+                      <div class="dash-row"><div class="dash-k">Hair</div><div class="dash-v">—</div></div>
+                      <div class="dash-row"><div class="dash-k">Style</div><div class="dash-v">—</div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="tabC" class="tab-panel" role="tabpanel" hidden>
+                <div class="panel">
+                  <h2 class="h2">Personal Data</h2>
+                  <p>Add whatever “file” style content you want here. You are not limited by Toyhouse structure now.</p>
+                  <ul>
+                    <li>Point 1</li>
+                    <li>Point 2</li>
+                    <li>Point 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ======= Tabs Group 2 ======= -->
+        <section class="dd-section">
+          <div class="tabs" data-tabs>
+            <div class="tabbar" role="tablist" aria-label="Profile tabs group 2">
+              <button class="tab is-active" type="button" role="tab" aria-selected="true"
+                      aria-controls="tabD" data-tab="tabD">
+                Psychology
+              </button>
+              <button class="tab" type="button" role="tab" aria-selected="false"
+                      aria-controls="tabE" data-tab="tabE">
+                Relationships
+              </button>
+              <button class="tab" type="button" role="tab" aria-selected="false"
+                      aria-controls="tabF" data-tab="tabF">
+                Preferences
+              </button>
+            </div>
+
+            <div class="tabpanes dd-display-bot">
+              <div id="tabD" class="tab-panel is-active" role="tabpanel">
+                <div class="panel">
+                  <h2 class="h2">Psychology</h2>
+                  <p>Several paragraphs go here. You can freely write longform.</p>
+                  <p>Second paragraph, etc.</p>
+                </div>
+              </div>
+
+              <div id="tabE" class="tab-panel" role="tabpanel" hidden>
+                <div class="panel">
+                  <h2 class="h2">Relationships</h2>
+                  <div class="rel-grid">
+                    <a class="rel-card" href="#">
+                      <div class="rel-name">Name</div>
+                      <div class="rel-tag rel-tag--danger">Danger</div>
+                      <div class="rel-note">Short relationship note.</div>
+                    </a>
+                    <a class="rel-card" href="#">
+                      <div class="rel-name">Name</div>
+                      <div class="rel-tag">Neutral</div>
+                      <div class="rel-note">Short relationship note.</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div id="tabF" class="tab-panel" role="tabpanel" hidden>
+                <div class="panel">
+                  <h2 class="h2">Preferences</h2>
+                  <div class="pref-grid">
+                    <div class="pref">
+                      <div class="pref-k">Likes</div>
+                      <div class="pref-v">—</div>
+                    </div>
+                    <div class="pref">
+                      <div class="pref-k">Dislikes</div>
+                      <div class="pref-v">—</div>
+                    </div>
+                    <div class="pref">
+                      <div class="pref-k">Theme</div>
+                      <div class="pref-v">
+                        <a class="btn btn--tiny" href="#" target="_blank" rel="noopener">Song Link</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="dd-footer">
+          <span>© LizzKiddWizz • </span>
+        </footer>
+
+      </section>
+    </div>
+  </main>
+
+  <script>
+    // Tiny, dependency-free tabs (replaces Bootstrap data-toggle="tab")
+    document.querySelectorAll('[data-tabs]').forEach((tabsRoot) => {
+      const buttons = Array.from(tabsRoot.querySelectorAll('.tabbar .tab'));
+      const panels = Array.from(tabsRoot.querySelectorAll('.tabpanes .tab-panel'));
+
+      function activate(id) {
+        buttons.forEach((b) => {
+          const on = b.dataset.tab === id;
+          b.classList.toggle('is-active', on);
+          b.setAttribute('aria-selected', on ? 'true' : 'false');
+        });
+        panels.forEach((p) => {
+          const on = p.id === id;
+          p.classList.toggle('is-active', on);
+          p.hidden = !on;
+        });
+      }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => activate(btn.dataset.tab));
+      });
+
+      // Ensure initial state is correct even if you edit markup
+      const firstActive = buttons.find(b => b.classList.contains('is-active')) || buttons[0];
+      if (firstActive) activate(firstActive.dataset.tab);
+    });
+  </script>
+</body>
+</html>

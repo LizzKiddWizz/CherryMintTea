@@ -1,0 +1,813 @@
+/* =========================================================
+   Divine Dossier — Standalone (No Bootstrap / No Toyhouse)
+   Scope: body.dd-page
+   ========================================================= */
+
+.dd-page {
+    margin: 0;
+    background: radial-gradient(1200px 600px at 80% -10%, rgba(122, 162, 255, .12), transparent 50%),
+        linear-gradient(180deg, #07080c 0%, #0b0c12 100%);
+    color: var(--text, #eaeef8);
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+.dd-wrap {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 22px 16px 64px;
+}
+
+/* Theme defaults (overridden inline per character) */
+.dd-wrap {
+    --bg: #0b0c12;
+    --panel: #0f1117;
+    --panel-2: #11131b;
+    --text: #eaeef8;
+    --muted: #a9b0c3;
+    --accent: #7aa2ff;
+    --accent-2: #2de2e6;
+    --accent-3: #b388ff;
+    --warning: #ffd166;
+    --danger: #ff5c7a;
+
+    --r: 20px;
+    --r2: 14px;
+    --line: rgba(122, 162, 255, .35);
+    --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+/* ---------------------------------------------------------
+   Banner
+--------------------------------------------------------- */
+.dd-banner {
+    margin-top: 14px;
+    border-radius: var(--r);
+    background: var(--panel);
+    border: 1px solid rgba(122, 162, 255, .35);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.dd-banner__inner {
+    display: grid;
+    grid-template-columns: 84px 1fr auto;
+    gap: 16px;
+    align-items: center;
+    padding: 16px;
+}
+
+.dd-crest {
+    width: 84px;
+    height: 84px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(122, 162, 255, .45);
+    box-shadow: 0 0 24px rgba(122, 162, 255, .25);
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+}
+
+.dd-crest img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.dd-kicker {
+    font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.dd-name {
+    margin: 4px 0 0;
+    font-family: serif;
+    font-size: 38px;
+    line-height: 1.1;
+}
+
+.dd-subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.dd-motifs {
+    display: flex;
+    gap: 10px;
+}
+
+.dd-motifs img {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    padding: 6px;
+    border: 1px solid rgba(45, 226, 230, .45);
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    box-shadow: 0 0 24px rgba(45, 226, 230, .20);
+}
+
+/* ---------------------------------------------------------
+   Body grid
+--------------------------------------------------------- */
+.dd-body {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.dd-left {
+    position: sticky;
+    top: 92px;
+    /* sits under your top nav */
+    display: grid;
+    gap: 12px;
+}
+
+.dd-right {
+    min-width: 0;
+    display: grid;
+    gap: 14px;
+}
+
+/* ---------------------------------------------------------
+   Cards / boxes
+--------------------------------------------------------- */
+.dd-card,
+.dd-box {
+    border-radius: var(--r);
+    border: 1px solid rgba(122, 162, 255, .35);
+    background: var(--panel);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.dd-card__head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: linear-gradient(180deg, rgba(122, 162, 255, .18), transparent);
+    border-bottom: 1px solid rgba(122, 162, 255, .22);
+}
+
+.dd-card__headicon {
+    width: 26px;
+    height: 26px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    border: 1px solid rgba(45, 226, 230, .35);
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+}
+
+.dd-card__headtext {
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.dd-card__body {
+    padding: 12px;
+    background: var(--panel-2);
+}
+
+/* Doll */
+.dd-doll {
+    height: 620px;
+    display: grid;
+    place-items: end center;
+    background: radial-gradient(400px 120px at 50% 90%, rgba(45, 226, 230, .14), transparent 60%),
+        var(--panel);
+}
+
+.dd-doll img {
+    max-height: 590px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, .35));
+}
+
+/* Holo */
+.dd-holo {
+    display: grid;
+    place-items: center;
+}
+
+.dd-holo img {
+    width: min(260px, 100%);
+    border-radius: 18px;
+    border: 1px solid rgba(45, 226, 230, .35);
+    background: linear-gradient(180deg, var(--panel-2), var(--panel));
+    box-shadow: 0 0 26px rgba(45, 226, 230, .18);
+}
+
+/* Theme widget */
+.dd-theme {
+    display: grid;
+    grid-template-columns: 64px 1fr 42px;
+    align-items: center;
+    gap: 12px;
+}
+
+.dd-theme__cover {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(38, 43, 62, .9);
+    background: #0b0d12;
+}
+
+.dd-theme__cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.dd-theme__song {
+    font-family: serif;
+    font-size: 16px;
+    line-height: 1.1;
+}
+
+.dd-theme__artist {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.dd-theme__play {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(45, 226, 230, .55);
+    color: var(--text);
+    background: linear-gradient(180deg, var(--panel), var(--panel-2));
+    text-decoration: none;
+}
+
+.dd-theme__play:hover {
+    filter: brightness(1.07);
+}
+
+.dd-credit {
+    text-align: right;
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.dd-credit a {
+    color: var(--warning);
+    text-decoration: none;
+    font-style: italic;
+}
+
+/* ---------------------------------------------------------
+   Tabs (radio-based)
+--------------------------------------------------------- */
+.dd-tabs {
+    border-radius: var(--r);
+    overflow: hidden;
+    border: 1px solid rgba(122, 162, 255, .35);
+    background: var(--panel);
+    box-shadow: var(--shadow);
+}
+
+.dd-tabradio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dd-tabbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-bottom: 1px solid rgba(122, 162, 255, .30);
+    background: linear-gradient(180deg, rgba(122, 162, 255, .14), transparent);
+}
+
+.dd-tabbtn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 10px;
+    font-weight: 800;
+    font-size: 13px;
+    color: var(--text);
+    user-select: none;
+    border-right: 1px solid rgba(122, 162, 255, .18);
+}
+
+.dd-tabbtn:last-child {
+    border-right: none;
+}
+
+.dd-tabbtn i {
+    opacity: .9;
+}
+
+.dd-panels {
+    padding: 12px;
+    background: var(--panel-2);
+}
+
+/* default: hide all panels */
+.dd-panel {
+    display: none;
+}
+
+/* Group 1 mapping */
+#dd1-a:checked~.dd-tabbar label[for="dd1-a"],
+#dd1-b:checked~.dd-tabbar label[for="dd1-b"],
+#dd1-c:checked~.dd-tabbar label[for="dd1-c"],
+#dd2-d:checked~.dd-tabbar label[for="dd2-d"],
+#dd2-e:checked~.dd-tabbar label[for="dd2-e"],
+#dd2-f:checked~.dd-tabbar label[for="dd2-f"] {
+    background: rgba(122, 162, 255, .10);
+}
+
+#dd1-a:checked~.dd-panels .dd-panel-a {
+    display: block;
+}
+
+#dd1-b:checked~.dd-panels .dd-panel-b {
+    display: block;
+}
+
+#dd1-c:checked~.dd-panels .dd-panel-c {
+    display: block;
+}
+
+#dd2-d:checked~.dd-panels .dd-panel-d {
+    display: block;
+}
+
+#dd2-e:checked~.dd-panels .dd-panel-e {
+    display: block;
+}
+
+#dd2-f:checked~.dd-panels .dd-panel-f {
+    display: block;
+}
+
+/* ---------------------------------------------------------
+   Layout helpers
+--------------------------------------------------------- */
+.dd-grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.dd-grid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.dd-grid2-uneven {
+    display: grid;
+    grid-template-columns: 1.25fr .85fr;
+    gap: 12px;
+}
+
+.dd-box {
+    padding: 12px;
+    background: var(--panel);
+    border: 1px solid rgba(122, 162, 255, .22);
+    box-shadow: none;
+}
+
+.dd-box h3 {
+    margin: 0 0 8px;
+    font-family: serif;
+    font-size: 18px;
+}
+
+.dd-box p {
+    margin: 0 0 8px;
+    color: var(--text);
+}
+
+.dd-help {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.dd-kv {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 10px;
+    padding: 8px 0;
+    border-top: 1px dashed rgba(169, 176, 195, .25);
+}
+
+.dd-kv:first-of-type {
+    border-top: none;
+    padding-top: 0;
+}
+
+.dd-kv span {
+    font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.dd-kv b {
+    font-weight: 700;
+}
+
+.dd-splitline {
+    height: 1px;
+    background: rgba(169, 176, 195, .18);
+    margin: 12px 0;
+}
+
+.dd-list {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--text);
+}
+
+.dd-list li {
+    margin: 4px 0;
+}
+
+/* Appearance */
+.dd-appear {
+    display: grid;
+    grid-template-columns: 110px 1fr 110px;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.dd-palette {
+    border-radius: var(--r2);
+    border: 1px dashed rgba(122, 162, 255, .45);
+    background: var(--panel);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dd-palette span {
+    flex: 1;
+    min-height: 30px;
+    border-radius: 10px;
+}
+
+.dd-mood {
+    border-radius: var(--r2);
+    border: 1px dashed rgba(122, 162, 255, .45);
+    background: var(--panel);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.dd-mood__img {
+    border-radius: 12px;
+    display: block;
+    min-height: 140px;
+    border: 1px solid rgba(169, 176, 195, .18);
+    background-image: var(--img);
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06);
+}
+
+/* Reference image */
+.dd-ref {
+    display: block;
+    border-radius: 14px;
+    min-height: 360px;
+    border: 1px solid rgba(169, 176, 195, .18);
+    background-image: var(--img);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Weapon */
+.dd-weapon {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.dd-weapon__img {
+    width: 96px;
+    height: 96px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(38, 43, 62, .9);
+    background: #0b0d12;
+}
+
+.dd-weapon__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.dd-weapon__txt {
+    display: grid;
+    gap: 8px;
+    color: var(--text);
+}
+
+/* Elements */
+.dd-elements {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.dd-el {
+    border-radius: 12px;
+    border: 1px solid rgba(169, 176, 195, .18);
+    background: rgba(0, 0, 0, .15);
+    padding: 10px;
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+}
+
+.dd-el img {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid rgba(122, 162, 255, .25);
+    object-fit: cover;
+}
+
+.dd-el b {
+    font-size: 12px;
+}
+
+/* Quotes */
+.dd-quote {
+    margin-top: 12px;
+    border-left: 3px solid var(--accent-2);
+    background: rgba(45, 226, 230, .08);
+    border-radius: 10px;
+    padding: 10px 12px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.dd-quote i {
+    opacity: .85;
+}
+
+.dd-quote--accent {
+    border-left-color: var(--accent);
+    background: rgba(122, 162, 255, .08);
+}
+
+.dd-quote--cyan {
+    border-left-color: var(--accent-2);
+    background: rgba(45, 226, 230, .08);
+}
+
+.dd-quote__by {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* Stats */
+.dd-stats {
+    display: grid;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.dd-stat {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(169, 176, 195, .18);
+    background: rgba(0, 0, 0, .14);
+    font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.dd-stat span {
+    color: var(--muted);
+}
+
+.dd-stat b {
+    font-weight: 800;
+}
+
+.dd-radar {
+    margin-top: 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(169, 176, 195, .18);
+    background: rgba(0, 0, 0, .14);
+    display: grid;
+    place-items: center;
+    padding: 10px;
+}
+
+.dd-radar svg {
+    width: 220px;
+    height: 220px;
+    display: block;
+}
+
+/* Relationships */
+.dd-relgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.dd-rel {
+    border-radius: var(--r2);
+    border: 1px solid rgba(169, 176, 195, .18);
+    background: rgba(0, 0, 0, .14);
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 12px;
+}
+
+.dd-rel__img {
+    width: 72px;
+    height: 72px;
+    border-radius: 14px;
+    object-fit: cover;
+    border: 1px solid rgba(122, 162, 255, .25);
+}
+
+.dd-rel__name {
+    font-weight: 900;
+    color: var(--warning);
+    text-decoration: none;
+}
+
+.dd-rel__name:hover {
+    text-decoration: underline;
+}
+
+.dd-rel__role {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.dd-hearts {
+    color: var(--danger);
+    margin: 6px 0 6px;
+}
+
+.dd-rel__txt p {
+    margin: 0;
+    color: var(--text);
+}
+
+/* Strengths/Weaknesses list */
+.dd-sw {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 4px;
+}
+
+.dd-sw__mid {
+    text-align: center;
+    color: var(--muted);
+    padding: 6px 0;
+}
+
+/* Favorites grid */
+.dd-favgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.dd-fav {
+    border-radius: 12px;
+    border: 1px solid rgba(169, 176, 195, .18);
+    background: rgba(0, 0, 0, .14);
+    padding: 12px 10px;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    gap: 6px;
+}
+
+.dd-fav i {
+    opacity: .85;
+}
+
+.dd-fav b {
+    font-size: 12px;
+}
+
+.dd-fav span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* Inventory (simple list) */
+.dd-invlist {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.dd-inv {
+    border-radius: 14px;
+    border: 1px solid rgba(169, 176, 195, .18);
+    background: rgba(0, 0, 0, .14);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.dd-inv img {
+    width: 96px;
+    height: 96px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid rgba(122, 162, 255, .25);
+}
+
+.dd-inv h4 {
+    margin: 0 0 6px;
+    font-family: serif;
+}
+
+.dd-inv p {
+    margin: 0;
+    color: var(--text);
+}
+
+/* ---------------------------------------------------------
+   Responsive
+--------------------------------------------------------- */
+@media (max-width: 980px) {
+    .dd-body {
+        grid-template-columns: 1fr;
+    }
+
+    .dd-left {
+        position: static;
+    }
+
+    .dd-banner__inner {
+        grid-template-columns: 84px 1fr;
+    }
+
+    .dd-motifs {
+        display: none;
+    }
+
+    .dd-appear {
+        grid-template-columns: 1fr;
+    }
+
+    .dd-elements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dd-grid2,
+    .dd-grid2-uneven {
+        grid-template-columns: 1fr;
+    }
+
+    .dd-relgrid {
+        grid-template-columns: 1fr;
+    }
+
+    .dd-favgrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

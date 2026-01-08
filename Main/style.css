@@ -320,7 +320,7 @@ section p {
     border-radius: 999px;
     border: 1px solid rgba(42, 27, 20, .14);
     background: rgba(42, 27, 20, .06);
-    color: rgba(42, 27, 20, .85);
+    color: rgba(20, 42, 34, 0.85);
 }
 
 .status.working {
