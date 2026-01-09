@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meltdown — MD</title>
+
+    <link rel="stylesheet" href="../../CSS/meltdown.css" />
+</head>
+
+<body>
+
+    <!-- TOP NAV BAR (match your site) -->
+    <header class="top-nav">
+        <div class="nav-inner">
+            <div class="brand">
+                <span class="logo"></span>
+                <div class="brand-text">
+                    <h1>CherryMintTea</h1>
+                    <p>Connection • Compassion • Continuity</p>
+                </div>
+            </div>
+
+            <nav class="nav-links" aria-label="Top navigation">
+                <a href="../../../Home.html">Home</a>
+                <a href="../../Vault/page1.html" class="active">Vault</a>
+                <a href="../../Projects/index.html">Projects</a>
+                <a href="../../Affiliations/page1.html">Affiliations</a>
+                <a href="../../FAQ/FAQ.html">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="layout">
+
+        <!-- LEFT SIDEBAR NAV -->
+        <aside class="side-menu">
+            <nav aria-label="Series vault navigation">
+                <ul>
+                    <li><a href="#glossary">Glossary</a></li>
+                    <li><a href="#featured-characters">Featured Characters</a></li>
+                    <li><a href="#featured-lore">Featured Lore</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="top" class="vault-page">
+
+            <!-- SERIES HEADER -->
+            <section class="section">
+                <header>
+                    <h2>Series Name</h2>
+                    <p>
+                        A short overview of the series: tone, themes, and what this vault contains.
+                    </p>
+                </header>
+            </section>
+
+            <!-- 1) GLOSSARY -->
+            <section id="glossary" class="section">
+                <header>
+                    <h2>Glossary</h2>
+                    <p>Key terms used throughout this series vault.</p>
+                </header>
+
+                <!-- You can do a simple list OR details blocks. Details feels great for a glossary. -->
+                <div class="glossary">
+                    <details>
+                        <summary>Term One</summary>
+                        <p>Definition for Term One (short, clear, canonical if possible).</p>
+                    </details>
+
+                    <details>
+                        <summary>Term Two</summary>
+                        <p>Definition for Term Two.</p>
+                    </details>
+
+                    <details>
+                        <summary>Term Three</summary>
+                        <p>Definition for Term Three.</p>
+                    </details>
+
+                    <details>
+                        <summary>Term Four</summary>
+                        <p>Definition for Term Four.</p>
+                    </details>
+                </div>
+            </section>
+
+            <!-- 2) FEATURED CHARACTERS (4 cards + button below) -->
+            <section id="featured-characters" class="section">
+                <header>
+                    <h2>Featured Characters</h2>
+                </header>
+
+                <div class="featured-grid featured-grid-4">
+                    <a class="featured-card" href="Characters/Character-1/index.html">
+                        <img class="featured-img" src="../../images/series/characters/char1.jpg" alt="Character 1">
+                        <div class="featured-overlay">
+                            <div class="featured-text">
+                                <h3>Character One</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="featured-card" href="Characters/Character-2/index.html">
+                        <img class="featured-img" src="../../images/series/characters/char2.jpg" alt="Character 2">
+                        <div class="featured-overlay">
+                            <div class="featured-text">
+                                <h3>Character Two</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="featured-card" href="Characters/Character-3/index.html">
+                        <img class="featured-img" src="../../images/series/characters/char3.jpg" alt="Character 3">
+                        <div class="featured-overlay">
+                            <div class="featured-text">
+                                <h3>Character Three</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="featured-card" href="Characters/Character-4/index.html">
+                        <img class="featured-img" src="../../images/series/characters/char4.jpg" alt="Character 4">
+                        <div class="featured-overlay">
+                            <div class="featured-text">
+                                <h3>Character Four</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <a class="button" href="CharacterCompendium/index.html">Open Character Compendium →</a>
+            </section>
+
+            <!-- 3) FEATURED LORE PAGES -->
+            <section id="featured-lore" class="section">
+                <header>
+                    <h2>Featured Lore Pages</h2>
+                    <p>Core entries that define the rules, history, or metaphysics of this series.</p>
+                </header>
+
+                <div class="featured-grid">
+                    <a class="featured-card" href="Lore/Entry-1/index.html">
+                        <img class="featured-img" src="../../images/series/lore/lore1.jpg" alt="Lore Entry 1">
+                        <div class="featured-overlay">
+                            <div class="featured-text">
+                                <h3>Lore Entry One</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="featured-card" href="Lore/Entry-2/index.html">
+                        <img class="featured-img" src="../../images/series/lore/lore2.jpg" alt="Lore Entry 2">
+                        <div class="featured-overlay">
+                            <div class="featured-text">
+                                <h3>Lore Entry Two</h3>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a class="featured-card" href="Lore/Entry-3/index.html">
+                        <img class="featured-img" src="../../images/series/lore/lore3.jpg" alt="Lore Entry 3">
+                        <div class="featured-overlay">
+                            <div class="featured-text">
+                                <h3>Lore Entry Three</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>© <span id="year"></span> LizzKiddWizz • <a href="../../index.html#contact">Contact</a></p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>

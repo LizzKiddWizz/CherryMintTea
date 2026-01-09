@@ -1,0 +1,1261 @@
+/* =========================================================
+   Project Page CSS — Character (Dossier / Holographic) Theme
+   FULL FILE — with customization knobs restored
+   ========================================================= */
+
+:root {
+    /* =========================
+       THEME KNOBS (edit per project)
+       ========================= */
+
+    /* Page background + core surfaces */
+    --bg: #07080c;
+    /* deep space */
+    --panel: #0f1117;
+    /* main surfaces */
+    --panel-2: #11131b;
+    /* secondary surfaces */
+
+    /* Text */
+    --text: #d0d6e4;
+    /* main text on dark */
+    --muted: rgba(169, 176, 195, .86);
+    --line: rgba(122, 162, 255, .18);
+
+    /* Accents (character style) */
+    --main: #1b6063;
+    /* primary glow */
+    --main-2: #2a4388;
+    /* secondary glow */
+    --accent: #55be89;
+    /* cyan glow */
+    --danger: #3d8d7c;
+    /* raspberry/pink */
+    --cream: #bbd3d2;
+    /* light text */
+
+    /* UI */
+    --radius: 18px;
+    --radius-sm: 12px;
+    --shadow: 0 14px 38px rgba(0, 0, 0, .35);
+    --shadow-soft: 0 10px 24px rgba(0, 0, 0, .22);
+
+    /* Layout sizing */
+    --max: 1160px;
+    --sidebar-w: 240px;
+
+    /* Global nav/layout vars */
+    --topbar-h: 68px;
+    --side-w: 260px;
+
+    /* Banner image */
+    --banner-image: url("images/banner.jpg");
+
+    /* Sidebar surfaces */
+    --nav-surface: rgba(15, 17, 23, .92);
+    --nav-surface-2: rgba(11, 13, 18, .92);
+    --nav-border: rgba(122, 162, 255, .20);
+
+    /* Optional fine-tuning knobs */
+    --card-surface: rgba(15, 17, 23, .72);
+    --card-border: rgba(122, 162, 255, .18);
+
+    --overlay-soft: rgba(7, 8, 12, .06);
+    --overlay-strong: rgba(7, 8, 12, .86);
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    color: var(--text);
+    background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(122, 162, 255, .12), transparent 50%),
+        radial-gradient(900px 500px at 10% 30%, rgba(45, 226, 230, .08), transparent 55%),
+        radial-gradient(900px 500px at 60% 95%, rgba(179, 136, 255, .08), transparent 55%),
+        linear-gradient(180deg, #07080c 0%, var(--bg) 100%);
+    line-height: 1.55;
+}
+
+a {
+    color: var(--main);
+    text-decoration: none;
+    font-weight: 650;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    border-radius: var(--radius);
+    border: 1px solid var(--card-border);
+    background: linear-gradient(180deg, rgba(15, 17, 23, .92), rgba(11, 13, 18, .92));
+    box-shadow: var(--shadow-soft);
+    padding: 18px;
+    margin-bottom: 18px;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 8px;
+}
+
+h2 {
+    font-size: 20px;
+    color: rgba(234, 238, 248, .96);
+}
+
+p {
+    margin: 0 0 10px;
+    color: var(--muted);
+}
+
+ul,
+ol {
+    margin: 8px 0 0 20px;
+    color: var(--muted);
+}
+
+/* =========================================================
+   TOP NAV
+   ========================================================= */
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: var(--topbar-h);
+    backdrop-filter: blur(10px);
+    background: linear-gradient(180deg, rgba(7, 8, 12, .86), rgba(7, 8, 12, .55));
+    border-bottom: 1px solid rgba(122, 162, 255, .18);
+}
+
+.nav-inner {
+    height: 100%;
+    max-width: calc(var(--max) + var(--side-w));
+    margin: 0 auto;
+    padding: 0 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 200px;
+}
+
+.logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(234, 238, 248, .92), rgba(231, 220, 255, .82));
+    box-shadow:
+        0 0 0 3px rgba(122, 162, 255, .28),
+        0 10px 24px rgba(0, 0, 0, .25);
+}
+
+.brand-text h1 {
+    margin: 0;
+    color: rgba(234, 238, 248, .96);
+    font-size: 14px;
+    letter-spacing: .3px;
+}
+
+.brand-text p {
+    margin: 0;
+    font-size: 12px;
+    color: rgba(169, 176, 195, .78);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: rgba(234, 238, 248, .92);
+    font-size: 13px;
+    font-weight: 650;
+    padding: 9px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(122, 162, 255, .16);
+    background: rgba(122, 162, 255, .06);
+    transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.nav-links a:hover {
+    text-decoration: none;
+    background: rgba(122, 162, 255, .12);
+    border-color: rgba(122, 162, 255, .28);
+    transform: translateY(-1px);
+}
+
+.nav-links a.active {
+    background: rgba(122, 162, 255, .18);
+    border-color: rgba(122, 162, 255, .42);
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+.layout {
+    max-width: calc(var(--max) + var(--side-w));
+    margin: 0 auto;
+    padding: 22px 18px 64px;
+    display: grid;
+    grid-template-columns: var(--side-w) 1fr;
+    gap: 22px;
+}
+
+/* =========================================================
+   SIDE MENU
+   ========================================================= */
+.side-menu {
+    position: relative;
+}
+
+.side-menu nav {
+    position: sticky;
+    top: calc(var(--topbar-h) + 18px);
+    border-radius: var(--radius);
+    padding: 14px;
+    background: linear-gradient(180deg, var(--nav-surface), var(--nav-surface-2));
+    border: 1px solid var(--nav-border);
+    box-shadow: var(--shadow);
+}
+
+.side-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.side-menu a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    color: rgba(234, 238, 248, .90);
+    border: 1px solid rgba(122, 162, 255, .12);
+    background: rgba(122, 162, 255, .06);
+    transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.side-menu a:hover {
+    text-decoration: none;
+    background: rgba(122, 162, 255, .10);
+    border-color: rgba(122, 162, 255, .22);
+    transform: translateY(-1px);
+}
+
+.side-menu a.nav-heading-link {
+    background: linear-gradient(90deg, var(--danger), var(--main), var(--accent));
+    color: rgba(234, 238, 248, .98);
+    border: 1px solid rgba(234, 238, 248, .20);
+    text-decoration: none;
+    display: block;
+    padding: 10px 14px;
+    border-radius: 999px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.side-menu a.nav-heading-link:hover {
+    filter: brightness(1.05);
+    text-decoration: none;
+}
+
+/* =========================================================
+   Title
+   ========================================================= */
+.project-header {
+    max-width: var(--max);
+    margin: 24px auto 0;
+    padding: 0 18px;
+}
+
+.project-title-wrap {
+    border-radius: var(--radius);
+    border: 1px solid var(--card-border);
+    background: linear-gradient(180deg, rgba(15, 17, 23, .92), rgba(11, 13, 18, .92));
+    box-shadow: var(--shadow-soft);
+    padding: 18px;
+}
+
+.project-title {
+    font-size: 30px;
+    letter-spacing: .2px;
+    color: rgba(234, 238, 248, .98);
+}
+
+.project-subtitle {
+    margin: 6px 0 0;
+    color: var(--muted);
+}
+
+/* =========================================================
+   Banner
+   ========================================================= */
+.banner {
+    max-width: var(--max);
+    margin: 14px auto 0;
+    padding: 0 18px;
+}
+
+.banner-overlay {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow);
+    background:
+        linear-gradient(90deg, rgba(7, 8, 12, .78), rgba(7, 8, 12, .38)),
+        var(--banner-image);
+    background-size: cover;
+    background-position: center;
+    min-height: 190px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.banner-inner {
+    padding: 16px;
+    color: var(--cream);
+}
+
+.banner-kicker,
+.banner-blurb {
+    color: rgba(234, 238, 248, .90);
+}
+
+/* =========================================================
+   Layout with Sidebar (internal page layout)
+   ========================================================= */
+.page {
+    max-width: var(--max);
+    margin: 18px auto 64px;
+    padding: 0 18px;
+    display: grid;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    gap: 18px;
+}
+
+.sidebar {
+    position: relative;
+}
+
+.side-nav {
+    position: sticky;
+    top: 18px;
+    border-radius: var(--radius);
+    border: 1px solid var(--card-border);
+    background: linear-gradient(180deg, rgba(15, 17, 23, .92), rgba(11, 13, 18, .92));
+    box-shadow: var(--shadow-soft);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.side-link {
+    padding: 10px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(122, 162, 255, .14);
+    background: rgba(122, 162, 255, .08);
+    color: rgba(234, 238, 248, .92);
+    text-decoration: none;
+}
+
+.side-link:hover {
+    background: rgba(45, 226, 230, .10);
+    text-decoration: none;
+}
+
+.side-link--muted {
+    background: rgba(234, 238, 248, .06);
+    color: rgba(234, 238, 248, .72);
+    font-weight: 600;
+}
+
+.side-divider {
+    height: 1px;
+    background: rgba(122, 162, 255, .18);
+    margin: 6px 2px;
+}
+
+.content {
+    min-width: 0;
+}
+
+/* =========================================================
+   Section 1: Cover + Intro shared container
+   ========================================================= */
+.cover-intro {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 14px;
+    align-items: stretch;
+}
+
+.cover-card,
+.intro-card {
+    border-radius: var(--radius);
+    border: 1px solid var(--card-border);
+    background: var(--card-surface);
+    padding: 14px;
+}
+
+.cover-card {
+    padding: 0;
+    overflow: hidden;
+}
+
+.cover-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    object-fit: cover;
+}
+
+.meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tag {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(122, 162, 255, .22);
+    background: rgba(122, 162, 255, .08);
+    color: rgba(234, 238, 248, .92);
+}
+
+.chip {
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(234, 238, 248, .16);
+    background: rgba(234, 248, 246, 0.08);
+    color: rgba(234, 238, 248, .92);
+}
+
+.chip--accent {
+    border-color: rgba(45, 226, 230, .35);
+    background: rgba(45, 226, 230, .14);
+    color: rgba(45, 226, 230, .92);
+}
+
+/* =========================================================
+   Section 3: Bible excerpt + button
+   ========================================================= */
+.bible-excerpt {
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: var(--radius);
+    border: 1px solid var(--card-border);
+    background: var(--card-surface);
+}
+
+.bible-excerpt h3 {
+    margin-top: 12px;
+    color: rgba(189, 197, 216, 0.96);
+}
+
+.bible-excerpt h3:first-child {
+    margin-top: 0;
+}
+
+/* Button: holo gradient (customizable by vars) */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--main), var(--danger), var(--accent));
+    color: rgba(207, 221, 226, 0.98);
+    border: 1px solid rgba(234, 238, 248, .22);
+    text-decoration: none;
+}
+
+.button:hover {
+    filter: brightness(1.05);
+    text-decoration: none;
+}
+
+/* =========================================================
+   Section 4: 3 hover image columns linking out
+   ========================================================= */
+.tri-grid {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.tri-card {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow-soft);
+    min-height: 220px;
+    text-decoration: none;
+    background: rgba(122, 162, 255, .05);
+}
+
+.tri-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.02);
+    transition: transform .25s ease;
+}
+
+.tri-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(180deg, var(--overlay-soft), var(--overlay-strong));
+    opacity: 0;
+    transition: opacity .18s ease;
+}
+
+.tri-text {
+    padding: 14px;
+    color: var(--cream);
+}
+
+.tri-text h3 {
+    margin: 0 0 4px;
+    color: rgba(234, 238, 248, .98);
+}
+
+.tri-text p {
+    margin: 0;
+    color: rgba(169, 176, 195, .92);
+}
+
+.tri-card:hover .tri-overlay {
+    opacity: 1;
+}
+
+.tri-card:hover .tri-img {
+    transform: scale(1.08);
+}
+
+.tri-card:hover {
+    text-decoration: none;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.footer {
+    margin-top: 10px;
+    padding: 12px 2px 0;
+    color: rgba(169, 176, 195, .80);
+}
+
+.footer p {
+    color: rgba(169, 176, 195, .88);
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+@media (max-width: 980px) {
+    .page {
+        grid-template-columns: 1fr;
+    }
+
+    .side-nav {
+        position: static;
+    }
+
+    .cover-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .cover-img {
+        min-height: 220px;
+    }
+
+    .tri-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   Global Notice Strip (Under Review / WIP / Archived)
+   ========================================================= */
+.notice-strip {
+    margin: 14px 0;
+    padding: 10px 14px;
+    border-radius: 16px;
+    border: 1px solid var(--card-border);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: var(--shadow-soft);
+    background: var(--card-surface);
+    color: rgba(234, 238, 248, .92);
+}
+
+.notice-strip strong {
+    font-weight: 900;
+    letter-spacing: .04em;
+}
+
+/* Under Review */
+.notice-review {
+    border-color: rgba(92, 255, 220, 0.4);
+    background: linear-gradient(90deg,
+            rgba(92, 255, 193, 0.16),
+            rgba(122, 239, 255, 0.08),
+            var(--card-surface));
+}
+
+.notice-review strong {
+    color: var(--danger);
+}
+
+/* WIP */
+.notice-wip {
+    border-color: rgba(45, 226, 230, .35);
+    background: linear-gradient(90deg,
+            rgba(45, 226, 230, .14),
+            rgba(122, 162, 255, .08),
+            var(--card-surface));
+}
+
+.notice-wip strong {
+    color: var(--accent);
+}
+
+/* Archived */
+.notice-archived {
+    border-color: rgba(234, 238, 248, .16);
+    background: linear-gradient(90deg,
+            rgba(234, 238, 248, .06),
+            var(--card-surface));
+}
+
+.notice-archived strong {
+    color: rgba(234, 238, 248, .88);
+}
+
+/* =========================================================
+   Featured cards (Explore-like) for Series Vault pages
+   ========================================================= */
+.featured-grid {
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.featured-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.featured-card {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--shadow-soft);
+    min-height: 220px;
+    text-decoration: none;
+    background: rgba(122, 162, 255, .05);
+}
+
+.featured-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.02);
+    transition: transform .25s ease;
+}
+
+.featured-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(180deg, var(--overlay-soft), var(--overlay-strong));
+    opacity: 0;
+    transition: opacity .18s ease;
+}
+
+.featured-text {
+    padding: 14px;
+    color: rgba(234, 238, 248, .96);
+}
+
+.featured-text h3 {
+    margin: 0 0 4px;
+    color: rgba(234, 238, 248, .98);
+}
+
+.featured-text p {
+    margin: 0;
+    color: rgba(169, 176, 195, .92);
+}
+
+.featured-card:hover .featured-overlay {
+    opacity: 1;
+}
+
+.featured-card:hover .featured-img {
+    transform: scale(1.08);
+}
+
+.featured-card:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 980px) {
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   MAIN VAULT HUB (Root Index)
+   ========================================================= */
+
+.vault-hub-grid {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.vault-hub-card {
+    position: relative;
+    min-height: 220px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(42, 27, 20, .14);
+    box-shadow: var(--shadow-soft);
+    text-decoration: none;
+}
+
+.vault-hub-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.03);
+    transition: transform .25s ease;
+}
+
+.vault-hub-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(180deg,
+            rgba(15, 29, 32, 0.05),
+            rgba(15, 32, 32, 0.82));
+    opacity: 0;
+    transition: opacity .18s ease;
+}
+
+.vault-hub-text {
+    padding: 14px;
+    color: var(--cream);
+}
+
+.vault-hub-text h3 {
+    margin: 0 0 4px;
+    color: var(--cream);
+}
+
+.vault-hub-text p {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(255, 242, 223, .88);
+}
+
+/* Hover */
+.vault-hub-card:hover img {
+    transform: scale(1.10);
+}
+
+.vault-hub-card:hover .vault-hub-overlay {
+    opacity: 1;
+}
+
+.vault-hub-card:hover {
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .vault-hub-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .vault-hub-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   CC Landing Mode: One card per row (full width)
+   Applies ONLY inside: <section class="cc-landing">
+   ========================================================= */
+
+.cc-landing .vault-hub-grid {
+    grid-template-columns: 1fr;
+    /* one column */
+    gap: 14px;
+}
+
+/* Make each card a horizontal row */
+.cc-landing .vault-hub-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    /* image | text */
+    min-height: 170px;
+}
+
+/* Ensure image fills left side nicely */
+.cc-landing .vault-hub-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    /* thicker border around image to match “special” vibe */
+    border-right: 3px solid rgba(255, 242, 223, .16);
+    transform: none;
+    /* overrides the zoom baseline */
+}
+
+/* Keep your hover zoom effect but controlled */
+.cc-landing .vault-hub-card:hover img {
+    transform: scale(1.06);
+}
+
+/* Overlay should cover the whole card (not just image) */
+.cc-landing .vault-hub-overlay {
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    /* always readable on landing */
+    background: linear-gradient(90deg,
+            rgba(33, 97, 72, 0.18),
+            rgba(7, 14, 20, 0.72));
+}
+
+/* Text padding + alignment */
+.cc-landing .vault-hub-text {
+    padding: 16px 16px 14px;
+    max-width: 80ch;
+}
+
+/* Make heading bigger in landing rows */
+.cc-landing .vault-hub-text h3 {
+    font-size: 16px;
+    margin: 0 0 6px;
+}
+
+/* Landing description readable */
+.cc-landing .vault-hub-text p {
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Optional: if you want overlay to brighten on hover */
+.cc-landing .vault-hub-card:hover .vault-hub-overlay {
+    background: linear-gradient(90deg,
+            rgba(44, 81, 90, 0.12),
+            rgba(79, 151, 145, 0.78));
+}
+
+/* =========================================================
+   Responsive (Landing rows)
+   ========================================================= */
+
+@media (max-width: 720px) {
+    .cc-landing .vault-hub-card {
+        grid-template-columns: 1fr;
+        min-height: unset;
+    }
+
+    .cc-landing .vault-hub-card img {
+        border-right: none;
+        border-bottom: 3px solid rgba(255, 242, 223, .16);
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+    .cc-landing .vault-hub-overlay {
+        background: linear-gradient(180deg,
+                rgba(32, 20, 15, .12),
+                rgba(32, 20, 15, .82));
+    }
+}
+
+/* =========================================================
+   CC Categories that MATCH landing cards (no new look)
+   Works inside: <section class="cc-landing cc-categories">
+   ========================================================= */
+
+.cc-landing.cc-categories .cat-stack {
+    display: grid;
+    gap: 14px;
+}
+
+/* The header card already looks like landing because it uses:
+   .vault-hub-card + .cc-card-row (your existing row styles) */
+.cc-landing.cc-categories .cc-cat-toggle {
+    cursor: pointer;
+    position: relative;
+}
+
+/* Caret in the lower-right like a subtle UI hint */
+.cc-landing.cc-categories .cc-caret {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    color: rgba(255, 242, 223, .90);
+    font-size: 18px;
+    font-weight: 900;
+    text-shadow: 0 10px 22px rgba(0, 0, 0, .35);
+    transition: transform .15s ease, opacity .15s ease;
+    opacity: .9;
+}
+
+.cc-landing.cc-categories .cc-cat.is-open .cc-caret {
+    transform: rotate(180deg);
+}
+
+/* Panel hidden until open */
+.cc-landing.cc-categories .cc-cat-panel {
+    display: none;
+    margin-top: 10px;
+}
+
+.cc-landing.cc-categories .cc-cat.is-open .cc-cat-panel {
+    display: block;
+}
+
+/* Inner grid: 4 per row */
+.cc-landing.cc-categories .cc-inner-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* Inner cards keep landing-card look */
+.cc-landing.cc-categories .cc-inner-card {
+    min-height: 190px;
+}
+
+/* Thicker image border for “special” readability */
+.cc-landing.cc-categories .cc-inner-card img {
+    border: 4px solid rgba(255, 242, 223, .16);
+    box-sizing: border-box;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .cc-landing.cc-categories .cc-inner-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .cc-landing.cc-categories .cc-inner-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   Character Compendium Grid (6 across)
+   ========================================================= */
+
+.compendium-header {
+    margin-bottom: 14px;
+}
+
+.compendium-header h2 {
+    margin: 0 0 6px;
+    font-size: 22px;
+    letter-spacing: .2px;
+}
+
+.compendium-header p {
+    margin: 0;
+    opacity: .85;
+}
+
+.compendium-heading {
+    margin: 18px 0 10px;
+    font-size: 14px;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+    opacity: .9;
+}
+
+/* 6 columns on desktop */
+.cc-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* Responsive: step down */
+@media (max-width: 1280px) {
+    .cc-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 980px) {
+    .cc-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .cc-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 420px) {
+    .cc-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================================
+   Card
+   ========================================================= */
+
+.cc-card {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    text-decoration: none;
+
+    border-radius: var(--radius, 18px);
+    overflow: hidden;
+
+    border: 1px solid rgba(122, 162, 255, .18);
+    background: linear-gradient(180deg, rgba(15, 17, 23, .92), rgba(11, 13, 18, .92));
+    box-shadow: var(--shadow-soft, 0 10px 24px rgba(0, 0, 0, .22));
+    transition: transform .14s ease, border-color .14s ease;
+}
+
+.cc-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(122, 162, 255, .34);
+    text-decoration: none;
+}
+
+/* =========================================================
+   Image + thick border
+   ========================================================= */
+
+.cc-media {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    /* square thumbnail; change if you want */
+    background: rgba(122, 162, 255, .06);
+}
+
+.cc-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    /* THICK border around image */
+    box-sizing: border-box;
+    border: 4px solid rgba(122, 162, 255, .28);
+}
+
+/* Optional: make special characters pop with stronger image border */
+.cc-card.is-special .cc-img {
+    border-color: rgba(255, 92, 122, .55);
+    /* danger accent */
+}
+
+/* =========================================================
+   Corner Icon
+   ========================================================= */
+
+.cc-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 26px;
+    height: 26px;
+
+    border-radius: 10px;
+    padding: 6px;
+
+}
+
+.cc-imgico {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 26px;
+    height: 26px;
+
+    border-radius: 10px;
+    padding: 6px;
+
+    background: rgba(7, 8, 12, .65);
+    border: 1px solid rgba(234, 238, 248, .18);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, .25);
+}
+
+/* If you use inline SVG instead of <img>, you can swap to .cc-icon svg rules */
+
+/* =========================================================
+   Body text
+   ========================================================= */
+
+.cc-body {
+    position: relative;
+    padding: 10px 10px 12px;
+    min-height: 90px;
+    /* ensures room for badges */
+}
+
+.cc-name {
+    margin: 0;
+    font-size: 13px;
+    letter-spacing: .2px;
+    color: rgba(234, 238, 248, .96);
+}
+
+.cc-sub {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: rgba(169, 176, 195, .88);
+}
+
+/* =========================================================
+   Badges (bottom-right, 4+ supported)
+   ========================================================= */
+
+.cc-badges {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    max-width: calc(100% - 20px);
+}
+
+.cc-badge {
+    display: inline-flex;
+    align-items: center;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .04em;
+
+    padding: 3px 8px;
+    border-radius: 999px;
+
+    border: 1px solid rgba(234, 238, 248, .16);
+    background: rgba(234, 238, 248, .08);
+    color: rgba(234, 238, 248, .92);
+
+    white-space: nowrap;
+}
+
+/* Badge color variants (mix & match) */
+.badge-main {
+    border-color: rgba(122, 162, 255, .30);
+    background: rgba(122, 162, 255, .12);
+}
+
+.badge-accent {
+    border-color: rgba(45, 226, 230, .32);
+    background: rgba(45, 226, 230, .12);
+}
+
+.badge-danger {
+    border-color: rgba(255, 92, 122, .34);
+    background: rgba(255, 92, 122, .12);
+}
+
+.badge-muted {
+    border-color: rgba(169, 176, 195, .22);
+    background: rgba(169, 176, 195, .08);
+}
+
+/* =========================================================
+   "Special" characters: stronger glow + ring
+   ========================================================= */
+
+.cc-card.is-special {
+    border-color: rgba(255, 92, 122, .40);
+    box-shadow:
+        0 0 0 1px rgba(255, 92, 122, .18),
+        0 18px 40px rgba(0, 0, 0, .35);
+}
+
+/* Another “special” style option */
+.cc-card.is-legendary {
+    border-color: rgba(45, 226, 230, .40);
+    box-shadow:
+        0 0 0 1px rgba(45, 226, 230, .20),
+        0 18px 40px rgba(0, 0, 0, .35);
+}
