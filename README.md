@@ -1,6 +1,11 @@
 # CherryMintTea
 Building a personal website for project hosting
 
+To Do:
+[] Figure out how to get github page to work
+[] Add Projector Asset to template
+[] Create MD profile templates
+
 Ideas and Notes:
 Meltdown Character Compendium breaks down more simply then within
 original documentation.
