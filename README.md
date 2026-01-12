@@ -2,9 +2,18 @@
 Building a personal website for project hosting
 
 To Do:
-[] Figure out how to get github page to work
-[] Add Projector Asset to template
+[X] Figure out how to get github page to work
+[X] Add Projector Asset to template
+[] Create Friend Profile Templates
+[] Finish Home Page
+[] Finish Projects Page
+[] Finish Affiliations Page
+[] Finish Friend Profiles
+[] Finish FAQ
 [] Create MD profile templates
+[] Finish one MD profile per area
+[] Add lore pages
+[] Upload Important Characters
 
 Ideas and Notes:
 Meltdown Character Compendium breaks down more simply then within

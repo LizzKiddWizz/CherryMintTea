@@ -87,7 +87,7 @@
 
                 <!-- Holoprojector -->
                 <div class="dd-holo">
-                    <img src="https://example.com/holo.png" alt="Holoprojector">
+                    <img src="../../../../-assets/projector.png" alt="Holoprojector">
                 </div>
 
                 <!-- Theme widget -->
