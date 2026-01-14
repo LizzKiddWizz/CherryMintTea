@@ -4,11 +4,15 @@ Building a personal website for project hosting
 To Do:
 [X] Figure out how to get github page to work
 [X] Add Projector Asset to template
-[] Create Friend Profile Templates
-[] Finish Home Page
-[] Finish Projects Page
-[] Finish Affiliations Page
-[] Finish Friend Profiles
+[X] Create Friend Profile Templates
+[-] Finish Home Page
+    [] Add images
+[-] Finish Projects Page
+    [] Add images
+[-] Finish Affiliations Page
+    [] Add images
+[-] Finish Friend Profiles
+    [] Get info and assets from friends
 [] Finish FAQ
 [] Create MD profile templates
 [] Finish one MD profile per area
