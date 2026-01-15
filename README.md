@@ -13,9 +13,55 @@ To Do:
     [] Add images
 [-] Finish Friend Profiles
     [] Get info and assets from friends
-[] Finish FAQ
+[X] Finish FAQ
 [] Create MD profile templates
+    [X] Main Characters
+    [] Side Characters
+    [] Background Characters
+        [] Athalmus
+        [] Ascension
+            [] Ascencia
+                [] Non-Combat
+            [] Mortal
+        [] Purgatory
+            [] Mortal
+                [] Non-Combat
+            [] Circlean
+            [] Death Brigade
+                [] Light
+                [] Dark
+        [] Lacrimae
+            [] Mortal
+                [] Non-Combat
+            [] Lacra
+                [] Martym
+                [] Sev
+                [] Endi
+    [] Location
+    [] Sentient Species
+    [] Animals
+    [] Plants
 [] Finish one MD profile per area
+    - Athalmus
+        [] Hisleschtevatkana Constanza
+        [] Una Atlanta
+        [] Mayim Blanka
+    - Ascension
+        [] Merlin Lagrange (Mortal)
+        [] Adamos Serim
+        [] Mildred Levier Heaven (Non-Com)
+    - Purgatory
+        [] Rosen Lovecraft (Circlean)
+        [] BECC BSoD (DB)
+        [] Magnus Aueralis (Mortal Non-Com)
+        [] Lawrence 'Law' Hunstman (Mortal Com)
+    - Lacrimae
+        [] Alloces Aluhyde (Endi- Glacius)
+        [] Halcyon Galia (Endi)
+        [] Geranigor Ishtarinavani (Martym)
+        [] Harlan Malaphar (Sev)
+    - Living Mortals
+        [] Theloden Leondir
 [] Add lore pages
 [] Upload Important Characters
 
