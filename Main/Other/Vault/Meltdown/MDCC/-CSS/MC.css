@@ -794,6 +794,60 @@
 }
 
 /* ---------------------------------------------------------
+   MC Profile — Action Buttons
+--------------------------------------------------------- */
+.dd-actions {
+    display: grid;
+    gap: 8px;
+    padding: 10px;
+    background: var(--panel);
+    border: 1px solid rgba(122, 162, 255, .28);
+    box-shadow: var(--shadow);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.dd-action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 13px;
+
+    border: 1px solid rgba(122, 162, 255, .22);
+    background: linear-gradient(180deg,
+            rgba(122, 162, 255, .14),
+            rgba(15, 17, 23, .85));
+
+    transition: transform .15s ease,
+        background .15s ease,
+        border-color .15s ease;
+}
+
+.dd-action i {
+    opacity: .85;
+    width: 16px;
+    text-align: center;
+}
+
+.dd-action:hover {
+    transform: translateY(-1px);
+    border-color: rgba(122, 162, 255, .45);
+    background: linear-gradient(180deg,
+            rgba(122, 162, 255, .22),
+            rgba(15, 17, 23, .9));
+}
+
+.dd-action:active {
+    transform: translateY(0);
+}
+
+/* ---------------------------------------------------------
    Responsive
 --------------------------------------------------------- */
 @media (max-width: 980px) {
