@@ -1,24 +1,24 @@
 /* =========================================================
-   Divine Dossier — Standalone (No Bootstrap / No Toyhouse)
+   Divine Dossier — Side Character (Standalone, no Bootstrap)
+   File: SC.css
    Scope: body.dd-page
    ========================================================= */
 
 .dd-page {
     margin: 0;
-    background: radial-gradient(1200px 600px at 80% -10%, rgba(122, 162, 255, .12), transparent 50%),
+    background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(122, 162, 255, .10), transparent 50%),
         linear-gradient(180deg, #07080c 0%, #0b0c12 100%);
     color: var(--text, #eaeef8);
     font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
 
 .dd-wrap {
-    max-width: 1160px;
+    max-width: 1080px;
     margin: 0 auto;
-    padding: 22px 16px 64px;
-}
+    padding: 20px 14px 56px;
 
-/* Theme defaults (overridden inline per character) */
-.dd-wrap {
+    /* theme defaults (override inline per character) */
     --bg: #0b0c12;
     --panel: #0f1117;
     --panel-2: #11131b;
@@ -30,39 +30,39 @@
     --warning: #ffd166;
     --danger: #ff5c7a;
 
-    --r: 20px;
+    --r: 18px;
     --r2: 14px;
-    --line: rgba(122, 162, 255, .35);
-    --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    --line: rgba(122, 162, 255, .32);
+    --shadow: 0 10px 30px rgba(0, 0, 0, .32);
 }
 
 /* ---------------------------------------------------------
-   Banner
+   Banner (slightly smaller)
 --------------------------------------------------------- */
 .dd-banner {
     margin-top: 14px;
     border-radius: var(--r);
     background: var(--panel);
-    border: 1px solid rgba(122, 162, 255, .35);
+    border: 1px solid var(--line);
     box-shadow: var(--shadow);
     overflow: hidden;
 }
 
 .dd-banner__inner {
     display: grid;
-    grid-template-columns: 84px 1fr auto;
-    gap: 16px;
+    grid-template-columns: 76px 1fr auto;
+    gap: 14px;
     align-items: center;
-    padding: 16px;
+    padding: 14px;
 }
 
 .dd-crest {
-    width: 84px;
-    height: 84px;
-    border-radius: 16px;
+    width: 76px;
+    height: 76px;
+    border-radius: 14px;
     overflow: hidden;
     border: 1px solid rgba(122, 162, 255, .45);
-    box-shadow: 0 0 24px rgba(122, 162, 255, .25);
+    box-shadow: 0 0 20px rgba(122, 162, 255, .20);
     background: linear-gradient(180deg, var(--panel-2), var(--panel));
 }
 
@@ -74,7 +74,7 @@
 }
 
 .dd-kicker {
-    font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font: 600 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     letter-spacing: .18em;
     text-transform: uppercase;
     color: var(--muted);
@@ -83,13 +83,13 @@
 .dd-name {
     margin: 4px 0 0;
     font-family: serif;
-    font-size: 38px;
+    font-size: 34px;
     line-height: 1.1;
 }
 
 .dd-subtitle {
     color: var(--muted);
-    font-size: 14px;
+    font-size: 13px;
     margin-top: 2px;
 }
 
@@ -99,30 +99,29 @@
 }
 
 .dd-motifs img {
-    width: 36px;
-    height: 36px;
+    width: 34px;
+    height: 34px;
     border-radius: 10px;
     padding: 6px;
-    border: 1px solid rgba(45, 226, 230, .45);
+    border: 1px solid rgba(45, 226, 230, .40);
     background: linear-gradient(180deg, var(--panel-2), var(--panel));
-    box-shadow: 0 0 24px rgba(45, 226, 230, .20);
+    box-shadow: 0 0 18px rgba(45, 226, 230, .16);
 }
 
 /* ---------------------------------------------------------
-   Body grid
+   Body grid (narrower left column)
 --------------------------------------------------------- */
 .dd-body {
     margin-top: 14px;
     display: grid;
-    grid-template-columns: 360px 1fr;
-    gap: 16px;
+    grid-template-columns: 320px 1fr;
+    gap: 14px;
     align-items: start;
 }
 
 .dd-left {
     position: sticky;
     top: 92px;
-    /* sits under your top nav */
     display: grid;
     gap: 12px;
 }
@@ -139,7 +138,7 @@
 .dd-card,
 .dd-box {
     border-radius: var(--r);
-    border: 1px solid rgba(122, 162, 255, .35);
+    border: 1px solid var(--line);
     background: var(--panel);
     box-shadow: var(--shadow);
     overflow: hidden;
@@ -150,8 +149,8 @@
     align-items: center;
     gap: 10px;
     padding: 10px 12px;
-    background: linear-gradient(180deg, rgba(122, 162, 255, .18), transparent);
-    border-bottom: 1px solid rgba(122, 162, 255, .22);
+    background: linear-gradient(180deg, rgba(122, 162, 255, .16), transparent);
+    border-bottom: 1px solid rgba(122, 162, 255, .18);
 }
 
 .dd-card__headicon {
@@ -160,7 +159,7 @@
     display: grid;
     place-items: center;
     border-radius: 10px;
-    border: 1px solid rgba(45, 226, 230, .35);
+    border: 1px solid rgba(45, 226, 230, .30);
     background: linear-gradient(180deg, var(--panel-2), var(--panel));
 }
 
@@ -176,20 +175,21 @@
     background: var(--panel-2);
 }
 
-/* Doll */
+/* Doll (shorter than MC) */
 .dd-doll {
-    height: 620px;
+    height: 520px;
     display: grid;
     place-items: end center;
-    background: radial-gradient(400px 120px at 50% 90%, rgba(45, 226, 230, .14), transparent 60%),
+    background:
+        radial-gradient(360px 110px at 50% 90%, rgba(45, 226, 230, .12), transparent 60%),
         var(--panel);
 }
 
 .dd-doll img {
-    max-height: 590px;
+    max-height: 500px;
     width: auto;
     display: block;
-    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, .35));
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, .32));
 }
 
 /* Holo */
@@ -205,14 +205,14 @@
 /* Theme widget */
 .dd-theme {
     display: grid;
-    grid-template-columns: 64px 1fr 42px;
+    grid-template-columns: 56px 1fr 40px;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .dd-theme__cover {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid rgba(38, 43, 62, .9);
@@ -228,7 +228,7 @@
 
 .dd-theme__song {
     font-family: serif;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.1;
 }
 
@@ -239,12 +239,12 @@
 }
 
 .dd-theme__play {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     border-radius: 12px;
     display: grid;
     place-items: center;
-    border: 1px solid rgba(45, 226, 230, .55);
+    border: 1px solid rgba(45, 226, 230, .50);
     color: var(--text);
     background: linear-gradient(180deg, var(--panel), var(--panel-2));
     text-decoration: none;
@@ -254,25 +254,13 @@
     filter: brightness(1.07);
 }
 
-.dd-credit {
-    text-align: right;
-    font-size: 10px;
-    color: var(--muted);
-}
-
-.dd-credit a {
-    color: var(--warning);
-    text-decoration: none;
-    font-style: italic;
-}
-
 /* ---------------------------------------------------------
    Tabs (radio-based)
 --------------------------------------------------------- */
 .dd-tabs {
     border-radius: var(--r);
     overflow: hidden;
-    border: 1px solid rgba(122, 162, 255, .35);
+    border: 1px solid var(--line);
     background: var(--panel);
     box-shadow: var(--shadow);
 }
@@ -286,9 +274,8 @@
 .dd-tabbar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    border-bottom: 1px solid rgba(122, 162, 255, .30);
-    background: linear-gradient(180deg, rgba(122, 162, 255, .14), transparent);
+    border-bottom: 1px solid rgba(122, 162, 255, .26);
+    background: linear-gradient(180deg, rgba(122, 162, 255, .12), transparent);
 }
 
 .dd-tabbtn {
@@ -297,20 +284,16 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 12px 10px;
+    padding: 11px 10px;
     font-weight: 800;
     font-size: 13px;
     color: var(--text);
     user-select: none;
-    border-right: 1px solid rgba(122, 162, 255, .18);
+    border-right: 1px solid rgba(122, 162, 255, .16);
 }
 
 .dd-tabbtn:last-child {
     border-right: none;
-}
-
-.dd-tabbtn i {
-    opacity: .9;
 }
 
 .dd-panels {
@@ -318,12 +301,11 @@
     background: var(--panel-2);
 }
 
-/* default: hide all panels */
 .dd-panel {
     display: none;
 }
 
-/* Group 1 mapping */
+/* mappings (same ids as your template) */
 #dd1-a:checked~.dd-tabbar label[for="dd1-a"],
 #dd1-b:checked~.dd-tabbar label[for="dd1-b"],
 #dd1-c:checked~.dd-tabbar label[for="dd1-c"],
@@ -358,7 +340,7 @@
 }
 
 /* ---------------------------------------------------------
-   Layout helpers
+   Layout helpers (slightly tighter)
 --------------------------------------------------------- */
 .dd-grid2 {
     display: grid;
@@ -366,30 +348,23 @@
     gap: 12px;
 }
 
-.dd-grid1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin-top: 12px;
-}
-
 .dd-grid2-uneven {
     display: grid;
-    grid-template-columns: 1.25fr .85fr;
+    grid-template-columns: 1.2fr .85fr;
     gap: 12px;
 }
 
 .dd-box {
     padding: 12px;
     background: var(--panel);
-    border: 1px solid rgba(122, 162, 255, .22);
+    border: 1px solid rgba(122, 162, 255, .18);
     box-shadow: none;
 }
 
 .dd-box h3 {
     margin: 0 0 8px;
     font-family: serif;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .dd-box p {
@@ -405,10 +380,10 @@
 
 .dd-kv {
     display: grid;
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 110px 1fr;
     gap: 10px;
-    padding: 8px 0;
-    border-top: 1px dashed rgba(169, 176, 195, .25);
+    padding: 7px 0;
+    border-top: 1px dashed rgba(169, 176, 195, .22);
 }
 
 .dd-kv:first-of-type {
@@ -417,7 +392,7 @@
 }
 
 .dd-kv span {
-    font: 600 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font: 600 11px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
     letter-spacing: .12em;
     text-transform: uppercase;
     color: var(--muted);
@@ -429,7 +404,7 @@
 
 .dd-splitline {
     height: 1px;
-    background: rgba(169, 176, 195, .18);
+    background: rgba(169, 176, 195, .16);
     margin: 12px 0;
 }
 
@@ -446,14 +421,14 @@
 /* Appearance */
 .dd-appear {
     display: grid;
-    grid-template-columns: 110px 1fr 110px;
+    grid-template-columns: 100px 1fr 100px;
     gap: 12px;
     align-items: stretch;
 }
 
 .dd-palette {
     border-radius: var(--r2);
-    border: 1px dashed rgba(122, 162, 255, .45);
+    border: 1px dashed rgba(122, 162, 255, .42);
     background: var(--panel);
     padding: 10px;
     display: flex;
@@ -463,13 +438,13 @@
 
 .dd-palette span {
     flex: 1;
-    min-height: 30px;
+    min-height: 26px;
     border-radius: 10px;
 }
 
 .dd-mood {
     border-radius: var(--r2);
-    border: 1px dashed rgba(122, 162, 255, .45);
+    border: 1px dashed rgba(122, 162, 255, .42);
     background: var(--panel);
     padding: 10px;
     display: grid;
@@ -480,36 +455,40 @@
 .dd-mood__img {
     border-radius: 12px;
     display: block;
-    min-height: 140px;
-    border: 1px solid rgba(169, 176, 195, .18);
+    min-height: 120px;
+    border: 1px solid rgba(169, 176, 195, .16);
     background-image: var(--img);
     background-size: cover;
     background-position: center;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .06);
 }
 
-/* Reference image */
+/* Reference (shorter for side chars) */
 .dd-ref {
     display: block;
     border-radius: 14px;
-    min-height: 360px;
-    border: 1px solid rgba(169, 176, 195, .18);
+    min-height: 280px;
+    border: 1px solid rgba(169, 176, 195, .16);
     background-image: var(--img);
     background-size: cover;
     background-position: center;
 }
 
+.dd-ref--sc {
+    min-height: 260px;
+}
+
 /* Weapon */
 .dd-weapon {
     display: grid;
-    grid-template-columns: 96px 1fr;
+    grid-template-columns: 88px 1fr;
     gap: 12px;
     align-items: center;
 }
 
 .dd-weapon__img {
-    width: 96px;
-    height: 96px;
+    width: 88px;
+    height: 88px;
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid rgba(38, 43, 62, .9);
@@ -523,23 +502,21 @@
     display: block;
 }
 
-.dd-weapon__txt {
-    display: grid;
-    gap: 8px;
-    color: var(--text);
-}
-
-/* Elements */
+/* Elements (side: fewer, bigger) */
 .dd-elements {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 }
 
+.dd-elements--sc {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .dd-el {
     border-radius: 12px;
-    border: 1px solid rgba(169, 176, 195, .18);
-    background: rgba(0, 0, 0, .15);
+    border: 1px solid rgba(169, 176, 195, .16);
+    background: rgba(0, 0, 0, .14);
     padding: 10px;
     display: grid;
     justify-items: center;
@@ -550,7 +527,7 @@
     width: 44px;
     height: 44px;
     border-radius: 10px;
-    border: 1px solid rgba(122, 162, 255, .25);
+    border: 1px solid rgba(122, 162, 255, .22);
     object-fit: cover;
 }
 
@@ -570,10 +547,6 @@
     align-items: center;
 }
 
-.dd-quote i {
-    opacity: .85;
-}
-
 .dd-quote--accent {
     border-left-color: var(--accent);
     background: rgba(122, 162, 255, .08);
@@ -590,11 +563,15 @@
     color: var(--muted);
 }
 
-/* Stats */
+/* Stats (side: fewer lines, smaller radar) */
 .dd-stats {
     display: grid;
     gap: 8px;
     margin-top: 8px;
+}
+
+.dd-stats--sc .dd-stat {
+    font-size: 11px;
 }
 
 .dd-stat {
@@ -603,7 +580,7 @@
     gap: 10px;
     padding: 8px 10px;
     border-radius: 12px;
-    border: 1px solid rgba(169, 176, 195, .18);
+    border: 1px solid rgba(169, 176, 195, .16);
     background: rgba(0, 0, 0, .14);
     font: 12px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
@@ -619,42 +596,46 @@
 .dd-radar {
     margin-top: 12px;
     border-radius: 14px;
-    border: 1px solid rgba(169, 176, 195, .18);
+    border: 1px solid rgba(169, 176, 195, .16);
     background: rgba(0, 0, 0, .14);
     display: grid;
     place-items: center;
     padding: 10px;
 }
 
-.dd-radar svg {
-    width: 220px;
-    height: 220px;
+.dd-radar--sc svg {
+    width: 200px;
+    height: 200px;
     display: block;
 }
 
-/* Relationships */
+/* Relationships (side: single column by default) */
 .dd-relgrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
 }
 
+.dd-relgrid--sc {
+    grid-template-columns: 1fr;
+}
+
 .dd-rel {
     border-radius: var(--r2);
-    border: 1px solid rgba(169, 176, 195, .18);
+    border: 1px solid rgba(169, 176, 195, .16);
     background: rgba(0, 0, 0, .14);
     padding: 12px;
     display: grid;
-    grid-template-columns: 72px 1fr;
+    grid-template-columns: 68px 1fr;
     gap: 12px;
 }
 
 .dd-rel__img {
-    width: 72px;
-    height: 72px;
+    width: 68px;
+    height: 68px;
     border-radius: 14px;
     object-fit: cover;
-    border: 1px solid rgba(122, 162, 255, .25);
+    border: 1px solid rgba(122, 162, 255, .22);
 }
 
 .dd-rel__name {
@@ -683,7 +664,7 @@
     color: var(--text);
 }
 
-/* Strengths/Weaknesses list */
+/* Strengths/Weaknesses */
 .dd-sw {
     list-style: none;
     margin: 0;
@@ -692,13 +673,17 @@
     gap: 4px;
 }
 
+.dd-sw--sc {
+    gap: 5px;
+}
+
 .dd-sw__mid {
     text-align: center;
     color: var(--muted);
     padding: 6px 0;
 }
 
-/* Favorites grid */
+/* Favorites grid (side: 2–3 columns) */
 .dd-favgrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -706,9 +691,13 @@
     margin-top: 10px;
 }
 
+.dd-favgrid--sc {
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .dd-fav {
     border-radius: 12px;
-    border: 1px solid rgba(169, 176, 195, .18);
+    border: 1px solid rgba(169, 176, 195, .16);
     background: rgba(0, 0, 0, .14);
     padding: 12px 10px;
     display: grid;
@@ -730,40 +719,152 @@
     font-size: 12px;
 }
 
-/* Inventory (simple list) */
-.dd-invlist {
-    display: grid;
-    gap: 10px;
+/* ---------------------------------------------------------
+   Inventory — 4 hover tiles (no JS)
+--------------------------------------------------------- */
+.dd-inv4 {
     margin-top: 10px;
-}
-
-.dd-inv {
-    border-radius: 14px;
-    border: 1px solid rgba(169, 176, 195, .18);
-    background: rgba(0, 0, 0, .14);
-    padding: 10px;
     display: grid;
-    grid-template-columns: 96px 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
-    align-items: center;
+
+    /* center the whole block */
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.dd-inv img {
-    width: 96px;
-    height: 96px;
-    border-radius: 12px;
-    object-fit: cover;
-    border: 1px solid rgba(122, 162, 255, .25);
+.dd-invTile {
+    position: relative;
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(122, 162, 255, .32);
+    background: rgba(17, 19, 27, .85);
+    height: 275px;
+    aspect-ratio: 1 / 1;
+    text-decoration: none;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, .22);
 }
 
-.dd-inv h4 {
-    margin: 0 0 6px;
-    font-family: serif;
+.dd-invTile::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--img);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transition: transform .22s ease, filter .22s ease;
 }
 
-.dd-inv p {
-    margin: 0;
+.dd-invTile::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(120% 120% at 30% 20%, rgba(122, 162, 255, .16), transparent 55%),
+        linear-gradient(to top, rgba(11, 12, 18, .88), rgba(11, 12, 18, 0) 60%);
+    opacity: .92;
+    transition: opacity .22s ease;
+}
+
+.dd-invTile__meta {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px 10px;
+    border-radius: 14px;
+    background: rgba(15, 17, 23, .78);
+    border: 1px solid rgba(122, 162, 255, .22);
+    backdrop-filter: blur(8px);
+    transform: translateY(8px);
+    opacity: 0;
+    transition: opacity .18s ease, transform .18s ease;
     color: var(--text);
+}
+
+.dd-invTile__meta b {
+    display: block;
+    font-size: .95rem;
+    line-height: 1.1;
+}
+
+.dd-invTile__meta em {
+    display: block;
+    margin-top: 4px;
+    font-style: normal;
+    color: var(--muted);
+    font-size: .85rem;
+    line-height: 1.2;
+}
+
+.dd-invTile:hover::before,
+.dd-invTile:focus-visible::before {
+    transform: scale(1.04);
+    filter: saturate(1.15) contrast(1.05);
+}
+
+.dd-invTile:hover .dd-invTile__meta,
+.dd-invTile:focus-visible .dd-invTile__meta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------------------------------------------------------
+   Side Profile — Action Buttons
+--------------------------------------------------------- */
+.dd-actions {
+    display: grid;
+    gap: 8px;
+    padding: 10px;
+    background: var(--panel);
+    border: 1px solid rgba(122, 162, 255, .28);
+    box-shadow: var(--shadow);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.dd-action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 13px;
+
+    border: 1px solid rgba(122, 162, 255, .22);
+    background: linear-gradient(180deg,
+            rgba(122, 162, 255, .14),
+            rgba(15, 17, 23, .85));
+
+    transition: transform .15s ease,
+        background .15s ease,
+        border-color .15s ease;
+}
+
+.dd-action i {
+    opacity: .85;
+    width: 16px;
+    text-align: center;
+}
+
+.dd-action:hover {
+    transform: translateY(-1px);
+    border-color: rgba(122, 162, 255, .45);
+    background: linear-gradient(180deg,
+            rgba(122, 162, 255, .22),
+            rgba(15, 17, 23, .9));
+}
+
+.dd-action:active {
+    transform: translateY(0);
 }
 
 /* ---------------------------------------------------------
@@ -779,7 +880,7 @@
     }
 
     .dd-banner__inner {
-        grid-template-columns: 84px 1fr;
+        grid-template-columns: 76px 1fr;
     }
 
     .dd-motifs {
@@ -790,20 +891,14 @@
         grid-template-columns: 1fr;
     }
 
-    .dd-elements {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .dd-grid2,
     .dd-grid2-uneven {
         grid-template-columns: 1fr;
     }
+}
 
-    .dd-relgrid {
+@media (max-width: 520px) {
+    .dd-inv4 {
         grid-template-columns: 1fr;
-    }
-
-    .dd-favgrid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }

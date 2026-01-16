@@ -1,21 +1,22 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Meltdown — Side Character Name</title>
+  <title>Meltdown — Character Name</title>
 
-  <!-- Font Awesome FREE (keep using free icons only) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- SC CSS (separate from MC.css) -->
-  <link rel="stylesheet" href="../../-CSS/SC.css" />
+  <!-- Divine Dossier CSS (standalone for this profile) -->
+  <link rel="stylesheet" href="../../-CSS/MC.css" />
   <link rel="stylesheet" href="../../../../../CSS/meltdown.css" />
 </head>
 
 <body class="dd-page">
 
-  <!-- TOP NAV BAR (unchanged) -->
+  <!-- TOP NAV BAR (your current site nav) -->
   <header class="top-nav">
     <div class="nav-inner">
       <div class="brand">
@@ -36,6 +37,7 @@
     </div>
   </header>
 
+  <!-- DOSSIER WRAP -->
   <main class="dd-wrap" style="
       --bg:#0b0c12;
       --panel:#0f1117;
@@ -49,9 +51,10 @@
       --danger:#ff5c7a;
     ">
 
-    <!-- Banner (compact) -->
+    <!-- Banner -->
     <section class="dd-banner">
       <div class="dd-banner__inner">
+
         <div class="dd-crest">
           <img src="https://example.com/icon-crest.svg" alt="Crest icon">
         </div>
@@ -59,33 +62,35 @@
         <div class="dd-banner__title">
           <div class="dd-kicker">NewAge Athalmial Database</div>
           <h1 class="dd-name">First Last Name</h1>
-          <div class="dd-subtitle">Title / Role</div>
+          <div class="dd-subtitle">Title</div>
         </div>
 
         <div class="dd-motifs">
           <img src="https://example.com/motif-constellation.svg" alt="Motif">
           <img src="https://example.com/motif-constellation.svg" alt="Motif">
+          <img src="https://example.com/motif-constellation.svg" alt="Motif">
         </div>
+
       </div>
     </section>
 
     <!-- Body grid -->
     <section class="dd-body">
 
-      <!-- LEFT SIDEBAR (smaller) -->
+      <!-- LEFT SIDEBAR -->
       <aside class="dd-left">
 
-        <!-- Doll (shorter) -->
+        <!-- Doll -->
         <div class="dd-card dd-doll">
           <img src="https://example.com/doll.png" alt="Full body doll">
         </div>
 
         <!-- Holoprojector -->
         <div class="dd-holo">
-            <img src="../../../../-assets/projector.png" alt="Holoprojector">
+          <img src="../../../../-assets/projector.png" alt="Holoprojector">
         </div>
 
-        <!-- Theme widget (still here, but optional) -->
+        <!-- Theme widget -->
         <div class="dd-card">
           <div class="dd-card__head">
             <span class="dd-card__headicon"><i class="fa-solid fa-music"></i></span>
@@ -109,23 +114,6 @@
             </div>
           </div>
         </div>
-        <!-- Side profile quick actions -->
-        <div class="dd-card dd-actions">
-            <a class="dd-action" href="../Wednas.html">
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>Back</span>
-            </a>
-        
-            <a class="dd-action" href="../../../MD.html">
-                <i class="fa-solid fa-box-archive"></i>
-                <span>Vault</span>
-            </a>
-        
-            <a class="dd-action" href="Extras/Una.html">
-                <i class="fa-solid fa-ellipsis"></i>
-                <span>Extras</span>
-            </a>
-        </div>
 
       </aside>
 
@@ -135,19 +123,25 @@
         <!-- TAB GROUP 1 -->
         <section class="dd-tabs">
 
+          <!-- radios -->
           <input class="dd-tabradio" type="radio" name="ddtabs1" id="dd1-a" checked>
           <input class="dd-tabradio" type="radio" name="ddtabs1" id="dd1-b">
           <input class="dd-tabradio" type="radio" name="ddtabs1" id="dd1-c">
 
+          <!-- tab buttons -->
           <div class="dd-tabbar">
-            <label class="dd-tabbtn" for="dd1-a"><i class="fa-solid fa-desktop"></i><span>Basic</span></label>
-            <label class="dd-tabbtn" for="dd1-b"><i class="fa-solid fa-shirt"></i><span>Appearance</span></label>
-            <label class="dd-tabbtn" for="dd1-c"><i class="fa-solid fa-file-lines"></i><span>Data</span></label>
+            <label class="dd-tabbtn" for="dd1-a"><i class="fa-solid fa-desktop"></i><span>Basic
+                Information</span></label>
+            <label class="dd-tabbtn" for="dd1-b"><i class="fa-solid fa-shirt"></i><span>Physical
+                Assessment</span></label>
+            <label class="dd-tabbtn" for="dd1-c"><i class="fa-solid fa-file-lines"></i><span>Personal
+                Data</span></label>
           </div>
 
+          <!-- panels -->
           <div class="dd-panels">
 
-            <!-- A: Soul/Body (same fields, tighter) -->
+            <!-- A -->
             <div class="dd-panel dd-panel-a">
               <div class="dd-grid2">
                 <div class="dd-box">
@@ -162,15 +156,16 @@
                   <h3>Body</h3>
                   <div class="dd-kv"><span>Gender</span><b>G</b></div>
                   <div class="dd-kv"><span>Race</span><b>R</b></div>
-                  <div class="dd-kv"><span>Height</span><b>0'0 / 000 cm</b></div>
-                  <div class="dd-kv"><span>Weight</span><b>000 / 000 kg</b></div>
+                  <div class="dd-kv"><span>Height</span><b>"0'0"ft / 000 cm</b></div>
+                  <div class="dd-kv"><span>Weight</span><b>000 lbs / 000 kg</b></div>
                 </div>
               </div>
             </div>
 
-            <!-- B: Appearance (keep palette + 4 mood, fewer notes) -->
+            <!-- B -->
             <div class="dd-panel dd-panel-b">
               <div class="dd-appear">
+
                 <div class="dd-palette">
                   <span style="background:var(--accent)"></span>
                   <span style="background:var(--accent-2)"></span>
@@ -195,9 +190,10 @@
                   <span style="background:#eaeef8"></span>
                   <span style="background:#a9b0c3"></span>
                 </div>
+
               </div>
 
-              <div class="dd-grid2">
+              <div class="dd-grid1">
                 <div class="dd-box">
                   <h3>Design Notes</h3>
                   <ul class="dd-list">
@@ -211,14 +207,14 @@
 
                 <div class="dd-box">
                   <h3>Visual Reference</h3>
-                    <a class="dd-ref" href="https://example.com/reference-image.png" target="_blank"
-                        style="--img:url('https://example.com/reference-image.png')"></a>
-                    <div class="dd-help">Click to view larger in a new tab.</div>
+                  <a class="dd-ref" href="https://example.com/reference-image.png" target="_blank"
+                    style="--img:url('https://example.com/reference-image.png')"></a>
+                  <div class="dd-help">Click to view larger in a new tab.</div>
                 </div>
               </div>
             </div>
 
-            <!-- C: Data (same fields, compact stats list) -->
+            <!-- C -->
             <div class="dd-panel dd-panel-c">
               <div class="dd-grid2-uneven">
 
@@ -245,22 +241,31 @@
                   <div class="dd-splitline"></div>
 
                   <h3>Elements</h3>
-                  <div class="dd-elements dd-elements--sc">
-                    <div class="dd-el"><img src="https://example.com/element-1.png" alt="1"><b>One</b></div>
-                    <div class="dd-el"><img src="https://example.com/element-2.png" alt="2"><b>Two</b></div>
-                    <div class="dd-el"><img src="https://example.com/element-3.png" alt="3"><b>Three</b></div>
-                    <div class="dd-el"><img src="https://example.com/element-4.png" alt="4"><b>Four</b></div>
+                  <div class="dd-elements">
+                    <div class="dd-el">
+                      <img src="https://example.com/element-1.png" alt="1"><b>Starlight</b>
+                    </div>
+                    <div class="dd-el">
+                      <img src="https://example.com/element-2.png" alt="2"><b>Silence</b>
+                    </div>
+                    <div class="dd-el">
+                      <img src="https://example.com/element-3.png" alt="3"><b>Gravity</b>
+                    </div>
+                    <div class="dd-el">
+                      <img src="https://example.com/element-4.png" alt="4"><b>Judgment</b>
+                    </div>
                   </div>
 
-                  <div class="dd-quote dd-quote--accent">
+                  <div class="dd-quote">
                     <i class="fa-solid fa-quote-left"></i>
-                    <span>Battle quote.</span>
+                    <span>Lorem Ipsum.</span>
                   </div>
                 </div>
 
                 <div class="dd-box">
                   <h3>Statistics</h3>
-                  <div class="dd-stats dd-stats--sc">
+
+                  <div class="dd-stats">
                     <div class="dd-stat"><span>Power</span><b>7</b></div>
                     <div class="dd-stat"><span>Defense</span><b>7</b></div>
                     <div class="dd-stat"><span>Agility</span><b>6</b></div>
@@ -270,8 +275,8 @@
                     <div class="dd-stat"><span>Speed</span><b>7</b></div>
                   </div>
 
-                  <div class="dd-radar dd-radar--sc">
-                    <!-- Optional: keep radar if you want; otherwise delete this block -->
+                  <div class="dd-radar">
+                    <!-- keep your SVG exactly, just let CSS size it -->
                     <svg viewBox="-110 -110 220 220" aria-label="Radar chart" role="img">
                       <defs>
                         <linearGradient id="ddGrad" x1="0" y1="0" x2="1" y2="1">
@@ -285,8 +290,8 @@
                         <circle r="55.5" />
                         <circle r="33.3" />
                       </g>
-                      <polygon fill="url(#ddGrad)" fill-opacity=".30" stroke="url(#ddGrad)" stroke-width="2"
-                        points="0,-70,50,-50,60,0,50,50,0,70,-50,50,-60,0,-50,-50" />
+                      <polygon fill="url(#ddGrad)" fill-opacity=".35" stroke="url(#ddGrad)" stroke-width="2"
+                        points="0,-77,54.9,-54.9,66,0,62.9,62.9,0,88.8,-62.9,62.9,-77,0,-62.9,-62.9" />
                     </svg>
                   </div>
 
@@ -306,24 +311,25 @@
           <input class="dd-tabradio" type="radio" name="ddtabs2" id="dd2-f">
 
           <div class="dd-tabbar">
-            <label class="dd-tabbtn" for="dd2-d"><i class="fa-solid fa-masks-theater"></i><span>Persona</span></label>
-            <label class="dd-tabbtn" for="dd2-e"><i class="fa-solid fa-heart"></i><span>Relations</span></label>
-            <label class="dd-tabbtn" for="dd2-f"><i class="fa-solid fa-palette"></i><span>Prefs</span></label>
+            <label class="dd-tabbtn" for="dd2-d"><i
+                class="fa-solid fa-masks-theater"></i><span>Psychology</span></label>
+            <label class="dd-tabbtn" for="dd2-e"><i class="fa-solid fa-heart"></i><span>Relationships</span></label>
+            <label class="dd-tabbtn" for="dd2-f"><i class="fa-solid fa-palette"></i><span>Preferences</span></label>
           </div>
 
           <div class="dd-panels">
 
-            <!-- D: Persona (short) -->
+            <!-- D -->
             <div class="dd-panel dd-panel-d">
               <div class="dd-quote dd-quote--accent">
                 <i class="fa-solid fa-quote-left"></i>
-                <span>"Personal quote."</span>
+                <span>"Lorem Ipsum."</span>
               </div>
 
-              <div class="dd-grid2">
+              <div class="dd-grid2-uneven">
                 <div class="dd-box">
                   <h3>Personality</h3>
-                  <p>...</p>
+                  <p>Lorem Ipsum</p>
                 </div>
 
                 <div class="dd-box">
@@ -352,35 +358,36 @@
               </div>
             </div>
 
-            <!-- E: Relationships (fewer cards) -->
+            <!-- E -->
             <div class="dd-panel dd-panel-e">
               <div class="dd-quote dd-quote--cyan">
                 <i class="fa-solid fa-quote-left"></i>
-                <span>“Relationship quote.”</span>
+                <span>“Lorem Ipsem”</span>
                 <span class="dd-quote__by">— Name</span>
               </div>
 
-              <div class="dd-relgrid dd-relgrid--sc">
+              <div class="dd-relgrid">
+                <!-- relationship card -->
                 <article class="dd-rel">
                   <img class="dd-rel__img" src="https://example.com/char1.png" alt="Character">
                   <div class="dd-rel__txt">
                     <a class="dd-rel__name" href="https://example.com/char1" target="_blank">Name</a>
                     <div class="dd-rel__role">Relation</div>
                     <div class="dd-hearts" aria-label="Relationship rating">
-                      <i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i>
-                      <i class="fa-regular fa-heart"></i><i class="fa-regular fa-heart"></i><i class="fa-regular fa-heart"></i>
+                      <i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i
+                        class="fa-solid fa-heart"></i>
+                      <i class="fa-regular fa-heart"></i><i class="fa-regular fa-heart"></i>
                     </div>
                     <p>Description</p>
                   </div>
                 </article>
 
-                <!-- add up to ~4 for side characters -->
+                <!-- duplicate as needed -->
               </div>
             </div>
 
-            <!-- F: Preferences (inventory = 4 hover tiles) -->
+            <!-- F -->
             <div class="dd-panel dd-panel-f">
-
               <div class="dd-grid2">
                 <div class="dd-box">
                   <h3>Likes</h3>
@@ -406,51 +413,58 @@
 
               <div class="dd-box">
                 <h3>Favorites & Hobbies</h3>
-                <div class="dd-favgrid dd-favgrid--sc">
-                  <div class="dd-fav"><i class="fa-solid fa-palette"></i><b>Hobby</b></div>
-                  <div class="dd-fav"><i class="fa-solid fa-bowl-food"></i><b>Food</b><span>F</span></div>
-                  <div class="dd-fav"><i class="fa-solid fa-martini-glass-citrus"></i><b>Drink</b><span>D</span></div>
-                  <div class="dd-fav"><i class="fa-solid fa-shirt"></i><b>Style</b><span>ST</span></div>
+                <div class="dd-favgrid">
+                  <div class="dd-fav"><i class="fa-solid fa-palette"></i><b>Hobby 1</b></div>
+                  <div class="dd-fav"><i class="fa-solid fa-baseball"></i></i><b>Hobby 2</b></div>
+                  <div class="dd-fav"><i class="fa-solid fa-plant-wilt"></i><b>Hobby 3</b></div>
+                  <div class="dd-fav"><i class="fa-solid fa-bowl-food"></i><b>Food</b><span>F</span>
+                  </div>
+                  <div class="dd-fav"><i class="fa-solid fa-martini-glass-citrus"></i><b>Drink</b><span>D</span>
+                  </div>
                   <div class="dd-fav"><i class="fa-solid fa-spray-can-sparkles"></i><b>Scent</b><span>S</span></div>
+                  <div class="dd-fav"><i class="fa-solid fa-shirt"></i><b>Style</b><span>ST</span>
+                  </div>
                   <div class="dd-fav"><i class="fa-solid fa-palette"></i><b>Color</b><span>C</span>
+                  </div>
+                  <div class="dd-fav"><i class="fa-solid fa-moon"></i><b>Place</b><span>P</span></div>
                 </div>
               </div>
 
+              <!-- Inventory section (carousel) -->
               <div class="dd-box">
                 <h3>Inventory</h3>
-
-                <div class="dd-inv4" aria-label="Inventory (4 items)">
-                  <a class="dd-invTile" href="#" style="--img:url('https://example.com/item1.png')">
-                    <span class="dd-invTile__meta">
-                      <b>Object Name</b>
-                      <em>Short tagline</em>
-                    </span>
-                  </a>
-
-                  <a class="dd-invTile" href="#" style="--img:url('https://example.com/item2.png')">
-                    <span class="dd-invTile__meta">
-                      <b>Object Name</b>
-                      <em>Short tagline</em>
-                    </span>
-                  </a>
-
-                  <a class="dd-invTile" href="#" style="--img:url('https://example.com/item3.png')">
-                    <span class="dd-invTile__meta">
-                      <b>Object Name</b>
-                      <em>Short tagline</em>
-                    </span>
-                  </a>
-
-                  <a class="dd-invTile" href="#" style="--img:url('https://example.com/item4.png')">
-                    <span class="dd-invTile__meta">
-                      <b>Object Name</b>
-                      <em>Short tagline</em>
-                    </span>
-                  </a>
+              
+                <div class="dd-carousel">
+                  <button class="dd-car-btn prev" aria-label="Previous">&#10094;</button>
+              
+                  <div class="dd-car-viewport">
+                    <div class="dd-car-track">
+                      <!-- ITEM -->
+                      <div class="dd-inv">
+                        <img src="https://example.com/item1.png" alt="Item">
+                        <div>
+                          <h4>Object</h4>
+                          <p><strong>Rarity:</strong> Rank<br>Description.</p>
+                        </div>
+                      </div>
+              
+                      <div class="dd-inv">
+                        <img src="https://example.com/item2.png" alt="Item">
+                        <div>
+                          <h4>Relic</h4>
+                          <p><strong>Rarity:</strong> High<br>Description.</p>
+                        </div>
+                      </div>
+              
+                      <!-- add more items freely -->
+                    </div>
+                  </div>
+              
+                  <button class="dd-car-btn next" aria-label="Next">&#10095;</button>
                 </div>
               </div>
-
             </div>
+
           </div>
         </section>
 
@@ -458,5 +472,32 @@
     </section>
   </main>
 
+  <script>
+    document.querySelectorAll(".dd-carousel").forEach(carousel => {
+      const track = carousel.querySelector(".dd-car-track");
+      const items = carousel.querySelectorAll(".dd-inv");
+      const prev = carousel.querySelector(".prev");
+      const next = carousel.querySelector(".next");
+
+      let index = 0;
+
+      function update() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      next.onclick = () => {
+        index = (index + 1) % items.length;
+        update();
+      };
+
+      prev.onclick = () => {
+        index = (index - 1 + items.length) % items.length;
+        update();
+      };
+    });
+  </script>
+  
+
 </body>
+
 </html>

@@ -242,23 +242,15 @@
 
                   <h3>Elements</h3>
                   <div class="dd-elements">
-                    <div class="dd-el">
-                      <img src="https://example.com/element-1.png" alt="1"><b>Starlight</b>
-                    </div>
-                    <div class="dd-el">
-                      <img src="https://example.com/element-2.png" alt="2"><b>Silence</b>
-                    </div>
-                    <div class="dd-el">
-                      <img src="https://example.com/element-3.png" alt="3"><b>Gravity</b>
-                    </div>
-                    <div class="dd-el">
-                      <img src="https://example.com/element-4.png" alt="4"><b>Judgment</b>
-                    </div>
+                    <div class="dd-el"><img src="https://example.com/element-1.png" alt="1"><b>One</b></div>
+                    <div class="dd-el"><img src="https://example.com/element-2.png" alt="2"><b>Two</b></div>
+                    <div class="dd-el"><img src="https://example.com/element-3.png" alt="3"><b>Three</b></div>
+                    <div class="dd-el"><img src="https://example.com/element-4.png" alt="4"><b>Four</b></div>
                   </div>
 
                   <div class="dd-quote">
                     <i class="fa-solid fa-quote-left"></i>
-                    <span>Lorem Ipsum.</span>
+                    <span>Battle quote.</span>
                   </div>
                 </div>
 
@@ -415,13 +407,13 @@
                 <h3>Favorites & Hobbies</h3>
                 <div class="dd-favgrid">
                   <div class="dd-fav"><i class="fa-solid fa-palette"></i><b>Hobby 1</b></div>
-                  <div class="dd-fav"><i class="fa-solid fa-shirt"></i><b>Hobby 2</b></div>
-                  <div class="dd-fav"><i class="fa-solid fa-bowl-food"></i><b>Hobby 3</b></div>
+                  <div class="dd-fav"><i class="fa-solid fa-baseball"></i></i><b>Hobby 2</b></div>
+                  <div class="dd-fav"><i class="fa-solid fa-plant-wilt"></i><b>Hobby 3</b></div>
                   <div class="dd-fav"><i class="fa-solid fa-bowl-food"></i><b>Food</b><span>F</span>
                   </div>
                   <div class="dd-fav"><i class="fa-solid fa-martini-glass-citrus"></i><b>Drink</b><span>D</span>
                   </div>
-                  <div class="dd-fav"><i class="fa-solid fa-candle-holder"></i><b>Scent</b><span>S</span></div>
+                  <div class="dd-fav"><i class="fa-solid fa-spray-can-sparkles"></i><b>Scent</b><span>S</span></div>
                   <div class="dd-fav"><i class="fa-solid fa-shirt"></i><b>Style</b><span>ST</span>
                   </div>
                   <div class="dd-fav"><i class="fa-solid fa-palette"></i><b>Color</b><span>C</span>
@@ -430,18 +422,37 @@
                 </div>
               </div>
 
-              <!-- Inventory section (simple, no bootstrap carousel) -->
+              <!-- Inventory section (carousel) -->
               <div class="dd-box">
                 <h3>Inventory</h3>
-                <div class="dd-invlist">
-                  <div class="dd-inv">
-                    <img src="https://example.com/item1.png" alt="Item">
-                    <div>
-                      <h4>Object</h4>
-                      <p><strong>Rarity:</strong> Rank<br>Description.</p>
+              
+                <div class="dd-carousel">
+                  <button class="dd-car-btn prev" aria-label="Previous">&#10094;</button>
+              
+                  <div class="dd-car-viewport">
+                    <div class="dd-car-track">
+                      <!-- ITEM -->
+                      <div class="dd-inv">
+                        <img src="https://example.com/item1.png" alt="Item">
+                        <div>
+                          <h4>Object</h4>
+                          <p><strong>Rarity:</strong> Rank<br>Description.</p>
+                        </div>
+                      </div>
+              
+                      <div class="dd-inv">
+                        <img src="https://example.com/item2.png" alt="Item">
+                        <div>
+                          <h4>Relic</h4>
+                          <p><strong>Rarity:</strong> High<br>Description.</p>
+                        </div>
+                      </div>
+              
+                      <!-- add more items freely -->
                     </div>
                   </div>
-                  <!-- duplicate items as needed -->
+              
+                  <button class="dd-car-btn next" aria-label="Next">&#10095;</button>
                 </div>
               </div>
             </div>
@@ -452,6 +463,32 @@
       </div>
     </section>
   </main>
+
+  <script>
+    document.querySelectorAll(".dd-carousel").forEach(carousel => {
+      const track = carousel.querySelector(".dd-car-track");
+      const items = carousel.querySelectorAll(".dd-inv");
+      const prev = carousel.querySelector(".prev");
+      const next = carousel.querySelector(".next");
+
+      let index = 0;
+
+      function update() {
+        track.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      next.onclick = () => {
+        index = (index + 1) % items.length;
+        update();
+      };
+
+      prev.onclick = () => {
+        index = (index - 1 + items.length) % items.length;
+        update();
+      };
+    });
+  </script>
+  
 
 </body>
 
