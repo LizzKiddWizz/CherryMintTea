@@ -13,12 +13,18 @@ To Do:
     [] Add images
 [-] Finish Friend Profiles
     [] Get info and assets from friends
+        [] Abyss
+        [-] Aso
+        [] Bell
+        [X] Jaed
+        [-] Sera
+        [] Stein
 [X] Finish FAQ
 [] Create MD profile templates
     [X] Main Characters
-    [] Side Characters
-    [] Background Characters
-        [] Athalmus
+    [X] Side Characters
+    [-] Background Characters
+        [X] Athalmus
         [] Ascension
             [] Ascencia
                 [] Non-Combat

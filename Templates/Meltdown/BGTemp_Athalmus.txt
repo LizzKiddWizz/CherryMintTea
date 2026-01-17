@@ -114,14 +114,14 @@
 
                 <!-- Buttons -->
                 <div class="dd-card dd-actions">
-                    <a class="dd-action" href="../Lunar.html">
+                    <a class="dd-action" href="../index.html">
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>Back</span>
                     </a>
 
                     <a class="dd-action" href="../../--Landing/Landing.html">
                         <i class="fa-solid fa-box-archive"></i>
-                        <span>Compendium</span>        
+                        <span>Compendium</span>
                     </a>
 
                     <a class="dd-action" href="#extras">
@@ -131,10 +131,10 @@
                 </div>
 
                 <!-- Owner card -->
-                <a class="dd-owner" href="../../../../../Affiliations/Friends/Jaed.html">
+                <!-- <a class="dd-owner" href="../../../../../Affiliations/Friends/Jaed.html">
                     <img class="dd-owner__img" src="../../../../../Affiliations/Friends/assets/Jaed/JaedPFP.png" alt="finestJaed" loading="lazy">
                     <span class="dd-owner__txt">this character is owned by <b>finestJaed</b></span>
-                </a>
+                </a> -->
 
             </aside>
 
