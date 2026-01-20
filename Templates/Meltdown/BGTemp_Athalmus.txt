@@ -114,14 +114,14 @@
 
                 <!-- Buttons -->
                 <div class="dd-card dd-actions">
-                    <a class="dd-action" href="../index.html">
+                    <a class="dd-action" href="../Lunar.html">
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>Back</span>
                     </a>
 
                     <a class="dd-action" href="../../--Landing/Landing.html">
                         <i class="fa-solid fa-box-archive"></i>
-                        <span>Compendium</span>
+                        <span>Hub</span>        
                     </a>
 
                     <a class="dd-action" href="#extras">
@@ -131,10 +131,10 @@
                 </div>
 
                 <!-- Owner card -->
-                <!-- <a class="dd-owner" href="../../../../../Affiliations/Friends/Jaed.html">
-                    <img class="dd-owner__img" src="../../../../../Affiliations/Friends/assets/Jaed/JaedPFP.png" alt="finestJaed" loading="lazy">
-                    <span class="dd-owner__txt">this character is owned by <b>finestJaed</b></span>
-                </a> -->
+                <a class="dd-owner" href="../../../../../Affiliations/Friends/">
+                    <img class="dd-owner__img" src="../../../../../Affiliations/Friends/assets/" alt="friend" loading="lazy">
+                    <span class="dd-owner__txt">this character is owned by <b>name</b></span>
+                </a>
 
             </aside>
 
@@ -399,12 +399,6 @@
                                     <div class="dd-fav"><i class="fa-solid fa-spray-can-sparkles"></i><b>Scent</b><span>S</span></div>
                                     <div class="dd-fav"><i class="fa-solid fa-palette"></i><b>Color</b><span>C</span>
                                 </div>
-                            </div>
-
-                            <!-- Extras anchor target (optional) -->
-                            <div id="extras" class="dd-box">
-                                <h3>Extras</h3>
-                                <p>Optional notes, links, or trivia.</p>
                             </div>
 
                         </div>

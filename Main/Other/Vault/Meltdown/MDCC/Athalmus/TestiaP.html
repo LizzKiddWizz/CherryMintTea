@@ -1,465 +1,422 @@
-<!doctype html>
-<html lang="en">
+<link rel="stylesheet" href="Test.css" />
+<!-- TOP NAV BAR (Snippet D) -->
+<header class="top-nav">
+    <div class="nav-inner">
+        <div class="brand">
+            <span class="logo"></span>
+            <div class="brand-text">
+                <h1>CherryMintTea</h1>
+                <p>Connection • Compassion • Continuity</p>
+            </div>
+        </div>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Meltdown — Character Name</title>
+        <nav class="nav-links">
+            <a href="../../../../../../Home.html">Home</a>
+            <a href="../../../../../Vault/page1.html">Vault</a>
+            <a href="../../../../../Projects/index.html">Projects</a>
+            <a href="../../../../../Affiliations/page1.html">Affiliations</a>
+            <a href="../../../../../FAQ/FAQ.html">FAQ</a>
+        </nav>
+    </div>
+</header>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<!-- Character Profile Container -->
+<section class="dd-profile dd-profile--asc" id="character-profile">
+    <!-- Header band: icon + banner + record bubble -->
+    <div class="dd-head">
+        <!-- LEFT: icon + bio fields + buttons + optional owner card -->
+        <aside class="dd-side">
+            <div class="dd-iconwrap">
+                <img class="dd-icon" src="https://placehold.co/160x160" alt="Character icon" loading="lazy" />
+                <span class="dd-iconring" aria-hidden="true"></span>
+            </div>
 
-    <!-- Divine Dossier CSS (standalone for this profile) -->
-    <link rel="stylesheet" href="../-CSS/MC.css" />
-    <link rel="stylesheet" href="../../../../CSS/meltdown.css" />
-</head>
+            <div class="dd-bio">
+                <div class="dd-field"><span>Full name</span><b>Firstname Lastname</b></div>
+                <div class="dd-field"><span>Nickname</span><b>Nickname</b></div>
+                <div class="dd-field"><span>Age</span><b>??</b></div>
+                <div class="dd-field"><span>Birthday</span><b>Month Day</b></div>
+            </div>
 
-<body class="dd-page">
+            <!-- Buttons (Snippet E) -->
+            <div class="dd-card dd-actions">
+                <a class="dd-action" href="../Lunar.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back</span>
+                </a>
 
-    <!-- TOP NAV BAR (your current site nav) -->
-    <header class="top-nav">
-        <div class="nav-inner">
-            <div class="brand">
-                <span class="logo"></span>
-                <div class="brand-text">
-                    <h1>CherryMintTea</h1>
-                    <p>Connection • Compassion • Continuity</p>
+                <a class="dd-action" href="../../--Landing/Landing.html">
+                    <i class="fa-solid fa-box-archive"></i>
+                    <span>Hub</span>
+                </a>
+
+                <a class="dd-action" href="#extras">
+                    <i class="fa-solid fa-ellipsis"></i>
+                    <span>Extras</span>
+                </a>
+            </div>
+
+            <!-- Optional Owner card (Snippet F) -->
+            <!--
+      <a class="dd-owner" href="../../../../../Affiliations/Friends/Jaed.html">
+        <img class="dd-owner__img" src="../../../../../Affiliations/Friends/assets/Jaed/JaedPFP.png" alt="finestJaed" loading="lazy">
+        <span class="dd-owner__txt">this character is owned by <b>finestJaed</b></span>
+      </a>
+      -->
+        </aside>
+
+        <!-- RIGHT: banner + record bubble -->
+        <div class="dd-titlewrap">
+            <div class="dd-titlebar">
+                <h2 class="dd-firstname">Firstname</h2>
+
+                <!-- Record / speech bubble -->
+                <div class="dd-song" title="Click to open/play">
+                    <!-- Option A: link to song -->
+                    <a class="dd-song__link" href="https://example.com/song" target="_blank" rel="noopener">
+                        <span class="dd-record" aria-hidden="true"></span>
+                        <span class="dd-song__txt">
+                            <b class="dd-song__name">Song Title</b>
+                            <span class="dd-song__by">by Artist</span>
+                        </span>
+                    </a>
+
+                    <!-- Option B: play audio (uncomment to use) -->
+                    <!--
+          <button class="dd-song__btn" type="button" data-audio="#dd-audio">
+            <span class="dd-record" aria-hidden="true"></span>
+            <span class="dd-song__txt">
+              <b class="dd-song__name">Song Title</b>
+              <span class="dd-song__by">by Artist</span>
+            </span>
+          </button>
+          <audio id="dd-audio" src="assets/song.mp3" preload="none"></audio>
+          -->
                 </div>
             </div>
 
-            <nav class="nav-links">
-                <a href="../../../../../Home.html">Home</a>
-                <a href="../../../../Vault/page1.html">Vault</a>
-                <a href="../../../../Projects/index.html">Projects</a>
-                <a href="../../../../Affiliations/page1.html">Affiliations</a>
-                <a href="../../../../FAQ/FAQ.html">FAQ</a>
+            <!-- Tabs -->
+            <nav class="dd-tabs" aria-label="Profile sections">
+                <button class="dd-tab is-active" type="button" data-tab="posts">Posts</button>
+                <button class="dd-tab" type="button" data-tab="highlights">Highlights</button>
+                <button class="dd-tab" type="button" data-tab="timeline">Timeline</button>
+                <button class="dd-tab" type="button" data-tab="likes">Likes</button>
             </nav>
         </div>
-    </header>
+    </div>
 
-    <!-- DOSSIER WRAP -->
-    <main class="dd-wrap" style="
-      --bg:#0b0c12;
-      --panel:#0f1117;
-      --panel-2:#11131b;
-      --text:#eaeef8;
-      --muted:#a9b0c3;
-      --accent:#7aa2ff;
-      --accent-2:#2de2e6;
-      --accent-3:#b388ff;
-      --warning:#ffd166;
-      --danger:#ff5c7a;
-    ">
+    <!-- Panels -->
+    <div class="dd-panels">
+        <!-- POSTS: Physical + Appearance -->
+        <section class="dd-panel is-active" id="posts" data-panel="posts">
+            <div class="dd-grid dd-grid--posts">
+                <!-- Left: categories -->
+                <div class="dd-card dd-cats">
+                    <h3>Physical + Appearance</h3>
 
-        <!-- Banner -->
-        <section class="dd-banner">
-            <div class="dd-banner__inner">
+                    <div class="dd-fieldline"><span>Gender</span><b>—</b></div>
+                    <div class="dd-fieldline"><span>Race</span><b>—</b></div>
+                    <div class="dd-fieldline"><span>Height</span><b>—</b></div>
+                    <div class="dd-fieldline"><span>Weight</span><b>—</b></div>
+                    <div class="dd-fieldline"><span>Wings</span><b>— (count/desc)</b></div>
 
-                <div class="dd-crest">
-                    <img src="https://example.com/icon-crest.svg" alt="Crest icon">
+                    <div class="dd-divider dd-divider--sun" aria-hidden="true"></div>
+
+                    <p class="dd-note">
+                        Optional: drop a short “vibe line” here, or a small summary.
+                    </p>
                 </div>
 
-                <div class="dd-banner__title">
-                    <div class="dd-kicker">NewAge Athalmial Database</div>
-                    <h1 class="dd-name">First Last Name</h1>
-                    <div class="dd-subtitle">Title</div>
+                <!-- Middle: full body + bg layering + aesthetic + palettes + moodboard -->
+                <div class="dd-card dd-bodycard">
+                    <div class="dd-bodyframe">
+                        <div class="dd-bodybg" aria-hidden="true"></div>
+                        <img class="dd-body" src="https://placehold.co/520x920/png"
+                            alt="Full body (transparent PNG recommended)" loading="lazy" />
+                    </div>
+
+                    <div class="dd-aesthetic">
+                        <span class="dd-aesthetic__label">Aesthetic</span>
+                        <span class="dd-aesthetic__sep">|</span>
+                        <span class="dd-aesthetic__value">Contents</span>
+                    </div>
+
+                    <div class="dd-pals">
+                        <span class="dd-swatch" style="--swatch:#f7d94c" title="Swatch 1"></span>
+                        <span class="dd-swatch" style="--swatch:#64d38a" title="Swatch 2"></span>
+                        <span class="dd-swatch" style="--swatch:#61a7ff" title="Swatch 3"></span>
+                        <span class="dd-swatch" style="--swatch:#ffffff" title="Swatch 4"></span>
+                    </div>
+
+                    <div class="dd-moodgrid">
+                        <img src="https://placehold.co/320x240" alt="Mood 1" loading="lazy" />
+                        <img src="https://placehold.co/320x240" alt="Mood 2" loading="lazy" />
+                        <img src="https://placehold.co/320x240" alt="Mood 3" loading="lazy" />
+                        <img src="https://placehold.co/320x240" alt="Mood 4" loading="lazy" />
+                    </div>
+
+                    <div class="dd-pals dd-pals--bottom">
+                        <span class="dd-swatch" style="--swatch:#f7d94c" title="Swatch 5"></span>
+                        <span class="dd-swatch" style="--swatch:#64d38a" title="Swatch 6"></span>
+                        <span class="dd-swatch" style="--swatch:#61a7ff" title="Swatch 7"></span>
+                        <span class="dd-swatch" style="--swatch:#ffffff" title="Swatch 8"></span>
+                    </div>
                 </div>
 
-                <div class="dd-motifs">
-                    <img src="https://example.com/motif-constellation.svg" alt="Motif">
-                    <img src="https://example.com/motif-constellation.svg" alt="Motif">
-                    <img src="https://example.com/motif-constellation.svg" alt="Motif">
+                <!-- Right: big clickable reference -->
+                <div class="dd-card dd-refcard">
+                    <h3>Full Reference</h3>
+                    <a class="dd-ref" href="https://placehold.co/1200x1600" target="_blank" rel="noopener">
+                        <img src="https://placehold.co/720x980" alt="Full reference (click to open)" loading="lazy" />
+                        <span class="dd-ref__tag">Click to view full image</span>
+                    </a>
                 </div>
-
             </div>
         </section>
 
-        <!-- Body grid -->
-        <section class="dd-body">
+        <!-- HIGHLIGHTS: Facts + Area -->
+        <section class="dd-panel" id="highlights" data-panel="highlights">
+            <div class="dd-grid dd-grid--facts">
+                <!-- Left: categories -->
+                <div class="dd-card dd-cats">
+                    <h3>Facts + Area</h3>
 
-            <!-- LEFT SIDEBAR -->
-            <aside class="dd-left">
+                    <div class="dd-fieldline"><span>Occupation</span><b>—</b></div>
+                    <div class="dd-fieldline"><span>Orientation</span><b>—</b></div>
+                    <div class="dd-fieldline"><span>Residence</span><b>—</b></div>
+                    <div class="dd-fieldline"><span>Element</span><b>—</b></div>
 
-                <!-- Doll -->
-                <div class="dd-card dd-doll">
-                    <img src="https://example.com/doll.png" alt="Full body doll">
+                    <div class="dd-divider dd-divider--sun" aria-hidden="true"></div>
+
+                    <p class="dd-note">Optional notes / fun fact line.</p>
                 </div>
 
-                <!-- Holoprojector -->
-                <div class="dd-holo">
-                    <img src="https://example.com/holo.png" alt="Holoprojector">
+                <!-- Right: weapon strip + stats (Snippet A) -->
+                <div class="dd-card dd-weaponstats">
+                    <div class="dd-weaponstrip">
+                        <img class="dd-weaponimg" src="https://placehold.co/140x140" alt="Weapon image"
+                            loading="lazy" />
+                        <div class="dd-weaponmeta">
+                            <div class="dd-weaponname">Weapon Name</div>
+                            <div class="dd-weapontag">Weapon type tagline</div>
+                        </div>
+                    </div>
+
+                    <!-- Snippet A -->
+                    <div class="dd-box">
+                        <h3>Stats</h3>
+                        <div class="dd-stats dd-stats--sc">
+                            <div class="dd-stat"><span>Power</span><b>7</b></div>
+                            <div class="dd-stat"><span>Defense</span><b>7</b></div>
+                            <div class="dd-stat"><span>Agility</span><b>6</b></div>
+                            <div class="dd-stat"><span>Magic</span><b>9</b></div>
+                            <div class="dd-stat"><span>Knowledge</span><b>8</b></div>
+                            <div class="dd-stat"><span>Perception</span><b>8</b></div>
+                            <div class="dd-stat"><span>Speed</span><b>7</b></div>
+                        </div>
+
+                        <div class="dd-radar dd-radar--sc">
+                            <svg viewBox="-110 -110 220 220" aria-label="Radar chart" role="img">
+                                <defs>
+                                    <linearGradient id="ddGrad" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0%" stop-color="var(--accent)" />
+                                        <stop offset="100%" stop-color="var(--accent-2)" />
+                                    </linearGradient>
+                                </defs>
+                                <g opacity=".35" stroke="rgba(169,176,195,.35)" fill="none">
+                                    <circle r="100" />
+                                    <circle r="77.7" />
+                                    <circle r="55.5" />
+                                    <circle r="33.3" />
+                                </g>
+                                <polygon fill="url(#ddGrad)" fill-opacity=".30" stroke="url(#ddGrad)" stroke-width="2"
+                                    points="0,-77,54.9,-54.9,66,0,62.9,62.9,0,88.8,-62.9,62.9,-77,0,-62.9,-62.9" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE: Persona + Relationships -->
+        <section class="dd-panel" id="timeline" data-panel="timeline">
+            <div class="dd-quoteBanner">
+                “A relationship quote goes here—something short and sharp.”
+            </div>
+
+            <div class="dd-grid dd-grid--timeline">
+                <!-- Main scroll area (2/3) -->
+                <div class="dd-card dd-scroll dd-story">
+                    <h3>Personality</h3>
+                    <p>
+                        One paragraph for personality. Keep this “bio post” styled.
+                    </p>
+
+                    <div class="dd-quoteDivider">“A personal quote divider goes here.”</div>
+
+                    <h3>Past</h3>
+                    <p>Paragraph for past.</p>
+
+                    <h3>Present</h3>
+                    <p>Paragraph for present.</p>
+
+                    <h3>Future</h3>
+                    <p>Paragraph for future.</p>
                 </div>
 
-                <!-- Theme widget -->
+                <!-- Relationships scroll area (1/3) -->
+                <div class="dd-card dd-scroll dd-rels">
+                    <h3>Relationships</h3>
+
+                    <!-- Snippet B (repeat 4 times) -->
+                    <div class="dd-relgrid dd-relgrid--sc">
+                        <article class="dd-rel">
+                            <img class="dd-rel__img" src="https://example.com/char1.png" alt="Character">
+                            <div class="dd-rel__txt">
+                                <a class="dd-rel__name" href="https://example.com/char1" target="_blank">Name</a>
+                                <div class="dd-rel__role">Relation</div>
+                                <div class="dd-hearts" aria-label="Relationship rating">
+                                    <i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i><i class="fa-regular fa-heart"></i><i
+                                        class="fa-regular fa-heart"></i>
+                                </div>
+                                <p>1–2 lines.</p>
+                            </div>
+                        </article>
+
+                        <article class="dd-rel">
+                            <img class="dd-rel__img" src="https://example.com/char2.png" alt="Character">
+                            <div class="dd-rel__txt">
+                                <a class="dd-rel__name" href="https://example.com/char2" target="_blank">Name</a>
+                                <div class="dd-rel__role">Relation</div>
+                                <div class="dd-hearts" aria-label="Relationship rating">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i><i class="fa-regular fa-heart"></i><i
+                                        class="fa-regular fa-heart"></i><i class="fa-regular fa-heart"></i>
+                                </div>
+                                <p>1–2 lines.</p>
+                            </div>
+                        </article>
+
+                        <article class="dd-rel">
+                            <img class="dd-rel__img" src="https://example.com/char3.png" alt="Character">
+                            <div class="dd-rel__txt">
+                                <a class="dd-rel__name" href="https://example.com/char3" target="_blank">Name</a>
+                                <div class="dd-rel__role">Relation</div>
+                                <div class="dd-hearts" aria-label="Relationship rating">
+                                    <i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i
+                                        class="fa-solid fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i><i class="fa-regular fa-heart"></i>
+                                </div>
+                                <p>1–2 lines.</p>
+                            </div>
+                        </article>
+
+                        <article class="dd-rel">
+                            <img class="dd-rel__img" src="https://example.com/char4.png" alt="Character">
+                            <div class="dd-rel__txt">
+                                <a class="dd-rel__name" href="https://example.com/char4" target="_blank">Name</a>
+                                <div class="dd-rel__role">Relation</div>
+                                <div class="dd-hearts" aria-label="Relationship rating">
+                                    <i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i
+                                        class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                </div>
+                                <p>1–2 lines.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIKES: Preferences -->
+        <section class="dd-panel" id="likes" data-panel="likes">
+            <div class="dd-grid dd-grid--likes">
+                <!-- Likes / dislikes -->
                 <div class="dd-card">
-                    <div class="dd-card__head">
-                        <span class="dd-card__headicon"><i class="fa-solid fa-music"></i></span>
-                        <span class="dd-card__headtext">Theme</span>
-                    </div>
+                    <h3>Preferences</h3>
 
-                    <div class="dd-card__body">
-                        <div class="dd-theme">
-                            <div class="dd-theme__cover">
-                                <img src="ThemeCoverURL" alt="Track cover">
-                            </div>
+                    <div class="dd-list2">
+                        <div class="dd-list">
+                            <h4>Likes</h4>
+                            <ul>
+                                <li>Like 1</li>
+                                <li>Like 2</li>
+                                <li>Like 3</li>
+                                <li>Like 4</li>
+                                <li>Like 5</li>
+                            </ul>
+                        </div>
 
-                            <div class="dd-theme__meta">
-                                <div class="dd-theme__song">“Song Name”</div>
-                                <div class="dd-theme__artist">Artist Name</div>
-                            </div>
-
-                            <a class="dd-theme__play" href="SongUrl" target="_blank" rel="noopener"
-                                aria-label="Play theme">
-                                <i class="fa-solid fa-play"></i>
-                            </a>
+                        <div class="dd-list">
+                            <h4>Dislikes</h4>
+                            <ul>
+                                <li>Dislike 1</li>
+                                <li>Dislike 2</li>
+                                <li>Dislike 3</li>
+                                <li>Dislike 4</li>
+                                <li>Dislike 5</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
-            </aside>
-
-            <!-- RIGHT CONTENT -->
-            <div class="dd-right">
-
-                <!-- TAB GROUP 1 -->
-                <section class="dd-tabs">
-
-                    <!-- radios -->
-                    <input class="dd-tabradio" type="radio" name="ddtabs1" id="dd1-a" checked>
-                    <input class="dd-tabradio" type="radio" name="ddtabs1" id="dd1-b">
-                    <input class="dd-tabradio" type="radio" name="ddtabs1" id="dd1-c">
-
-                    <!-- tab buttons -->
-                    <div class="dd-tabbar">
-                        <label class="dd-tabbtn" for="dd1-a"><i class="fa-solid fa-desktop"></i><span>Basic
-                                Information</span></label>
-                        <label class="dd-tabbtn" for="dd1-b"><i class="fa-solid fa-shirt"></i><span>Physical
-                                Assessment</span></label>
-                        <label class="dd-tabbtn" for="dd1-c"><i class="fa-solid fa-file-lines"></i><span>Personal
-                                Data</span></label>
+                <!-- Favorites / hobby boxes (Snippet C) -->
+                <div class="dd-card">
+                    <div class="dd-box">
+                        <h3>Favorites & Hobbies</h3>
+                        <div class="dd-favgrid dd-favgrid--sc">
+                            <div class="dd-fav"><i class="fa-solid fa-palette"></i><b>Hobby</b></div>
+                            <div class="dd-fav"><i class="fa-solid fa-bowl-food"></i><b>Food</b><span>F</span></div>
+                            <div class="dd-fav"><i
+                                    class="fa-solid fa-martini-glass-citrus"></i><b>Drink</b><span>D</span></div>
+                            <div class="dd-fav"><i class="fa-solid fa-shirt"></i><b>Style</b><span>ST</span></div>
+                            <div class="dd-fav"><i class="fa-solid fa-spray-can-sparkles"></i><b>Scent</b><span>S</span>
+                            </div>
+                            <div class="dd-fav"><i class="fa-solid fa-palette"></i><b>Color</b><span>C</span></div>
+                        </div>
                     </div>
-
-                    <!-- panels -->
-                    <div class="dd-panels">
-
-                        <!-- A -->
-                        <div class="dd-panel dd-panel-a">
-                            <div class="dd-grid2">
-                                <div class="dd-box">
-                                    <h3>Soul</h3>
-                                    <div class="dd-kv"><span>Name</span><b>N</b></div>
-                                    <div class="dd-kv"><span>Alias</span><b>NN</b></div>
-                                    <div class="dd-kv"><span>Age</span><b>A</b></div>
-                                    <div class="dd-kv"><span>Birthday</span><b>B</b></div>
-                                </div>
-
-                                <div class="dd-box">
-                                    <h3>Body</h3>
-                                    <div class="dd-kv"><span>Gender</span><b>G</b></div>
-                                    <div class="dd-kv"><span>Race</span><b>R</b></div>
-                                    <div class="dd-kv"><span>Height</span><b>"0'0"ft / 000 cm</b></div>
-                                    <div class="dd-kv"><span>Weight</span><b>000 lbs / 000 kg</b></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- B -->
-                        <div class="dd-panel dd-panel-b">
-                            <div class="dd-appear">
-
-                                <div class="dd-palette">
-                                    <span style="background:var(--accent)"></span>
-                                    <span style="background:var(--accent-2)"></span>
-                                    <span style="background:var(--accent-3)"></span>
-                                    <span style="background:var(--warning)"></span>
-                                </div>
-
-                                <div class="dd-mood">
-                                    <a class="dd-mood__img" href="https://example.com/mood-1.jpg" target="_blank"
-                                        style="--img:url('https://example.com/mood-1.jpg')"></a>
-                                    <a class="dd-mood__img" href="https://example.com/mood-2.jpg" target="_blank"
-                                        style="--img:url('https://example.com/mood-2.jpg')"></a>
-                                    <a class="dd-mood__img" href="https://example.com/mood-3.jpg" target="_blank"
-                                        style="--img:url('https://example.com/mood-3.jpg')"></a>
-                                    <a class="dd-mood__img" href="https://example.com/mood-4.jpg" target="_blank"
-                                        style="--img:url('https://example.com/mood-4.jpg')"></a>
-                                </div>
-
-                                <div class="dd-palette">
-                                    <span style="background:#1a1f2d"></span>
-                                    <span style="background:#0f1117"></span>
-                                    <span style="background:#eaeef8"></span>
-                                    <span style="background:#a9b0c3"></span>
-                                </div>
-
-                            </div>
-
-                            <div class="dd-grid1">
-                                <div class="dd-box">
-                                    <h3>Design Notes</h3>
-                                    <ul class="dd-list">
-                                        <li>1</li>
-                                        <li>2</li>
-                                        <li>3</li>
-                                        <li>4</li>
-                                        <li>5</li>
-                                    </ul>
-                                </div>
-
-                                <div class="dd-box">
-                                    <h3>Visual Reference</h3>
-                                    <a class="dd-ref" href="https://example.com/reference-image.png" target="_blank"
-                                        style="--img:url('https://example.com/reference-image.png')"></a>
-                                    <div class="dd-help">Click to view larger in a new tab.</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- C -->
-                        <div class="dd-panel dd-panel-c">
-                            <div class="dd-grid2-uneven">
-
-                                <div class="dd-box">
-                                    <h3>Data</h3>
-                                    <div class="dd-kv"><span>Occupation</span><b>O</b></div>
-                                    <div class="dd-kv"><span>Education</span><b>E</b></div>
-                                    <div class="dd-kv"><span>Orientation</span><b>OR</b></div>
-                                    <div class="dd-kv"><span>Residence</span><b>R</b></div>
-                                    <div class="dd-kv"><span>Agency</span><b>A</b></div>
-
-                                    <div class="dd-splitline"></div>
-
-                                    <div class="dd-weapon">
-                                        <div class="dd-weapon__img">
-                                            <img src="https://example.com/weapon.png" alt="Weapon">
-                                        </div>
-                                        <div class="dd-weapon__txt">
-                                            <div><strong>Name</strong><br>N</div>
-                                            <div><strong>Type</strong><br>T</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="dd-splitline"></div>
-
-                                    <h3>Elements</h3>
-                                    <div class="dd-elements">
-                                        <div class="dd-el">
-                                            <img src="https://example.com/element-1.png" alt="1"><b>Starlight</b>
-                                        </div>
-                                        <div class="dd-el">
-                                            <img src="https://example.com/element-2.png" alt="2"><b>Silence</b>
-                                        </div>
-                                        <div class="dd-el">
-                                            <img src="https://example.com/element-3.png" alt="3"><b>Gravity</b>
-                                        </div>
-                                        <div class="dd-el">
-                                            <img src="https://example.com/element-4.png" alt="4"><b>Judgment</b>
-                                        </div>
-                                    </div>
-
-                                    <div class="dd-quote">
-                                        <i class="fa-solid fa-quote-left"></i>
-                                        <span>Lorem Ipsum.</span>
-                                    </div>
-                                </div>
-
-                                <div class="dd-box">
-                                    <h3>Statistics</h3>
-
-                                    <div class="dd-stats">
-                                        <div class="dd-stat"><span>Power</span><b>7</b></div>
-                                        <div class="dd-stat"><span>Defense</span><b>7</b></div>
-                                        <div class="dd-stat"><span>Agility</span><b>6</b></div>
-                                        <div class="dd-stat"><span>Magic</span><b>9</b></div>
-                                        <div class="dd-stat"><span>Knowledge</span><b>8</b></div>
-                                        <div class="dd-stat"><span>Perception</span><b>8</b></div>
-                                        <div class="dd-stat"><span>Speed</span><b>7</b></div>
-                                    </div>
-
-                                    <div class="dd-radar">
-                                        <!-- keep your SVG exactly, just let CSS size it -->
-                                        <svg viewBox="-110 -110 220 220" aria-label="Radar chart" role="img">
-                                            <defs>
-                                                <linearGradient id="ddGrad" x1="0" y1="0" x2="1" y2="1">
-                                                    <stop offset="0%" stop-color="var(--accent)" />
-                                                    <stop offset="100%" stop-color="var(--accent-2)" />
-                                                </linearGradient>
-                                            </defs>
-                                            <g opacity=".35" stroke="rgba(169,176,195,.35)" fill="none">
-                                                <circle r="100" />
-                                                <circle r="77.7" />
-                                                <circle r="55.5" />
-                                                <circle r="33.3" />
-                                            </g>
-                                            <polygon fill="url(#ddGrad)" fill-opacity=".35" stroke="url(#ddGrad)"
-                                                stroke-width="2"
-                                                points="0,-77,54.9,-54.9,66,0,62.9,62.9,0,88.8,-62.9,62.9,-77,0,-62.9,-62.9" />
-                                        </svg>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-
-                <!-- TAB GROUP 2 -->
-                <section class="dd-tabs dd-tabs--second">
-
-                    <input class="dd-tabradio" type="radio" name="ddtabs2" id="dd2-d" checked>
-                    <input class="dd-tabradio" type="radio" name="ddtabs2" id="dd2-e">
-                    <input class="dd-tabradio" type="radio" name="ddtabs2" id="dd2-f">
-
-                    <div class="dd-tabbar">
-                        <label class="dd-tabbtn" for="dd2-d"><i
-                                class="fa-solid fa-masks-theater"></i><span>Psychology</span></label>
-                        <label class="dd-tabbtn" for="dd2-e"><i
-                                class="fa-solid fa-heart"></i><span>Relationships</span></label>
-                        <label class="dd-tabbtn" for="dd2-f"><i
-                                class="fa-solid fa-palette"></i><span>Preferences</span></label>
-                    </div>
-
-                    <div class="dd-panels">
-
-                        <!-- D -->
-                        <div class="dd-panel dd-panel-d">
-                            <div class="dd-quote dd-quote--accent">
-                                <i class="fa-solid fa-quote-left"></i>
-                                <span>"Lorem Ipsum."</span>
-                            </div>
-
-                            <div class="dd-grid2-uneven">
-                                <div class="dd-box">
-                                    <h3>Personality</h3>
-                                    <p>Lorem Ipsum</p>
-                                </div>
-
-                                <div class="dd-box">
-                                    <h3>Strengths & Weaknesses</h3>
-                                    <ul class="dd-sw">
-                                        <li>+++ 1</li>
-                                        <li>+++ 2</li>
-                                        <li>+++ 3</li>
-                                        <li>+++ 4</li>
-                                        <li>+++ 5</li>
-                                        <li class="dd-sw__mid">= 1</li>
-                                        <li>--- 5</li>
-                                        <li>--- 4</li>
-                                        <li>--- 3</li>
-                                        <li>--- 2</li>
-                                        <li>--- 1</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="dd-box">
-                                <h3>History</h3>
-                                <p><strong>Past:</strong> Lorem</p>
-                                <p><strong>Present:</strong> Ipsum</p>
-                                <p><strong>Future:</strong> Dolor</p>
-                            </div>
-                        </div>
-
-                        <!-- E -->
-                        <div class="dd-panel dd-panel-e">
-                            <div class="dd-quote dd-quote--cyan">
-                                <i class="fa-solid fa-quote-left"></i>
-                                <span>“Lorem Ipsem”</span>
-                                <span class="dd-quote__by">— Name</span>
-                            </div>
-
-                            <div class="dd-relgrid">
-                                <!-- relationship card -->
-                                <article class="dd-rel">
-                                    <img class="dd-rel__img" src="https://example.com/char1.png" alt="Character">
-                                    <div class="dd-rel__txt">
-                                        <a class="dd-rel__name" href="https://example.com/char1"
-                                            target="_blank">Name</a>
-                                        <div class="dd-rel__role">Relation</div>
-                                        <div class="dd-hearts" aria-label="Relationship rating">
-                                            <i class="fa-solid fa-heart"></i><i class="fa-solid fa-heart"></i><i
-                                                class="fa-solid fa-heart"></i>
-                                            <i class="fa-regular fa-heart"></i><i class="fa-regular fa-heart"></i>
-                                        </div>
-                                        <p>Description</p>
-                                    </div>
-                                </article>
-
-                                <!-- duplicate as needed -->
-                            </div>
-                        </div>
-
-                        <!-- F -->
-                        <div class="dd-panel dd-panel-f">
-                            <div class="dd-grid2">
-                                <div class="dd-box">
-                                    <h3>Likes</h3>
-                                    <ul class="dd-list">
-                                        <li>1</li>
-                                        <li>2</li>
-                                        <li>3</li>
-                                        <li>4</li>
-                                        <li>5</li>
-                                    </ul>
-                                </div>
-                                <div class="dd-box">
-                                    <h3>Dislikes</h3>
-                                    <ul class="dd-list">
-                                        <li>1</li>
-                                        <li>2</li>
-                                        <li>3</li>
-                                        <li>4</li>
-                                        <li>5</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="dd-box">
-                                <h3>Favorites & Hobbies</h3>
-                                <div class="dd-favgrid">
-                                    <div class="dd-fav"><i class="fa-solid fa-palette"></i><b>Hobby 1</b></div>
-                                    <div class="dd-fav"><i class="fa-solid fa-shirt"></i><b>Hobby 2</b></div>
-                                    <div class="dd-fav"><i class="fa-solid fa-bowl-food"></i><b>Hobby 3</b></div>
-                                    <div class="dd-fav"><i class="fa-solid fa-bowl-food"></i><b>Food</b><span>F</span>
-                                    </div>
-                                    <div class="dd-fav"><i
-                                            class="fa-solid fa-martini-glass-citrus"></i><b>Drink</b><span>D</span>
-                                    </div>
-                                    <div class="dd-fav"><i
-                                            class="fa-solid fa-candle-holder"></i><b>Scent</b><span>S</span></div>
-                                    <div class="dd-fav"><i class="fa-solid fa-shirt"></i><b>Style</b><span>ST</span>
-                                    </div>
-                                    <div class="dd-fav"><i class="fa-solid fa-palette"></i><b>Color</b><span>C</span>
-                                    </div>
-                                    <div class="dd-fav"><i class="fa-solid fa-moon"></i><b>Place</b><span>P</span></div>
-                                </div>
-                            </div>
-
-                            <!-- Inventory section (simple, no bootstrap carousel) -->
-                            <div class="dd-box">
-                                <h3>Inventory</h3>
-                                <div class="dd-invlist">
-                                    <div class="dd-inv">
-                                        <img src="https://example.com/item1.png" alt="Item">
-                                        <div>
-                                            <h4>Object</h4>
-                                            <p><strong>Rarity:</strong> Rank<br>Description.</p>
-                                        </div>
-                                    </div>
-                                    <!-- duplicate items as needed -->
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-
+                </div>
             </div>
         </section>
-    </main>
+    </div>
 
-</body>
+    <!-- Extras anchor -->
+    <div id="extras" class="dd-extras">
+        <div class="dd-card">
+            <h3>Extras</h3>
+            <p>Anything optional goes here.</p>
+        </div>
+    </div>
 
-</html>
+    <!-- Tiny JS for tabs + optional audio play -->
+    <script>
+        (function () {
+            const root = document.querySelector('#character-profile');
+            if (!root) return;
+
+            const tabs = Array.from(root.querySelectorAll('.dd-tab'));
+            const panels = Array.from(root.querySelectorAll('.dd-panel'));
+
+            function activate(key) {
+                tabs.forEach(t => t.classList.toggle('is-active', t.dataset.tab === key));
+                panels.forEach(p => p.classList.toggle('is-active', p.dataset.panel === key));
+            }
+
+            tabs.forEach(t => t.addEventListener('click', () => activate(t.dataset.tab)));
+
+            // Optional audio play button behavior
+            const btn = root.querySelector('.dd-song__btn');
+            if (btn) {
+                btn.addEventListener('click', () => {
+                    const audioSel = btn.getAttribute('data-audio');
+                    const audio = audioSel ? root.querySelector(audioSel) : null;
+                    if (!audio) return;
+                    if (audio.paused) audio.play();
+                    else audio.pause();
+                });
+            }
+        })();
+    </script>
+</section>

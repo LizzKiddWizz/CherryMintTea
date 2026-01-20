@@ -1,0 +1,976 @@
+/* =========================================================
+   Divine Dossier — Ascension Profile (Standalone)
+   Loads AFTER meltdown.css
+   Scope: .dd-profile--asc
+   ========================================================= */
+
+.dd-profile--asc {
+    /* Theme tokens (BRIGHTER) */
+    --bg: rgba(245, 248, 255, 0.78);
+    --card: rgba(255, 255, 255, 0.62);
+    --card-2: rgba(255, 255, 255, 0.52);
+    --line: rgba(40, 55, 90, 0.18);
+
+    --text: rgba(12, 16, 24, 0.92);
+    --muted: rgba(12, 16, 24, 0.62);
+
+    /* Ascension palette (slightly punchier) */
+    --accent: #ffd84a;
+    /* sun gold */
+    --accent-2: #4dff9a;
+    /* leaf green */
+    --accent-3: #4aa7ff;
+    /* sky blue */
+    --white: #ffffff;
+
+    /* GEOMETRIC corners */
+    --radius: 2px;
+    --radius-sm: 2px;
+
+    color: var(--text);
+    font-family: inherit;
+}
+
+/* Container behavior (meant to sit "on the page") */
+.dd-profile--asc {
+    width: min(1200px, 100%);
+    margin: 22px auto;
+    padding: 18px;
+    border-radius: 2px;
+    background:
+        radial-gradient(900px 420px at 80% 0%, rgba(255, 216, 74, 0.24), transparent 58%),
+        radial-gradient(700px 380px at 10% 20%, rgba(74, 167, 255, 0.16), transparent 60%),
+        radial-gradient(700px 420px at 40% 110%, rgba(77, 255, 154, 0.14), transparent 60%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(240, 244, 255, 0.78));
+    border: 1px solid var(--line);
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.18);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle geometric “Ascension” overlay (RHOMBUS/DIAMOND, yellow→green) */
+.dd-profile--asc::before {
+    content: "";
+    position: absolute;
+    inset: -140px;
+    pointer-events: none;
+
+    /* a little stronger so it reads on bright backgrounds */
+    opacity: 0.55;
+
+    /* 1) paint a yellow→green gradient
+       2) cut it into a diamond lattice using two diagonal line sets */
+    background:
+        linear-gradient(90deg, rgba(255, 216, 74, 0.30), rgba(77, 255, 154, 0.26)),
+        repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.16) 0 2px, transparent 2px 28px),
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.16) 0 2px, transparent 2px 28px);
+
+    /* IMPORTANT: don’t mask it out */
+    mask-image: none;
+}
+
+.dd-profile--asc * {
+    box-sizing: border-box;
+}
+
+/* ---------- Header layout ---------- */
+.dd-head {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+    align-items: start;
+}
+
+.dd-side {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Icon */
+.dd-iconwrap {
+    position: relative;
+    width: 180px;
+    max-width: 100%;
+}
+
+.dd-icon {
+    width: 160px;
+    height: 160px;
+    border-radius: var(--radius);
+    object-fit: cover;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+}
+
+/* remove icon ring */
+.dd-iconring {
+    display: none;
+}
+
+/* Bio fields */
+.dd-bio {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 12px 12px;
+    display: grid;
+    gap: 8px;
+}
+
+.dd-field {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.48);
+    border: 1px solid rgba(40, 55, 90, 0.14);
+}
+
+.dd-field span {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.dd-field b {
+    font-weight: 700;
+    color: var(--text);
+}
+
+/* Buttons */
+.dd-actions {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.dd-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 14px;
+}
+
+.dd-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--text);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.35));
+    border: 1px solid rgba(40, 55, 90, 0.16);
+    transition: transform 0.15s ease, border-color 0.15s ease;
+    font-size: 12px;
+}
+
+.dd-action:hover {
+    transform: translateY(-1px);
+    border-color: rgba(255, 216, 74, 0.55);
+}
+
+.dd-action i {
+    opacity: 0.9;
+}
+
+.dd-action span {
+    font-weight: 800;
+}
+
+/* Optional owner card */
+.dd-owner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    background: var(--card-2);
+    border: 1px solid rgba(40, 55, 90, 0.16);
+    color: var(--muted);
+}
+
+.dd-owner__img {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    object-fit: cover;
+    border: 1px solid rgba(40, 55, 90, 0.18);
+}
+
+.dd-owner__txt b {
+    color: var(--text);
+}
+
+/* Title + song bubble */
+.dd-titlewrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.dd-titlebar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+}
+
+/* Firstname darker */
+.dd-firstname {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    color: rgba(12, 16, 24, 0.92);
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    text-shadow: none;
+}
+
+/* Song bubble */
+.dd-song {
+    background: rgba(255, 255, 255, 0.52);
+    border: 1px solid rgba(40, 55, 90, 0.16);
+    border-radius: 999px;
+    padding: 8px 12px;
+}
+
+/* Status bubble by icon */
+.dd-song.dd-song--status {
+    position: absolute;
+    left: 172px;
+    top: 10px;
+    max-width: 240px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(40, 55, 90, 0.16);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* speech pointer */
+.dd-song.dd-song--status::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 14px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 9px solid rgba(40, 55, 90, 0.16);
+}
+
+.dd-song.dd-song--status::after {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 14px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 9px solid rgba(255, 255, 255, 0.72);
+}
+
+.dd-song__link,
+.dd-song__btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 0;
+    color: var(--text);
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dd-record {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(245, 248, 255, 0.92) 0 18%, rgba(12, 16, 24, 0.12) 19% 22%, rgba(245, 248, 255, 0.92) 23%),
+        conic-gradient(from 0deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+    border: 1px solid rgba(40, 55, 90, 0.18);
+}
+
+.dd-song__txt {
+    display: grid;
+    line-height: 1.1;
+}
+
+.dd-song__name {
+    font-size: 13px;
+}
+
+.dd-song__by {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* Tabs */
+.dd-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 8px;
+}
+
+.dd-tab {
+    appearance: none;
+    border: 1px solid rgba(40, 55, 90, 0.16);
+    background: rgba(255, 255, 255, 0.52);
+    color: var(--muted);
+    padding: 8px 10px;
+    border-radius: var(--radius);
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 11px;
+    cursor: pointer;
+    transition: transform 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.dd-tab:hover {
+    transform: translateY(-1px);
+}
+
+.dd-tab.is-active {
+    color: var(--text);
+    border-color: rgba(255, 216, 74, 0.55);
+    background:
+        linear-gradient(90deg,
+            rgba(255, 216, 74, 0.60),
+            rgba(77, 255, 154, 0.40),
+            rgba(74, 167, 255, 0.45));
+}
+
+/* ---------- Panels ---------- */
+.dd-panels {
+    margin-top: 14px;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+    /* keep container height stable (uses tallest panel) */
+    display: grid;
+}
+
+/* All panels occupy same grid cell so the row height = tallest panel */
+.dd-panel {
+    grid-area: 1 / 1;
+    display: block;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.dd-panel.is-active {
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.dd-grid {
+    display: grid;
+    gap: 14px;
+}
+
+/* =========================================================
+   POSTS LAYOUT FIX (your request)
+   - Physical (left) stays left
+   - Full-body/mood/palette (right) stays right
+   - Full reference goes UNDER physical (left column)
+   - Bottom of reference aligns with right column by stretching
+   ========================================================= */
+
+.dd-grid--posts {
+    grid-template-columns: 320px 380px 1fr;
+}
+
+/* Make the right column keep its intended sizing (prevents "huge doll" feeling) */
+.dd-bodycard {
+    align-self: start;
+}
+
+/* If your physical card is .dd-cats, keep it in left column */
+.dd-cats {
+    grid-column: 1;
+}
+
+/* Place the reference card under Physical in left column */
+.dd-refcard {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Keep reference image from forcing odd heights */
+.dd-refcard .dd-ref {
+    flex: 1;
+    min-height: 0;
+}
+
+/* Let the right column span both rows so its bottom aligns with the ref’s bottom */
+.dd-bodycard {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    height: 100%;
+}
+
+/* ---------- Other grids ---------- */
+.dd-grid--facts {
+    grid-template-columns: 320px 1fr;
+    align-items: start;
+}
+
+.dd-grid--timeline {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+}
+
+.dd-grid--likes {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+.dd-card h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(12, 16, 24, 0.86);
+}
+
+.dd-note {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+/* Category lines */
+.dd-fieldline {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 10px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.48);
+    border: 1px solid rgba(40, 55, 90, 0.14);
+    margin-bottom: 8px;
+}
+
+.dd-fieldline span {
+    font-size: 12px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.dd-fieldline b {
+    color: var(--text);
+}
+
+/* Decorative divider */
+.dd-divider {
+    height: 10px;
+    margin: 12px 0;
+    border-radius: var(--radius);
+    border: 1px solid rgba(40, 55, 90, 0.14);
+    background:
+        linear-gradient(90deg,
+            rgba(255, 216, 74, 0.50),
+            rgba(74, 167, 255, 0.30),
+            rgba(77, 255, 154, 0.30),
+            rgba(255, 255, 255, 0.28));
+}
+
+/* Full-body framing + background layering */
+.dd-bodyframe {
+    position: relative;
+    width: min(360px, 100%);
+    /* thinner frame */
+    margin: 0 auto;
+    /* centers it inside the card */
+    aspect-ratio: 3 / 5.6;
+    /* taller/thinner silhouette */
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(40, 55, 90, 0.16);
+    background: rgba(255, 255, 255, 0.32);
+}
+
+.dd-bodybg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(600px 360px at 70% 20%, rgba(255, 216, 74, 0.18), transparent 60%),
+        linear-gradient(135deg, rgba(74, 167, 255, 0.14), transparent 55%),
+        linear-gradient(225deg, rgba(77, 255, 154, 0.12), transparent 55%),
+        repeating-linear-gradient(90deg, rgba(40, 55, 90, 0.06) 0 1px, transparent 1px 26px);
+    opacity: 0.9;
+    filter: blur(0.2px);
+}
+
+.dd-body {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: translateY(6px);
+    filter: drop-shadow(0 22px 40px rgba(0, 0, 0, 0.22));
+}
+
+/* Aesthetic divider */
+.dd-aesthetic {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.52);
+    border: 1px solid rgba(40, 55, 90, 0.16);
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.dd-aesthetic__label {
+    color: rgba(12, 16, 24, 0.82);
+    font-weight: 800;
+}
+
+.dd-aesthetic__sep {
+    opacity: 0.6;
+}
+
+.dd-aesthetic__value {
+    opacity: 0.85;
+}
+
+/* Palette circles */
+.dd-pals {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.dd-swatch {
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: var(--swatch, rgba(255, 255, 255, 0.5));
+    border: 1px solid rgba(40, 55, 90, 0.18);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+/* Moodboard grid */
+.dd-moodgrid {
+    margin-top: 12px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dd-moodgrid img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 1px solid rgba(40, 55, 90, 0.14);
+}
+
+/* Reference clickable */
+.dd-ref {
+    display: block;
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(40, 55, 90, 0.14);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.32);
+}
+
+.dd-ref img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dd-ref__tag {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    padding: 8px 10px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(40, 55, 90, 0.16);
+    color: rgba(12, 16, 24, 0.80);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+
+
+/* Weapon strip */
+.dd-weaponstrip {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    padding: 12px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.48);
+    border: 1px solid rgba(40, 55, 90, 0.14);
+    margin-bottom: 12px;
+}
+
+.dd-weaponimg {
+    width: 74px;
+    height: 74px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 1px solid rgba(40, 55, 90, 0.16);
+}
+
+.dd-weaponname {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    color: rgba(12, 16, 24, 0.92);
+}
+
+.dd-weapontag {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Stats / radar */
+.dd-box {
+    background: rgba(255, 255, 255, 0.44);
+    border: 1px solid rgba(40, 55, 90, 0.14);
+    border-radius: var(--radius);
+    padding: 12px;
+}
+
+.dd-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.dd-stat {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.52);
+    border: 1px solid rgba(40, 55, 90, 0.14);
+}
+
+.dd-stat span {
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+}
+
+.dd-stat b {
+    font-size: 14px;
+}
+
+.dd-radar {
+    display: grid;
+    place-items: center;
+}
+
+.dd-radar svg {
+    width: min(260px, 100%);
+    height: auto;
+}
+
+/* Quote banner + scroll areas */
+.dd-quoteBanner {
+    background: linear-gradient(90deg,
+            rgba(255, 216, 74, 0.22),
+            rgba(74, 167, 255, 0.14),
+            rgba(77, 255, 154, 0.14));
+    border: 1px solid rgba(40, 55, 90, 0.14);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    color: rgba(12, 16, 24, 0.86);
+    font-style: italic;
+}
+
+.dd-scroll {
+    max-height: 520px;
+    overflow: auto;
+    padding-right: 6px;
+}
+
+.dd-quoteDivider {
+    margin: 14px 0;
+    padding: 10px 12px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.52);
+    border: 1px solid rgba(40, 55, 90, 0.14);
+    color: rgba(12, 16, 24, 0.82);
+    font-style: italic;
+}
+
+/* Relationships grid */
+.dd-relgrid {
+    display: grid;
+    gap: 12px;
+}
+
+.dd-rel {
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    gap: 12px;
+    padding: 12px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.48);
+    border: 1px solid rgba(40, 55, 90, 0.14);
+}
+
+.dd-rel__img {
+    width: 54px;
+    height: 54px;
+    border-radius: var(--radius);
+    object-fit: cover;
+    border: 1px solid rgba(40, 55, 90, 0.14);
+}
+
+.dd-rel__name {
+    font-weight: 900;
+    text-decoration: none;
+    color: rgba(12, 16, 24, 0.92);
+}
+
+.dd-rel__name:hover {
+    color: var(--accent-3);
+}
+
+.dd-rel__role {
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.dd-rel__txt p {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Likes lists */
+.dd-list2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.dd-list h4 {
+    margin: 0 0 10px;
+    font-size: 13px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: rgba(12, 16, 24, 0.86);
+}
+
+.dd-list ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* ---------- Likes: optional picture grid to fill space ---------- */
+.dd-likepics {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dd-likepics a,
+.dd-likepics img {
+    width: 100%;
+    height: 120px;
+    display: block;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 1px solid rgba(40, 55, 90, 0.14);
+    background: rgba(255, 255, 255, 0.32);
+}
+
+/* If you put the grid inside a card and want it to span both columns */
+.dd-likepicscard {
+    grid-column: 1 / -1;
+}
+
+/* Favorites grid */
+.dd-favgrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.dd-fav {
+    display: grid;
+    grid-template-columns: 22px 1fr auto;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.52);
+    border: 1px solid rgba(40, 55, 90, 0.14);
+}
+
+.dd-fav i {
+    opacity: 0.9;
+}
+
+.dd-fav b {
+    font-weight: 900;
+}
+
+.dd-fav span {
+    font-size: 12px;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+/* Extras */
+.dd-extras {
+    margin-top: 14px;
+}
+
+/* Optional: extra Highlights image under the left Facts card */
+.dd-factsPic {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+}
+
+.dd-factsPic .dd-factsPic__img {
+    flex: 1;
+    min-height: 0;
+    border-radius: var(--radius);
+    border: 1px solid rgba(40, 55, 90, 0.14);
+    background: rgba(255, 255, 255, 0.32);
+    overflow: hidden;
+}
+
+.dd-factsPic .dd-factsPic__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Make the weapon+stats card span both rows so bottoms align */
+.dd-weaponstats {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .dd-head {
+        grid-template-columns: 1fr;
+    }
+
+    /* posts stack naturally on small screens */
+    .dd-grid--posts {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .dd-bodycard {
+        grid-column: 1;
+        grid-row: auto;
+        height: auto;
+    }
+
+    .dd-refcard {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .dd-grid--facts {
+    grid-template-columns: 320px 1fr;
+    align-items: stretch; /* key: makes left and right columns share height */
+    }
+
+
+    .dd-grid--timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .dd-grid--likes {
+        grid-template-columns: 1fr;
+    }
+
+    .dd-scroll {
+        max-height: none;
+    }
+
+    /* status bubble drops under icon on small screens */
+    .dd-song.dd-song--status {
+        position: static;
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    .dd-song.dd-song--status::before,
+    .dd-song.dd-song--status::after {
+        display: none;
+    }
+}

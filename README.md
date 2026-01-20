@@ -17,7 +17,7 @@ To Do:
         [-] Aso
         [] Bell
         [X] Jaed
-        [-] Sera
+        [X] Sera
         [] Stein
 [X] Finish FAQ
 [] Create MD profile templates
@@ -26,7 +26,7 @@ To Do:
     [-] Background Characters
         [X] Athalmus
         [] Ascension
-            [] Ascencia
+            [-] Ascencia
                 [] Non-Combat
             [] Mortal
         [] Purgatory
@@ -49,9 +49,9 @@ To Do:
     [] Plants
 [] Finish one MD profile per area
     - Athalmus
-        [] Hisleschtevatkana Constanza
-        [] Una Atlanta
-        [] Mayim Blanka
+        [-] Hisleschtevatkana Constanza
+        [-] Una Atlanta
+        [-] Mayim Blanka
     - Ascension
         [] Merlin Lagrange (Mortal)
         [] Adamos Serim
