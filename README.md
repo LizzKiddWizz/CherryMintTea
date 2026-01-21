@@ -54,15 +54,15 @@ To Do:
         [-] Mayim Blanka
     - Ascension
         [] Merlin Lagrange (Mortal)
-        [] Adamos Serim
+        [-] Adamos Serim
         [] Mildred Levier Heaven (Non-Com)
     - Purgatory
-        [] Rosen Lovecraft (Circlean)
+        [-] Rosen Lovecraft (Circlean)
         [] BECC BSoD (DB)
         [] Magnus Aueralis (Mortal Non-Com)
         [] Lawrence 'Law' Hunstman (Mortal Com)
     - Lacrimae
-        [] Alloces Aluhyde (Endi- Glacius)
+        [-] Alloces Aluhyde (Endi- Glacius)
         [] Halcyon Galia (Endi)
         [] Geranigor Ishtarinavani (Martym)
         [] Harlan Malaphar (Sev)
