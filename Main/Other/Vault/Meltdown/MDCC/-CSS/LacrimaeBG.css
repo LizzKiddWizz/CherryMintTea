@@ -84,21 +84,18 @@
     inset: 0;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.16;
+    opacity: 0.09;
 
-    background-image: url("PATH_TO_GOTHIC_OVERLAY.png");
-    background-repeat: repeat;
+    background-image: url("../../../-assets/ice.png");
+    background-repeat: no-repeat;
     background-position: center;
-    background-size: 560px auto;
+    background-size: cover;
 }
 
-.dd-profile--asc>* {
+/* Keep real content above overlays (but DO NOT affect .dd-clouds) */
+.dd-profile--asc> :not(.dd-clouds) {
     position: relative;
-    z-index: 1;
-}
-
-.dd-profile--asc * {
-    box-sizing: border-box;
+    z-index: 2;
 }
 
 /* ---------- Header ---------- */
@@ -500,31 +497,47 @@
     margin: 0 auto;
 }
 
-.dd-tabdeco {
-    width: 34px;
-    height: 34px;
-    border-radius: var(--radius);
-    border: 1px solid rgba(182, 205, 255, 0.16);
-    background: rgba(240, 244, 255, 0.06);
+/* wrapper holds left deco + tabs + right deco tightly */
+.dd-tabswrap {
     display: grid;
-    place-items: center;
-    overflow: hidden;
-    box-shadow: inset 0 1px 0 rgba(240, 244, 255, 0.08);
+    grid-template-columns: auto max-content auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* slightly more breathing room */
+    width: max-content;
+    margin: 0 auto;
 }
 
+/* deco becomes a transparent positioning hook only */
+.dd-tabdeco {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    padding: 0;
+    overflow: visible;
+    display: block;
+}
+
+/* spacing relative to tabs */
 .dd-tabdeco--left {
-    margin-right: 100px;
+    margin-right: 24px;
 }
 
 .dd-tabdeco--right {
-    margin-left: 100px;
+    margin-left: 24px;
 }
 
+/* image is the decoration */
 .dd-tabdeco img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
     display: block;
+    height: 42px;
+    /* CONTROL SIZE HERE */
+    width: 170px;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 /* ---------- Panels ---------- */

@@ -25,24 +25,24 @@ To Do:
     [X] Side Characters
     [-] Background Characters
         [X] Athalmus
-        [] Ascension
+        [-] Ascension
             [-] Ascencia
                 [] Non-Combat
             [] Mortal
-        [] Purgatory
+        [-] Purgatory
             [] Mortal
                 [] Non-Combat
-            [] Circlean
+            [X] Circlean
             [] Death Brigade
                 [] Light
                 [] Dark
-        [] Lacrimae
+        [-] Lacrimae
             [] Mortal
                 [] Non-Combat
             [] Lacra
                 [] Martym
                 [] Sev
-                [] Endi
+                [-] Endi
     [] Location
     [] Sentient Species
     [] Animals
@@ -53,7 +53,7 @@ To Do:
         [-] Una Atlanta
         [-] Mayim Blanka
     - Ascension
-        [] Merlin Lagrange (Mortal)
+        [-] Merlin Lagrange (Mortal)
         [-] Adamos Serim
         [] Mildred Levier Heaven (Non-Com)
     - Purgatory

@@ -56,16 +56,10 @@
     opacity: 0.35;
 
     /* Replace with your own cloud PNG */
-    background-image: url("PATH_TO_CLOUDS.png");
-    background-repeat: repeat-x;
+    background-image: url("../../../-assets/clouds.png");
+    background-repeat: repeat;
     background-position: center top;
-    background-size: auto 220px;
-}
-
-/* ensure content is above overlays */
-.dd-profile--asc>* {
-    position: relative;
-    z-index: 1;
+    background-size: auto 800px;
 }
 
 /* Subtle geometric “Ascension” overlay (RHOMBUS/DIAMOND, yellow→green) */
@@ -89,8 +83,10 @@
     mask-image: none;
 }
 
-.dd-profile--asc * {
-    box-sizing: border-box;
+/* Keep real content above overlays (but DO NOT affect .dd-clouds) */
+.dd-profile--asc> :not(.dd-clouds) {
+    position: relative;
+    z-index: 2;
 }
 
 /* ---------- Header layout ---------- */
@@ -414,39 +410,41 @@
     grid-template-columns: auto max-content auto;
     align-items: center;
     justify-content: center;
-    gap: 6px;
-    /* closeness to tabs */
+    gap: 10px;
+    /* slightly more breathing room */
     width: max-content;
     margin: 0 auto;
 }
 
-/* deco “box” ALWAYS exists */
+/* deco becomes a transparent positioning hook only */
 .dd-tabdeco {
-    width: 34px;
-    height: 34px;
-    border-radius: var(--radius);
-    border: 1px solid rgba(40, 55, 90, 0.18);
-    background: rgba(255, 255, 255, 0.35);
-    display: grid;
-    place-items: center;
-    overflow: hidden;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    padding: 0;
+    overflow: visible;
+    display: block;
 }
 
-/* keep them hugging tabs */
+/* spacing relative to tabs */
 .dd-tabdeco--left {
-    margin-right: 100px;
+    margin-right: 24px;
 }
 
 .dd-tabdeco--right {
-    margin-left: 100px;
+    margin-left: 24px;
 }
 
-/* img fills the box IF you later add a real src */
+/* image is the decoration */
 .dd-tabdeco img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
     display: block;
+    height: 42px;
+    /* CONTROL SIZE HERE */
+    width: 170px;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 /* ---------- Panels ---------- */

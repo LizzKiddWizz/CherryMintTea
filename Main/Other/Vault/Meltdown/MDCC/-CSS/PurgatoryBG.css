@@ -31,11 +31,11 @@
     --radius-sm: 12px;
 
     /* Plant assets (set your paths) */
-    --plant-overlay: url("PATH_TO_PLANT_OVERLAY.png");
+    --plant-overlay: url("../../../-assets/waterfall.png");
     /* repeating, subtle */
-    --plant-corner: url("PATH_TO_PLANT_CORNER.png");
+    --plant-corner: url("../../../-assets/plant-corner.png");
     /* single corner flourish (optional) */
-    --plant-divider: url("PATH_TO_PLANT_DIVIDER.png");
+    --plant-divider: url("../../../-assets/plant-divider.png");
     /* optional small ribbon divider */
 
     color: var(--text);
@@ -75,13 +75,16 @@
         repeating-radial-gradient(circle at 30% 40%, rgba(255, 255, 255, 0.16) 0 2px, transparent 2px 22px);
 }
 
-/* Plant iconography overlay (your PNG) */
+/* Plant / Waterfall overlay (your PNG) */
 .dd-clouds {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    z-index: 0;
-    opacity: 0.20;
+
+    /* Put it ABOVE ::before/::after, but BELOW content */
+    z-index: 1;
+
+    opacity: 0.10;
 
     background-image: var(--plant-overlay);
     background-repeat: repeat;
@@ -89,25 +92,10 @@
     background-size: 520px auto;
 }
 
-/* Corner flourish (optional). Uses your plant PNG. */
-.dd-profile--asc::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.35;
-
-    background-image: var(--plant-corner);
-    background-repeat: no-repeat;
-    background-position: right 10px top 10px;
-    background-size: 220px auto;
-}
-
-/* ensure content is above overlays */
-.dd-profile--asc>* {
+/* Keep real content above overlays (but DO NOT affect .dd-clouds) */
+.dd-profile--asc> :not(.dd-clouds) {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 .dd-profile--asc * {
@@ -429,30 +417,47 @@
     margin: 0 auto;
 }
 
-.dd-tabdeco {
-    width: 34px;
-    height: 34px;
-    border-radius: 999px;
-    border: 1px solid rgba(28, 54, 34, 0.16);
-    background: rgba(255, 255, 255, 0.52);
+/* wrapper holds left deco + tabs + right deco tightly */
+.dd-tabswrap {
     display: grid;
-    place-items: center;
-    overflow: hidden;
+    grid-template-columns: auto max-content auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* slightly more breathing room */
+    width: max-content;
+    margin: 0 auto;
 }
 
+/* deco becomes a transparent positioning hook only */
+.dd-tabdeco {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    padding: 0;
+    overflow: visible;
+    display: block;
+}
+
+/* spacing relative to tabs */
 .dd-tabdeco--left {
-    margin-right: 100px;
+    margin-right: 24px;
 }
 
 .dd-tabdeco--right {
-    margin-left: 100px;
+    margin-left: 24px;
 }
 
+/* image is the decoration */
 .dd-tabdeco img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
     display: block;
+    height: 42px;
+    /* CONTROL SIZE HERE */
+    width: 170px;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 /* ---------- Panels ---------- */
