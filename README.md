@@ -25,10 +25,11 @@ To Do:
     [X] Side Characters
     [-] Background Characters
         [X] Athalmus
-        [-] Ascension
-            [-] Ascencia
-                [] Non-Combat
-            [] Mortal
+        [X] Ascension
+            [X] Ascencia
+                [X] Non-Combat
+            [X] Mortal
+                [X] Non-Combat
         [-] Purgatory
             [] Mortal
                 [] Non-Combat
@@ -54,8 +55,9 @@ To Do:
         [-] Mayim Blanka
     - Ascension
         [-] Merlin Lagrange (Mortal)
+        [-] Noryemir Ellumwyn
         [-] Adamos Serim
-        [] Mildred Levier Heaven (Non-Com)
+        [-] Mildred Levier Heaven (Non-Com)
     - Purgatory
         [-] Rosen Lovecraft (Circlean)
         [] BECC BSoD (DB)
