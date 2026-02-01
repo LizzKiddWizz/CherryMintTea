@@ -34,9 +34,9 @@ To Do:
             [] Mortal
                 [] Non-Combat
             [X] Circlean
-            [] Death Brigade
-                [] Light
-                [] Dark
+            [X] Death Brigade
+                [X] Light
+                [X] Dark
         [-] Lacrimae
             [] Mortal
                 [] Non-Combat
@@ -54,13 +54,14 @@ To Do:
         [-] Una Atlanta
         [-] Mayim Blanka
     - Ascension
-        [-] Merlin Lagrange (Mortal)
-        [-] Noryemir Ellumwyn
-        [-] Adamos Serim
+        [-] Merlin Lagrange (Mortal Non-Com)
+        [-] Noryemir Ellumwyn (Mortal Com)
+        [-] Adamos Serim (Ascensia)
         [-] Mildred Levier Heaven (Non-Com)
     - Purgatory
         [-] Rosen Lovecraft (Circlean)
-        [] BECC BSoD (DB)
+        [] Tatsu (DB Dark)
+        [] Honey Bun (DB Light)
         [] Magnus Aueralis (Mortal Non-Com)
         [] Lawrence 'Law' Hunstman (Mortal Com)
     - Lacrimae
