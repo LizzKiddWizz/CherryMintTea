@@ -30,9 +30,9 @@ To Do:
                 [X] Non-Combat
             [X] Mortal
                 [X] Non-Combat
-        [-] Purgatory
-            [] Mortal
-                [] Non-Combat
+        [X] Purgatory
+            [X] Mortal
+                [X] Non-Combat
             [X] Circlean
             [X] Death Brigade
                 [X] Light
@@ -60,10 +60,10 @@ To Do:
         [-] Mildred Levier Heaven (Non-Com)
     - Purgatory
         [-] Rosen Lovecraft (Circlean)
-        [] Tatsu (DB Dark)
-        [] Honey Bun (DB Light)
-        [] Magnus Aueralis (Mortal Non-Com)
-        [] Lawrence 'Law' Hunstman (Mortal Com)
+        [-] Tatsu (DB Dark)
+        [-] Honey Bun (DB Light)
+        [-] Magnus Aueralis (Mortal Non-Com)
+        [-] Lawrence 'Law' Hunstman (Mortal Com)
     - Lacrimae
         [-] Alloces Aluhyde (Endi- Glacius)
         [] Halcyon Galia (Endi)
