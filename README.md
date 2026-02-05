@@ -37,14 +37,17 @@ To Do:
             [X] Death Brigade
                 [X] Light
                 [X] Dark
-        [-] Lacrimae
-            [] Mortal
-                [] Non-Combat
-            [] Lacra
-                [] Martym
-                [] Sev
-                [-] Endi
-    [] Location
+        [X] Lacrimae
+            [X] Mortal
+                [X] Non-Combat
+            [X] Lacra
+                [X] Martym
+                [X] Sev
+                [X] Endi
+        [X] Living Mortal
+            [X] Combat
+            [X] Non-Combat
+    [X] Location
     [] Sentient Species
     [] Animals
     [] Plants
@@ -54,23 +57,26 @@ To Do:
         [-] Una Atlanta
         [-] Mayim Blanka
     - Ascension
-        [-] Merlin Lagrange (Mortal Non-Com)
+        [-] Merlin Lagrange (Mortal Non-Com) -
         [-] Noryemir Ellumwyn (Mortal Com)
         [-] Adamos Serim (Ascensia)
-        [-] Mildred Levier Heaven (Non-Com)
+        [-] Mildred Levier Heaven (Non-Com) -
     - Purgatory
         [-] Rosen Lovecraft (Circlean)
         [-] Tatsu (DB Dark)
         [-] Honey Bun (DB Light)
-        [-] Magnus Aueralis (Mortal Non-Com)
+        [-] Magnus Aueralis (Mortal Non-Com) -
         [-] Lawrence 'Law' Hunstman (Mortal Com)
     - Lacrimae
         [-] Alloces Aluhyde (Endi- Glacius)
-        [] Halcyon Galia (Endi)
-        [] Geranigor Ishtarinavani (Martym)
-        [] Harlan Malaphar (Sev)
+        [-] Halcyon Galia (Endi)
+        [-] Geranigor Ishtarinavani (Martym)
+        [-] Harlan Malaphar (Sev)
+        [-] Mavi Ladimar (Mortal Non-Com) -
+        [-] Regalia Marx (Mortal Com)
     - Living Mortals
-        [] Theloden Leondir
+        [-] Theloden Leondir
+        [-] Abasinthe Constanza -
 [] Add lore pages
 [] Upload Important Characters
 

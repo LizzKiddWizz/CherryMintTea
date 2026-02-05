@@ -1,3 +1,4 @@
+<!---- Athalmus ---->
 <!doctype html>
 <html lang="en">
 
@@ -131,9 +132,9 @@
                 </div>
 
                 <!-- Owner card -->
-                <a class="dd-owner" href="../../../../../Affiliations/Friends/">
-                    <img class="dd-owner__img" src="../../../../../Affiliations/Friends/assets/" alt="friend" loading="lazy">
-                    <span class="dd-owner__txt">this character is owned by <b>name</b></span>
+                <a class="dd-owner" href="../../../../../Affiliations/Friends/Jaed.html">
+                    <img class="dd-owner__img" src="../../../../../Affiliations/Friends/assets/Jaed/JaedPFP.png" alt="finestJaed" loading="lazy">
+                    <span class="dd-owner__txt">this character is owned by <b>finestJaed</b></span>
                 </a>
 
             </aside>
@@ -274,6 +275,7 @@
                                         <div class="dd-stat"><span>Defense</span><b>7</b></div>
                                         <div class="dd-stat"><span>Agility</span><b>6</b></div>
                                         <div class="dd-stat"><span>Magic</span><b>9</b></div>
+                                        <div class="dd-stat"><span>Weapon</span><b>3</b></div>
                                         <div class="dd-stat"><span>Knowledge</span><b>8</b></div>
                                         <div class="dd-stat"><span>Perception</span><b>8</b></div>
                                         <div class="dd-stat"><span>Speed</span><b>7</b></div>
@@ -288,13 +290,35 @@
                                                 </linearGradient>
                                             </defs>
                                             <g opacity=".35" stroke="rgba(169,176,195,.35)" fill="none">
+                                                <circle r="12.5" />
+                                                <circle r="25" />
+                                                <circle r="37.5" />
+                                                <circle r="50" />
+                                                <circle r="62.5" />
+                                                <circle r="75" />
+                                                <circle r="87.5" />
                                                 <circle r="100" />
-                                                <circle r="77.7" />
-                                                <circle r="55.5" />
-                                                <circle r="33.3" />
                                             </g>
-                                            <polygon fill="url(#ddGrad)" fill-opacity=".30" stroke="url(#ddGrad)"
-                                                stroke-width="2"
+                                            <!-- Axis labels -->
+                                            <g class="dd-radar-labels">
+                                                <!-- N -->
+                                                <text x="0" y="-108" text-anchor="middle" dominant-baseline="central">Power</text>
+                                                <!-- NE -->
+                                                <text x="78" y="-78" text-anchor="start" dominant-baseline="central">Defense</text>
+                                                <!-- E -->
+                                                <text x="108" y="0" text-anchor="start" dominant-baseline="central">Agility</text>
+                                                <!-- SE -->
+                                                <text x="78" y="78" text-anchor="start" dominant-baseline="central">Magic</text>
+                                                <!-- S -->
+                                                <text x="0" y="108" text-anchor="middle" dominant-baseline="central">Weapon</text>
+                                                <!-- SW -->
+                                                <text x="-78" y="78" text-anchor="end" dominant-baseline="central">Knowledge</text>
+                                                <!-- W -->
+                                                <text x="-99" y="0" text-anchor="end" dominant-baseline="central">Perception</text>
+                                                <!-- NW -->
+                                                <text x="-78" y="-78" text-anchor="end" dominant-baseline="central">Speed</text>
+                                            </g>
+                                            <polygon fill="url(#ddGrad)" fill-opacity=".30" stroke="url(#ddGrad)" stroke-width="2"
                                                 points="0,-77,54.9,-54.9,66,0,62.9,62.9,0,88.8,-62.9,62.9,-77,0,-62.9,-62.9" />
                                         </svg>
                                     </div>

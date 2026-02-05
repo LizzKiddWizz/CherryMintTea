@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Moonlit Nebula — Location</title>
+
+    <!-- Font Awesome FREE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Base / Global CSS -->
+    <link rel="stylesheet" href="../../../../../CSS/meltdown.css" />
+
+    <!-- Location CSS (FULL FILE below) -->
+    <link rel="stylesheet" href="../../-CSS/Location.css" />
+</head>
+
+<body class="dd-page">
+
+    <!-- ================= TOP NAV ================= -->
+    <header class="top-nav">
+        <div class="nav-inner">
+            <div class="brand">
+                <span class="logo"></span>
+                <div class="brand-text">
+                    <h1>CherryMintTea</h1>
+                    <p>Connection • Compassion • Continuity</p>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="../../../../../../Home.html">Home</a>
+                <a href="../../../../../Vault/page1.html">Vault</a>
+                <a href="../../../../../Projects/index.html">Projects</a>
+                <a href="../../../../../Affiliations/page1.html">Affiliations</a>
+                <a href="../../../../../FAQ/FAQ.html">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= PAGE LAYOUT ================= -->
+    <div class="layout">
+
+        <!-- ========== SIDEBAR ========== -->
+        <aside class="side-menu">
+            <nav>
+                <ul>
+                    <li>
+                        <a class="nav-heading-link" href="../../../MD.html#glossary">Back</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ========== MAIN CONTENT ========== -->
+        <main class="content" id="overview">
+
+            <section class="loc-card">
+
+                <!-- ===== MAIN ROW ===== -->
+                <div class="loc-main">
+
+                    <!-- IMAGE -->
+                    <div class="loc-image"
+                        style="background-image:url('https://cdn.discordapp.com/attachments/1089310599743275109/1205694954882600991/image.png');">
+                        <div class="loc-image-frame"></div>
+                    </div>
+
+                    <!-- INFO -->
+                    <div class="loc-info">
+                        <div class="loc-body">
+
+                            <h1 class="loc-title">
+                                <i class="fa-solid fa-fire"></i>
+                                Moonlit Nebula
+                            </h1>
+
+                            <section class="loc-box" id="purpose">
+                                <h2>Purpose</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Duis sollicitudin elit sed tellus blandit viverra sed eget odio.
+                                </p>
+                            </section>
+
+                            <div class="loc-tags" id="tags">
+                                <div class="tag"><i class="fa-solid fa-triangle-exclamation"></i> Safety</div>
+                                <div class="tag"><i class="fa-solid fa-camera"></i> Demographic</div>
+                                <div class="tag"><i class="fa-solid fa-globe"></i> Ownership</div>
+                                <div class="tag">-</div>
+                                <div class="tag">-</div>
+                                <div class="tag">-</div>
+                            </div>
+
+                            <section class="loc-box" id="world">
+                                <h2>Means of Constuction/Ownership</h2>
+
+                                <p>History / popularity description.</p>
+
+                                <div class="loc-split">
+                                    <div>
+                                        <h3>Access</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Duis sollicitudin elit sed tellus blandit viverra sed eget odio.
+                                        </p>
+                                    </div>
+
+                                    <div>
+                                        <h3>Services</h3>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Duis sollicitudin elit sed tellus blandit viverra sed eget odio.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ===== PLACES CAROUSEL ===== -->
+                <section class="places" id="areas" aria-label="Places">
+
+                    <div class="places-head">
+                        <h2 class="places-title">Places</h2>
+
+                        <div class="places-controls" aria-label="Carousel controls">
+                            <button class="places-btn" type="button" data-prev aria-label="Previous">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <button class="places-btn" type="button" data-next aria-label="Next">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="places-viewport" data-viewport tabindex="0" aria-label="Places carousel">
+                        <div class="places-track" data-track>
+
+                            <!-- CARD 1 -->
+                            <button class="place-card is-active" type="button" data-place data-title="PlaceName"
+                                data-sub="Purpose"
+                                data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Duis sollicitudin elit sed tellus blandit viverra sed eget odio."
+                                data-extra="ExtraInfo">
+                                <img src="URL"
+                                    alt="">
+                                <div class="place-meta">
+                                    <strong>PlaceName</strong>
+                                    <span>Purpose</span>
+                                </div>
+                            </button>
+
+                            <!-- CARD 2 -->
+                            <button class="place-card is-active" type="button" data-place data-title="PlaceName"
+                                data-sub="Purpose"
+                                data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Duis sollicitudin elit sed tellus blandit viverra sed eget odio."
+                                data-extra="ExtraInfo">
+                                <img src="URL"
+                                    alt="">
+                                <div class="place-meta">
+                                    <strong>PlaceName</strong>
+                                    <span>Purpose</span>
+                                </div>
+                            </button>
+
+                            <!-- CARD 3 -->
+                            <button class="place-card is-active" type="button" data-place data-title="PlaceName"
+                                data-sub="Purpose"
+                                data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Duis sollicitudin elit sed tellus blandit viverra sed eget odio."
+                                data-extra="ExtraInfo">
+                                <img src="URL"
+                                    alt="">
+                                <div class="place-meta">
+                                    <strong>PlaceName</strong>
+                                    <span>Purpose</span>
+                                </div>
+                            </button>
+
+                            <!-- CARD 4 -->
+                            <button class="place-card is-active" type="button" data-place data-title="PlaceName"
+                                data-sub="Purpose"
+                                data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Duis sollicitudin elit sed tellus blandit viverra sed eget odio."
+                                data-extra="ExtraInfo">
+                                <img src="URL"
+                                    alt="">
+                                <div class="place-meta">
+                                    <strong>PlaceName</strong>
+                                    <span>Purpose</span>
+                                </div>
+                            </button>
+
+                            <!-- CARD 5 -->
+                            <button class="place-card is-active" type="button" data-place data-title="PlaceName"
+                                data-sub="Purpose"
+                                data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Duis sollicitudin elit sed tellus blandit viverra sed eget odio."
+                                data-extra="ExtraInfo">
+                                <img src="URL"
+                                    alt="">
+                                <div class="place-meta">
+                                    <strong>PlaceName</strong>
+                                    <span>Purpose</span>
+                                </div>
+                            </button>
+
+                            <!-- CARD 6 -->
+                            <button class="place-card is-active" type="button" data-place data-title="PlaceName"
+                                data-sub="Purpose"
+                                data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    Duis sollicitudin elit sed tellus blandit viverra sed eget odio."
+                                data-extra="ExtraInfo">
+                                <img src="URL"
+                                    alt="">
+                                <div class="place-meta">
+                                    <strong>PlaceName</strong>
+                                    <span>Purpose</span>
+                                </div>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <div class="places-dots" data-dots aria-label="Carousel position"></div>
+
+                    <!-- Details panel (updates when card selected) -->
+                    <section class="places-detail" aria-live="polite">
+                        <div class="places-detail-head">
+                            <h3 class="places-detail-title" data-detail-title>Main Gateway</h3>
+                            <span class="places-detail-sub" data-detail-sub>Guest Check-in</span>
+                        </div>
+                        <p class="places-detail-desc" data-detail-desc>
+                            For checking in guests, verifying invitations, and processing “entry rites.”
+                        </p>
+                        <p class="places-detail-extra" data-detail-extra>
+                            Primary staff: doormen + clerks • Security: moderate • Vibe: velvet-lit reception
+                        </p>
+                    </section>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script>
+        (function () {
+            const viewport = document.querySelector("[data-viewport]");
+            const track = document.querySelector("[data-track]");
+            const cards = Array.from(document.querySelectorAll("[data-place]"));
+            const prev = document.querySelector("[data-prev]");
+            const next = document.querySelector("[data-next]");
+            const dotsWrap = document.querySelector("[data-dots]");
+
+            const titleEl = document.querySelector("[data-detail-title]");
+            const subEl = document.querySelector("[data-detail-sub]");
+            const descEl = document.querySelector("[data-detail-desc]");
+            const extraEl = document.querySelector("[data-detail-extra]");
+
+            if (!viewport || !track || cards.length === 0) return;
+
+            const gap = () => parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || "14");
+            const cardW = () => cards[0].getBoundingClientRect().width;
+            const perView = () => {
+                const w = viewport.clientWidth;
+                if (w < 620) return 1;
+                if (w < 980) return 2;
+                return 3;
+            };
+
+            let index = 0;
+
+            function pagesCount() {
+                return Math.max(1, Math.ceil(cards.length / perView()));
+            }
+
+            function clamp(v, min, max) {
+                return Math.max(min, Math.min(max, v));
+            }
+
+            function scrollToIndex(i) {
+                index = clamp(i, 0, pagesCount() - 1);
+
+                const step = (cardW() + gap()) * perView();
+                const x = step * index;
+
+                track.style.transform = `translateX(${-x}px)`;
+                updateDots();
+            }
+
+            function setActive(card) {
+                cards.forEach(c => c.classList.remove("is-active"));
+                card.classList.add("is-active");
+
+                titleEl.textContent = card.dataset.title || "";
+                subEl.textContent = card.dataset.sub || "";
+                descEl.textContent = card.dataset.desc || "";
+                extraEl.textContent = card.dataset.extra || "";
+            }
+
+            function buildDots() {
+                dotsWrap.innerHTML = "";
+                const n = pagesCount();
+
+                for (let i = 0; i < n; i++) {
+                    const b = document.createElement("button");
+                    b.type = "button";
+                    b.className = "dot";
+                    b.setAttribute("aria-label", `Go to slide ${i + 1}`);
+                    b.addEventListener("click", () => scrollToIndex(i));
+                    dotsWrap.appendChild(b);
+                }
+                updateDots();
+            }
+
+            function updateDots() {
+                const dots = Array.from(dotsWrap.querySelectorAll(".dot"));
+                dots.forEach((d, i) => d.classList.toggle("is-active", i === index));
+            }
+
+            prev?.addEventListener("click", () => scrollToIndex(index - 1));
+            next?.addEventListener("click", () => scrollToIndex(index + 1));
+
+            cards.forEach((card) => {
+                card.addEventListener("click", () => setActive(card));
+            });
+
+            // keyboard (on the carousel area)
+            viewport.addEventListener("keydown", (e) => {
+                if (e.key === "ArrowLeft") { e.preventDefault(); scrollToIndex(index - 1); }
+                if (e.key === "ArrowRight") { e.preventDefault(); scrollToIndex(index + 1); }
+            });
+
+            // initial
+            setActive(cards[0]);
+            buildDots();
+            scrollToIndex(0);
+
+            // rebuild on resize
+            window.addEventListener("resize", () => {
+                buildDots();
+                scrollToIndex(clamp(index, 0, pagesCount() - 1));
+            });
+        })();
+    </script>
+
+</body>
+
+</html>

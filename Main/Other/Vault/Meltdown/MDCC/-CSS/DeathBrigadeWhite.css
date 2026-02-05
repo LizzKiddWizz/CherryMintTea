@@ -1114,3 +1114,18 @@
         opacity: 0.28;
     }
 }
+.dd-radar-labels text {
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    fill: var(--muted);
+    paint-order: stroke;
+    stroke: rgba(255, 255, 255, .65);
+    /* optional “readability” halo */
+    stroke-width: 3px;
+    /* optional */
+}
+
+.dd-radar svg {
+    overflow: visible;
+}

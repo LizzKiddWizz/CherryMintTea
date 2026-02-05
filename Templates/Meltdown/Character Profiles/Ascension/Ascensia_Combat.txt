@@ -1,3 +1,4 @@
+<!---- Ascensia Combat ---->
 <!doctype html>
 <html lang="en">
 
@@ -11,7 +12,7 @@
 
     <!-- Base + Profile CSS -->
     <link rel="stylesheet" href="../../../../../../../CSS/meltdown.css" />
-    <link rel="stylesheet" href="../../../../-CSS/PurgatoryBG.css" />
+    <link rel="stylesheet" href="../../../../-CSS/AscensiaBG.css" />
 </head>
 
 <body class="dd-page">
@@ -70,13 +71,14 @@
                     <div class="dd-field"><span>Nickname</span><b>Nickname</b></div>
                     <div class="dd-field"><span>Age</span><b>??</b></div>
                     <div class="dd-field"><span>Birthday</span><b>Month Day</b></div>
-                    <div class="dd-field"><span>Rank</span><b>Rank</b></div>
-                    <div class="dd-field"><span>Department</span><b>Department</b></div>
+                    <div class="dd-field"><span>Choir Rank</span><b>Rank</b></div>
+                    <div class="dd-field"><span>Ministry</span><b>Ministry</b></div>
+                    <div class="dd-field"><span>Segment</span><b>Segment</b></div>
                 </div>
     
                 <!-- Buttons -->
                 <div class="dd-card dd-actions">
-                    <a class="dd-action" href="../../Purgatory.html">
+                    <a class="dd-action" href="../../Ascension.html">
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>Back</span>
                     </a>
@@ -111,7 +113,7 @@
     
                 <div class="dd-tabswrap" aria-label="Profile sections">
                     <div class="dd-tabdeco dd-tabdeco--left">
-                        <img src="../../../../../../-assets/purgatory-divider.png" alt="" />
+                        <img src="../../../../../../-assets/ascension-divider.png" alt="" />
                     </div>
                     <!-- Tabs -->
                     <nav class="dd-tabs" aria-label="Profile sections">
@@ -121,7 +123,7 @@
                         <button class="dd-tab" type="button" data-tab="likes">Likes</button>
                     </nav>
                     <div class="dd-tabdeco dd-tabdeco--right">
-                        <img src="../../../../../../-assets/purgatory-divider.png" alt="" />
+                        <img src="../../../../../../-assets/ascension-divider.png" alt="" />
                     </div>
                 </div>
     
@@ -141,7 +143,7 @@
                                 <div class="dd-fieldline"><span>Weight</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Wings</span><b>— (count/desc)</b></div>
     
-                                <div class="dd-divider dd-divider--plant" aria-hidden="true"></div>
+                                <div class="dd-divider dd-divider--sun" aria-hidden="true"></div>
     
                                 <div class="dd-note">
                                     <p>Design Notes...</p>
@@ -190,7 +192,7 @@
     
                                 <div class="dd-paletteimg">
                                     <a href="FULL_IMAGE.jpg" target="_blank" rel="noopener">
-                                        <img src="THUMB_IMAGE.jpg" alt="Seal" loading="lazy">
+                                        <img src="THUMB_IMAGE.jpg" alt="Halo" loading="lazy">
                                     </a>
                                 </div>
     
@@ -226,14 +228,13 @@
                             <!-- Left: categories -->
                             <div class="dd-card dd-cats">
     
-    
                                 <div class="dd-fieldline"><span>Occupation</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Orientation</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Residence</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Element</span><b>—</b></div>
-                                <div class="dd-fieldline"><span>Parentage</span><b>—</b></div>
+                                <div class="dd-fieldline"><span>Virtue</span><b>—</b></div>
     
-                                <div class="dd-divider dd-divider--plant" aria-hidden="true"></div>
+                                <div class="dd-divider dd-divider--sun" aria-hidden="true"></div>
     
                                 <p class="dd-note">Optional notes / fun fact line.</p>
                             </div>

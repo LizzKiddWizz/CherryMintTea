@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
     <!-- Base + Profile CSS -->
-    <link rel="stylesheet" href="../../../../../../../CSS/meltdown.css" />
-    <link rel="stylesheet" href="../../../../-CSS/AscensiaBG.css" />
+    <link rel="stylesheet" href="../../../../CSS/meltdown.css" />
+    <link rel="stylesheet" href="../../../Meltdown/MDCC/-CSS/LivingMortals.css" />
 </head>
 
 <body class="dd-page">
@@ -28,11 +28,11 @@
             </div>
 
             <nav class="nav-links">
-                <a href="../../../../../../Home.html">Home</a>
-                <a href="../../../../../Vault/page1.html">Vault</a>
-                <a href="../../../../../Projects/index.html">Projects</a>
-                <a href="../../../../../Affiliations/page1.html">Affiliations</a>
-                <a href="../../../../../FAQ/FAQ.html">FAQ</a>
+                <a href="../../../../../Home.html">Home</a>
+                <a href="../../../../Vault/page1.html">Vault</a>
+                <a href="../../../../Projects/index.html">Projects</a>
+                <a href="../../../../Affiliations/page1.html">Affiliations</a>
+                <a href="../../../../FAQ/FAQ.html">FAQ</a>
             </nav>
         </div>
     </header>
@@ -49,8 +49,6 @@
 
                 <div class="dd-iconwrap">
                     <img class="dd-icon" src="https://placehold.co/160x160" alt="Character icon" loading="lazy" />
-                    <img class="dd-iconborder" src="../../../../../../-assets/chainborder.png" alt="Chain"
-                        aria-hidden="true">
                     <span class="dd-iconring" aria-hidden="true"></span>
 
                     <!-- Record / status bubble (by icon) -->
@@ -68,24 +66,22 @@
                 </div>
 
                 <div class="dd-bio">
-                    <div class="dd-field"><span>Full name</span><b>Firstname Lastname</b></div>
+                    <div class="dd-field"><span>User</span><b>@username</b></div>
                     <div class="dd-field"><span>Nickname</span><b>Nickname</b></div>
                     <div class="dd-field"><span>Age</span><b>??</b></div>
                     <div class="dd-field"><span>Birthday</span><b>Month Day</b></div>
-                    <div class="dd-field"><span>Choir Rank</span><b>Rank</b></div>
-                    <div class="dd-field"><span>Ministry</span><b>Ministry</b></div>
-                    <div class="dd-field"><span>Segment</span><b>Segment</b></div>
-                    <div class="dd-field"><span>Status</span><b>Month Day</b></div>
+                    <div class="dd-field"><span>Universe</span><b>-</b></div>
+                    <div class="dd-field"><span>Location</span><b>-</b></div>
                 </div>
 
                 <!-- Buttons -->
                 <div class="dd-card dd-actions">
-                    <a class="dd-action" href="../../Ascension.html">
+                    <a class="dd-action" href="-LivingMortals.html">
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>Back</span>
                     </a>
 
-                    <a class="dd-action" href="../../--Landing/Landing.html">
+                    <a class="dd-action" href="../--Landing/Landing.html">
                         <i class="fa-solid fa-box-archive"></i>
                         <span>Hub</span>
                     </a>
@@ -110,12 +106,12 @@
             <div class="dd-titlewrap">
 
                 <div class="dd-titlebar">
-                    <h2 class="dd-firstname">Firstname</h2>
+                    <h2 class="dd-firstname">Fullname</h2>
                 </div>
 
                 <div class="dd-tabswrap" aria-label="Profile sections">
                     <div class="dd-tabdeco dd-tabdeco--left">
-                        <img src="../../../../../../-assets/ascension-divider.png" alt="" />
+                        <img src="../../../-assets/webborder.png" alt="" />
                     </div>
                     <!-- Tabs -->
                     <nav class="dd-tabs" aria-label="Profile sections">
@@ -125,7 +121,7 @@
                         <button class="dd-tab" type="button" data-tab="likes">Likes</button>
                     </nav>
                     <div class="dd-tabdeco dd-tabdeco--right">
-                        <img src="../../../../../../-assets/ascension-divider.png" alt="" />
+                        <img src="../../../-assets/webborder.png" alt="" />
                     </div>
                 </div>
 
@@ -143,7 +139,6 @@
                                 <div class="dd-fieldline"><span>Race</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Height</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Weight</span><b>—</b></div>
-                                <div class="dd-fieldline"><span>Status</span><b>—</b></div>
 
                                 <div class="dd-divider dd-divider--sun" aria-hidden="true"></div>
 
@@ -192,10 +187,9 @@
                                     <span class="dd-swatch" style="--swatch:#ffffff" title="Swatch 8"></span>
                                 </div>
 
-                                <!-- Alternate Photo -->
                                 <div class="dd-paletteimg">
                                     <a href="FULL_IMAGE.jpg" target="_blank" rel="noopener">
-                                        <img src="THUMB_IMAGE.jpg" alt="AltPicture" loading="lazy">
+                                        <img src="THUMB_IMAGE.jpg" alt="Sigil" loading="lazy">
                                     </a>
                                 </div>
 
@@ -234,8 +228,29 @@
                                 <div class="dd-fieldline"><span>Occupation</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Orientation</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Residence</span><b>—</b></div>
-                                <div class="dd-fieldline"><span>Element</span><b>—</b></div>
-                                <div class="dd-fieldline"><span>Virtue</span><b>—</b></div>
+                                <div class="dd-fieldline"><span>Home Planet</span><b>—</b></div>
+                                <div class="dd-fieldline"><span>Nationality</span><b>—</b></div>
+                                <!----------- Area Specific ----------->
+                                <!---------- Ascension ---------------->
+                                <!--
+                                <div class="dd-fieldline"><span>Ministry</span><b>—</b></div>
+                                <div class="dd-fieldline"><span>Segment</span><b>—</b></div>
+                                 -->
+                                <!------------ Purgatory -------------->
+                                <!--
+                                <div class="dd-fieldline"><span>Department</span><b>—</b></div>
+                                 -->
+                                <!----------- Lacrimae ---------------->
+                                <!--
+                                <div class="dd-fieldline"><span>Resonance</span><b>—</b></div>
+                                <div class="dd-fieldline"><span>Rank</span><b>—</b></div>
+                                <div class="dd-fieldline"><span>House</span><b>—</b></div>
+                                 -->
+                                <!----------------- Other ------------->
+                                <!--
+                                <div class="dd-fieldline"><span></span><b>—</b></div>
+                                <div class="dd-fieldline"><span>Nationality</span><b>—</b></div>
+                                 -->
 
                                 <div class="dd-divider dd-divider--sun" aria-hidden="true"></div>
 
@@ -255,8 +270,8 @@
                                     <img class="dd-weaponimg" src="https://placehold.co/140x140" alt="Weapon image"
                                         loading="lazy" />
                                     <div class="dd-weaponmeta">
-                                        <div class="dd-weaponname">Weapon Name</div>
-                                        <div class="dd-weapontag">Weapon type tagline</div>
+                                        <div class="dd-weaponname">Trinket Name</div>
+                                        <div class="dd-weapontag">Trinket rarity tagline</div>
                                     </div>
                                 </div>
 
@@ -267,6 +282,7 @@
                                         <div class="dd-stat"><span>Defense</span><b>7</b></div>
                                         <div class="dd-stat"><span>Agility</span><b>6</b></div>
                                         <div class="dd-stat"><span>Magic</span><b>9</b></div>
+                                        <div class="dd-stat"><span>Weapon</span><b>3</b></div>
                                         <div class="dd-stat"><span>Knowledge</span><b>8</b></div>
                                         <div class="dd-stat"><span>Perception</span><b>8</b></div>
                                         <div class="dd-stat"><span>Speed</span><b>7</b></div>
@@ -281,10 +297,14 @@
                                                 </linearGradient>
                                             </defs>
                                             <g opacity=".35" stroke="rgba(169,176,195,.35)" fill="none">
+                                                <circle r="12.5" />
+                                                <circle r="25" />
+                                                <circle r="37.5" />
+                                                <circle r="50" />
+                                                <circle r="62.5" />
+                                                <circle r="75" />
+                                                <circle r="87.5" />
                                                 <circle r="100" />
-                                                <circle r="77.7" />
-                                                <circle r="55.5" />
-                                                <circle r="33.3" />
                                             </g>
                                             <polygon fill="url(#ddGrad)" fill-opacity=".30" stroke="url(#ddGrad)"
                                                 stroke-width="2"
@@ -310,9 +330,6 @@
                                 <p>One paragraph for personality. Keep this “bio post” styled.</p>
 
                                 <div class="dd-quoteDivider">“A personal quote divider goes here.”</div>
-
-                                <h3>Death</h3>
-                                <p>What their death was and how they died.</p>
 
                                 <h3>Past</h3>
                                 <p>Paragraph for past.</p>

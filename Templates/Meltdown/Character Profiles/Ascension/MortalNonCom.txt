@@ -1,3 +1,4 @@
+<!---- Ascensia Mortal Non-Combat ---->
 <!doctype html>
 <html lang="en">
 
@@ -11,7 +12,7 @@
 
     <!-- Base + Profile CSS -->
     <link rel="stylesheet" href="../../../../../../../CSS/meltdown.css" />
-    <link rel="stylesheet" href="../../../../-CSS/PurgatoryBG.css" />
+    <link rel="stylesheet" href="../../../../-CSS/AscensiaBG.css" />
 </head>
 
 <body class="dd-page">
@@ -49,6 +50,8 @@
     
                 <div class="dd-iconwrap">
                     <img class="dd-icon" src="https://placehold.co/160x160" alt="Character icon" loading="lazy" />
+                    <img class="dd-iconborder" src="../../../../../../-assets/chainborder.png" alt="Chain"
+                        aria-hidden="true">
                     <span class="dd-iconring" aria-hidden="true"></span>
     
                     <!-- Record / status bubble (by icon) -->
@@ -70,13 +73,14 @@
                     <div class="dd-field"><span>Nickname</span><b>Nickname</b></div>
                     <div class="dd-field"><span>Age</span><b>??</b></div>
                     <div class="dd-field"><span>Birthday</span><b>Month Day</b></div>
-                    <div class="dd-field"><span>Rank</span><b>Rank</b></div>
-                    <div class="dd-field"><span>Department</span><b>Department</b></div>
+                    <div class="dd-field"><span>Choir Rank</span><b>Rank</b></div>
+                    <div class="dd-field"><span>Ministry</span><b>Ministry</b></div>
+                    <div class="dd-field"><span>Segment</span><b>Segment</b></div>
                 </div>
     
                 <!-- Buttons -->
                 <div class="dd-card dd-actions">
-                    <a class="dd-action" href="../../Purgatory.html">
+                    <a class="dd-action" href="../../Ascension.html">
                         <i class="fa-solid fa-arrow-left"></i>
                         <span>Back</span>
                     </a>
@@ -111,7 +115,7 @@
     
                 <div class="dd-tabswrap" aria-label="Profile sections">
                     <div class="dd-tabdeco dd-tabdeco--left">
-                        <img src="../../../../../../-assets/purgatory-divider.png" alt="" />
+                        <img src="../../../../../../-assets/ascension-divider.png" alt="" />
                     </div>
                     <!-- Tabs -->
                     <nav class="dd-tabs" aria-label="Profile sections">
@@ -121,7 +125,7 @@
                         <button class="dd-tab" type="button" data-tab="likes">Likes</button>
                     </nav>
                     <div class="dd-tabdeco dd-tabdeco--right">
-                        <img src="../../../../../../-assets/purgatory-divider.png" alt="" />
+                        <img src="../../../../../../-assets/ascension-divider.png" alt="" />
                     </div>
                 </div>
     
@@ -139,9 +143,9 @@
                                 <div class="dd-fieldline"><span>Race</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Height</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Weight</span><b>—</b></div>
-                                <div class="dd-fieldline"><span>Wings</span><b>— (count/desc)</b></div>
+                                <div class="dd-fieldline"><span>Status</span><b>—</b></div>
     
-                                <div class="dd-divider dd-divider--plant" aria-hidden="true"></div>
+                                <div class="dd-divider dd-divider--sun" aria-hidden="true"></div>
     
                                 <div class="dd-note">
                                     <p>Design Notes...</p>
@@ -188,9 +192,10 @@
                                     <span class="dd-swatch" style="--swatch:#ffffff" title="Swatch 8"></span>
                                 </div>
     
+                                <!-- Alternate Photo -->
                                 <div class="dd-paletteimg">
                                     <a href="FULL_IMAGE.jpg" target="_blank" rel="noopener">
-                                        <img src="THUMB_IMAGE.jpg" alt="Seal" loading="lazy">
+                                        <img src="THUMB_IMAGE.jpg" alt="AltPicture" loading="lazy">
                                     </a>
                                 </div>
     
@@ -226,14 +231,13 @@
                             <!-- Left: categories -->
                             <div class="dd-card dd-cats">
     
-    
                                 <div class="dd-fieldline"><span>Occupation</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Orientation</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Residence</span><b>—</b></div>
                                 <div class="dd-fieldline"><span>Element</span><b>—</b></div>
-                                <div class="dd-fieldline"><span>Parentage</span><b>—</b></div>
+                                <div class="dd-fieldline"><span>Virtue</span><b>—</b></div>
     
-                                <div class="dd-divider dd-divider--plant" aria-hidden="true"></div>
+                                <div class="dd-divider dd-divider--sun" aria-hidden="true"></div>
     
                                 <p class="dd-note">Optional notes / fun fact line.</p>
                             </div>
@@ -248,25 +252,21 @@
                             <div class="dd-card dd-weaponstats">
     
                                 <div class="dd-weaponstrip">
-                                    <img class="dd-weaponimg" src="https://placehold.co/140x140" alt="Weapon image"
+                                    <img class="dd-weaponimg" src="https://placehold.co/140x140" alt="Trinket image"
                                         loading="lazy" />
                                     <div class="dd-weaponmeta">
-                                        <div class="dd-weaponname">Weapon Name</div>
-                                        <div class="dd-weapontag">Weapon type tagline</div>
+                                        <div class="dd-weaponname">Trinket</div>
+                                        <div class="dd-weapontag">Trinket rarity tagline</div>
                                     </div>
                                 </div>
     
                                 <div class="dd-box">
                                     <h3>Stats</h3>
                                     <div class="dd-stats dd-stats--sc">
-                                        <div class="dd-stat"><span>Power</span><b>7</b></div>
-                                        <div class="dd-stat"><span>Defense</span><b>7</b></div>
-                                        <div class="dd-stat"><span>Agility</span><b>6</b></div>
+                                        <div class="dd-stat"><span>Element Affinity</span><b>7</b></div>
+                                        <div class="dd-stat"><span>Vitality</span><b>7</b></div>
+                                        <div class="dd-stat"><span>Defense</span><b>6</b></div>
                                         <div class="dd-stat"><span>Magic</span><b>9</b></div>
-                                        <div class="dd-stat"><span>Weapon</span><b>3</b></div>
-                                        <div class="dd-stat"><span>Knowledge</span><b>8</b></div>
-                                        <div class="dd-stat"><span>Perception</span><b>8</b></div>
-                                        <div class="dd-stat"><span>Speed</span><b>7</b></div>
                                     </div>
     
                                     <div class="dd-radar dd-radar--sc">
@@ -287,27 +287,22 @@
                                                 <circle r="87.5" />
                                                 <circle r="100" />
                                             </g>
-                                            <!-- Axis labels -->
                                             <g class="dd-radar-labels">
-                                                <!-- N -->
-                                                <text x="0" y="-108" text-anchor="middle" dominant-baseline="central">Power</text>
-                                                <!-- NE -->
-                                                <text x="78" y="-78" text-anchor="start" dominant-baseline="central">Defense</text>
-                                                <!-- E -->
-                                                <text x="108" y="0" text-anchor="start" dominant-baseline="central">Agility</text>
-                                                <!-- SE -->
-                                                <text x="78" y="78" text-anchor="start" dominant-baseline="central">Magic</text>
-                                                <!-- S -->
-                                                <text x="0" y="108" text-anchor="middle" dominant-baseline="central">Weapon</text>
-                                                <!-- SW -->
-                                                <text x="-78" y="78" text-anchor="end" dominant-baseline="central">Knowledge</text>
-                                                <!-- W -->
-                                                <text x="-108" y="0" text-anchor="end" dominant-baseline="central">Perception</text>
-                                                <!-- NW -->
-                                                <text x="-78" y="-78" text-anchor="end" dominant-baseline="central">Speed</text>
+                                                <!-- Top -->
+                                                <text x="0" y="-110" text-anchor="middle" dominant-baseline="central">Element</text>
+                                        
+                                                <!-- Right -->
+                                                <text x="122" y="0" text-anchor="start" dominant-baseline="central">Vitality</text>
+                                        
+                                                <!-- Bottom -->
+                                                <text x="0" y="110" text-anchor="middle" dominant-baseline="central">Defense</text>
+                                        
+                                                <!-- Left -->
+                                                <text x="-122" y="0" text-anchor="end" dominant-baseline="central">Magic</text>
                                             </g>
+                                        
                                             <polygon fill="url(#ddGrad)" fill-opacity=".30" stroke="url(#ddGrad)" stroke-width="2"
-                                                points="0,-77,54.9,-54.9,66,0,62.9,62.9,0,88.8,-62.9,62.9,-77,0,-62.9,-62.9" />
+                                                points="0,-77.8 77.8,0 0,66.7 -100,0" />
                                         </svg>
                                     </div>
                                 </div>
@@ -329,6 +324,9 @@
                                 <p>One paragraph for personality. Keep this “bio post” styled.</p>
     
                                 <div class="dd-quoteDivider">“A personal quote divider goes here.”</div>
+    
+                                <h3>Death</h3>
+                                <p>What their death was and how they died.</p>
     
                                 <h3>Past</h3>
                                 <p>Paragraph for past.</p>

@@ -948,3 +948,19 @@
         grid-template-columns: 1fr;
     }
 }
+
+.dd-radar-labels text {
+    font-size: 5px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    fill: var(--muted);
+    paint-order: stroke;
+    stroke: rgba(76, 146, 226, 0);
+    /* optional “readability” halo */
+    stroke-width: 3px;
+    /* optional */
+}
+
+.dd-radar svg {
+    overflow: visible;
+}

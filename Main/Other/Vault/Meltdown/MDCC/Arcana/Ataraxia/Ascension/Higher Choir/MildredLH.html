@@ -274,13 +274,31 @@
                                                 </linearGradient>
                                             </defs>
                                             <g opacity=".35" stroke="rgba(169,176,195,.35)" fill="none">
+                                                <circle r="12.5" />
+                                                <circle r="25" />
+                                                <circle r="37.5" />
+                                                <circle r="50" />
+                                                <circle r="62.5" />
+                                                <circle r="75" />
+                                                <circle r="87.5" />
                                                 <circle r="100" />
-                                                <circle r="77.7" />
-                                                <circle r="55.5" />
-                                                <circle r="33.3" />
                                             </g>
-                                            <polygon fill="url(#ddGrad)" fill-opacity=".30" stroke="url(#ddGrad)"
-                                                stroke-width="2" points="0,-77,54.9,-54.9,66,0,62.9,62.9" />
+                                            <g class="dd-radar-labels">
+                                                <!-- Top -->
+                                                <text x="0" y="-110" text-anchor="middle" dominant-baseline="central">Element</text>
+                                        
+                                                <!-- Right -->
+                                                <text x="122" y="0" text-anchor="start" dominant-baseline="central">Vitality</text>
+                                        
+                                                <!-- Bottom -->
+                                                <text x="0" y="110" text-anchor="middle" dominant-baseline="central">Defense</text>
+                                        
+                                                <!-- Left -->
+                                                <text x="-122" y="0" text-anchor="end" dominant-baseline="central">Magic</text>
+                                            </g>
+                                        
+                                            <polygon fill="url(#ddGrad)" fill-opacity=".30" stroke="url(#ddGrad)" stroke-width="2" 
+                                                points="0,-77.8 77.8,0 0,66.7 -100,0" />
                                         </svg>
                                     </div>
                                 </div>
