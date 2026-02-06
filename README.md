@@ -208,7 +208,7 @@ Card Example:
 <!-- CARD -->
                     <a class="cc-card is-special" href="characters/your-character.html">
                         <div class="cc-media">
-                            <img class="cc-img" src="images/characters/char1.jpg" alt="Character Name">
+                            <img class="cc-img" src="../../-PFPs/MDDefaultPFP.png" alt="Character Name">
                             <!-- corner icon (optional) -->
                             <!-- Image -->
                             <img class="cc-imgico" src="images/icons/star.svg" alt="" aria-hidden="true">
