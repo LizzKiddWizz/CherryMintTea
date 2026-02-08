@@ -48,7 +48,7 @@ To Do:
             [X] Combat
             [X] Non-Combat
     [X] Location
-    [] Sentient Species
+    [-] Sentient Species
     [] Animals
     [] Plants
 [] Finish one MD profile per area
@@ -78,6 +78,9 @@ To Do:
         [-] Theloden Leondir
         [-] Abasinthe Constanza -
 [] Add lore pages
+[] Finish Lore Pages
+    [-] Moonlit Nebula (Location)
+    [-] Circlean (Reaper Core Species)
 [] Upload Important Characters
 
 Ideas and Notes:

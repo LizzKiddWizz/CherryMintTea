@@ -414,3 +414,90 @@
         /* 1 per view */
     }
 }
+
+/* === Left column wrapper (image + address) === */
+.loc-left {
+    display: grid;
+    gap: 12px;
+    align-content: start;
+}
+
+/* IMPORTANT: update loc-main columns so it still works */
+.loc-main {
+    display: grid;
+    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+    min-width: 0;
+}
+
+/* Address box styling */
+.loc-address {
+    border-radius: var(--radius);
+    border: 1px solid rgba(122, 162, 255, .18);
+    background: rgba(15, 17, 23, .72);
+    box-shadow: var(--shadow-soft);
+    padding: 14px;
+}
+
+.loc-address-title {
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 14px;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+    color: rgba(234, 238, 248, .94);
+}
+
+.loc-address-title i {
+    color: rgba(45, 226, 230, .85);
+}
+
+.loc-address-lines {
+    display: grid;
+    gap: 6px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.loc-address-lines strong {
+    color: rgba(234, 238, 248, .92);
+    font-weight: 800;
+}
+
+/* Copy button */
+.loc-copy {
+    margin-top: 12px;
+    width: 100%;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 12px;
+    border-radius: 999px;
+
+    border: 1px solid rgba(122, 162, 255, .18);
+    background: rgba(122, 162, 255, .08);
+    color: rgba(234, 238, 248, .92);
+
+    cursor: pointer;
+    transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+
+.loc-copy:hover {
+    transform: translateY(-1px);
+    background: rgba(122, 162, 255, .12);
+    border-color: rgba(122, 162, 255, .30);
+}
+
+/* Responsive: left column goes full width */
+@media (max-width: 980px) {
+    .loc-main {
+        grid-template-columns: 1fr;
+    }
+}

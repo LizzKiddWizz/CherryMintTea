@@ -1,0 +1,976 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Species Template — Dossier</title>
+
+    <!-- Font Awesome (optional, for icons like your example) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Your GLOBAL CSS (the one you pasted earlier) -->
+    <link rel="stylesheet" href="../../../../../../CSS/meltdown.css" />
+
+    <!-- Species template CSS (below) -->
+    <link rel="stylesheet" href="../../../-CSS/SentientSpecies.css" />
+</head>
+
+<body>
+
+    <!-- ================= TOP NAV (compatible with your global) ================= -->
+    <header class="top-nav">
+        <div class="nav-inner">
+            <div class="brand">
+                <span class="logo"></span>
+                <div class="brand-text">
+                    <h1>CherryMintTea</h1>
+                    <p>Connection • Compassion • Continuity</p>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="../../../../../../../Home.html">Home</a>
+                <a href="../../../../../../Vault/page1.html">Vault</a>
+                <a href="../../../../../../Projects/index.html">Projects</a>
+                <a href="../../../../../../Affiliations/page1.html">Affiliations</a>
+                <a href="../../../../../../FAQ/FAQ.html">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= HEADER TITLE BLOCK ================= -->
+    <section class="project-header">
+        <div class="project-title-wrap species-hero">
+            <div class="species-hero__inner">
+                <div class="species-hero__lines" aria-hidden="true"></div>
+
+                <h1 class="species-name">Common Name</h1>
+                <p class="species-pron">(Pronounciation)</p>
+
+                <h2 class="species-binomial">Scientific Name</h2>
+                <p class="species-pron">(Pronounciation)</p>
+
+                <div class="meta-row" style="justify-content:center;">
+                    <span class="tag">Native to: </span>
+                    <span class="chip chip--accent">Type: </span>
+                    <span class="chip">Status: </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MAIN PAGE GRID ================= -->
+    <main class="page species-page">
+
+        <!-- ===== Sticky side nav (internal) ===== -->
+        <aside class="sidebar">
+            <nav class="side-nav" aria-label="Species sections">
+                <a class="side-link side-link--muted" href="../../../../MD.html#glossary">Glossary</a>
+                <div class="side-divider"></div>
+
+                <a class="side-link" href="#name-origins"><i class="fa-solid fa-feather"></i> Name Origins</a>
+                <a class="side-link" href="#anatomy"><i class="fa-solid fa-head-side-virus"></i> Anatomy</a>
+                <a class="side-link" href="#traits"><i class="fa-solid fa-dna"></i> Biological Traits</a>
+                <a class="side-link" href="#reproduction"><i class="fa-solid fa-venus-mars"></i> Reproduction</a>
+                <a class="side-link" href="#preferences"><i class="fa-solid fa-temperature-half"></i> Preferences</a>
+                <a class="side-link" href="#culture"><i class="fa-solid fa-people-group"></i> Culture</a>
+                <a class="side-link" href="#facts"><i class="fa-solid fa-book-atlas"></i> Facts</a>
+                <a class="side-link" href="#stats"><i class="fa-solid fa-chart-simple"></i> Stats</a>
+                <a class="side-link" href="#notes"><i class="fa-solid fa-pencil"></i> Notes</a>
+                <a class="side-link" href="#members"><i class="fa-solid fa-certificate"></i> Notable Members</a>
+            </nav>
+        </aside>
+
+        <!-- ===== Content ===== -->
+        <div class="content">
+
+            <!-- ================= Name Origins + Side Image ================= -->
+            <section class="species-split" id="name-origins">
+                <div class="section species-block">
+                    <div class="species-head">
+                        <h2><i class="fa-solid fa-feather"></i> Name Origins</h2>
+                    </div>
+
+                    <div class="species-body">
+                        <p>
+                            Explanation for why the species is named the way it is, both it's scientific and common name.
+                        </p>
+                    </div>
+                </div>
+
+                <aside class="species-image" aria-label="Side image">
+                    <div class="species-image__frame">
+                        <img src="URL" alt="" />
+                    </div>
+                </aside>
+            </section>
+
+            <!-- ================= Anatomy ================= -->
+            <section class="section species-block" id="anatomy">
+                <div class="species-head">
+                    <h2><i class="fa-solid fa-head-side-virus"></i> Anatomy</h2>
+                </div>
+
+                <div class="species-accordion" data-accordion>
+                    <!-- item -->
+                    <details open class="species-item">
+                        <summary><span>Skeletal</span><span class="species-caret">▾</span></summary>
+                        <div class="species-item__body">
+                            <p>Details about the skeleton and bones (the lack thereof, or analogous structures)</p>
+                        </div>
+                    </details>
+
+                    <details class="species-item">
+                        <summary><span>Neural</span><span class="species-caret">▾</span></summary>
+                        <div class="species-item__body">
+                            <p>Details about the nervous system, or how the body is operated</p>
+                        </div>
+                    </details>
+
+                    <details class="species-item">
+                        <summary><span>Organs</span><span class="species-caret">▾</span></summary>
+                        <div class="species-item__body">
+                            <p>Details about specific organs</p>
+                        </div>
+                    </details>
+
+                    <details class="species-item">
+                        <summary><span>Endocrine</span><span class="species-caret">▾</span></summary>
+                        <div class="species-item__body">
+                            <p>Details about the reproductive system, and chemicals necessary for body regulation</p>
+                        </div>
+                    </details>
+
+                    <details class="species-item">
+                        <summary><span>Epidermis</span><span class="species-caret">▾</span></summary>
+                        <div class="species-item__body">
+                            <p>Details about the skin and muscle systems</p>
+                        </div>
+                    </details>
+
+                    <details class="species-item">
+                        <summary><span>Blood</span><span class="species-caret">▾</span></summary>
+                        <div class="species-item__body">
+                            <p>Details about the blood or how the body distributes resources</p>
+                        </div>
+                    </details>
+
+                    <details class="species-item">
+                        <summary><span>Eyes</span><span class="species-caret">▾</span></summary>
+                        <div class="species-item__body">
+                            <p>Details about the physical make up of the eye (or similar organ), and how it functions</p>
+                        </div>
+                    </details>
+
+                    <details class="species-item">
+                        <summary><span>Ears</span><span class="species-caret">▾</span></summary>
+                        <div class="species-item__body">
+                            <p>Details about the physical make up of the ear, and how it functions</p>
+                        </div>
+                    </details>
+
+                    <details class="species-item">
+                        <summary><span>Nasal–Oral</span><span class="species-caret">▾</span></summary>
+                        <div class="species-item__body">
+                            <p>Details about the nose (or equivalent), and the mouth (and teeth)</p>
+                        </div>
+                    </details>
+
+                    <details class="species-item">
+                        <summary><span>Peripherals</span><span class="species-caret">▾</span></summary>
+                        <div class="species-item__body">
+                            <p>Details about the limbs</p>
+                        </div>
+                    </details>
+
+                    <details class="species-item">
+                        <summary><span>Classification</span><span class="species-caret">▾</span></summary>
+                        <div class="species-item__body">
+                            <p><b>Biological? Mechanical? Magical? Spiritual?</b></p>
+                        </div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- ================= Traits + Side Image ================= -->
+            <section class="species-split" id="traits">
+                <div class="section species-block">
+                    <div class="species-head">
+                        <h2><i class="fa-solid fa-dna"></i> Biological Traits</h2>
+                    </div>
+
+                    <div class="species-body">
+                        <div class="species-kv">
+                            <div class="kv">
+                                <div class="k">Lifespan</div>
+                                <div class="v">-</div>
+                            </div>
+                            <div class="kv">
+                                <div class="k">Fertility</div>
+                                <div class="v">-</div>
+                            </div>
+                            <div class="kv">
+                                <div class="k">Height</div>
+                                <div class="v">~ 0'0" / 000cm</div>
+                            </div>
+                            <div class="kv">
+                                <div class="k">Weight</div>
+                                <div class="v">~ 000lb / 00kg</div>
+                            </div>
+                            <div class="kv">
+                                <div class="k">Hair</div>
+                                <div class="v">-</div>
+                            </div>
+                            <div class="kv">
+                                <div class="k">Eyes</div>
+                                <div class="v">-</div>
+                            </div>
+                            <div class="kv">
+                                <div class="k">Dermis</div>
+                                <div class="v">-</div>
+                            </div>
+                            <div class="kv">
+                                <div class="k">Intelligence</div>
+                                <div class="v">-</div>
+                            </div>
+                            <div class="kv">
+                                <div class="k">Demeanor</div>
+                                <div class="v">-</div>
+                            </div>
+                        </div>
+
+                        <h3 class="species-h3">Behaviors</h3>
+                        <ul class="species-list species-list--nested">
+                            <li>
+                                <b>Feeding</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <b>Social</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <b>Communication</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <b>Exploration</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <b>Migration</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <b>Nesting</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <b>Stimuli Response</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="species-image" aria-label="Side image">
+                    <div class="species-image__frame">
+                        <img src="https://i.pinimg.com/736x/76/0d/65/760d65b5a1037a3605798580b0effd90.jpg" alt="" />
+                    </div>
+                </aside>
+            </section>
+
+            <!-- ================= Reproduction (with narrow side image) ================= -->
+            <section class="species-trio" id="reproduction">
+                <aside class="species-slim-image" aria-label="Side image">
+                    <div class="species-image__frame species-image__frame--tall">
+                        <img src="https://i.pinimg.com/736x/6d/6f/6a/6d6f6a2c82f9d925e9719b3634a91c67.jpg" alt="" />
+                    </div>
+                </aside>
+
+                <div class="section species-block species-block--wide">
+                    <div class="species-head">
+                        <h2><i class="fa-solid fa-venus-mars"></i> Reproduction</h2>
+                    </div>
+
+                    <div class="species-body">
+                        <h3 class="species-h3">Courtship</h3>
+                        <ul class="species-list species-list--nested">
+                            <li>
+                                <b>Interest</b>
+                                <ul>
+                                    <li>How they come to want one another</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Pursuit</b>
+                                <ul>
+                                    <li>How they choose to capture the others' attention</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Partnership</b>
+                                <ul>
+                                    <li>How they come to agree to be together</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Engagement</b>
+                                <ul>
+                                    <li>How they solidify their partnership</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Cooperation / Agreement</b>
+                                <ul>
+                                    <li>How they maintain their relationship/agree to reproduce</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3 class="species-h3">Process</h3>
+                        <ul class="species-list species-list--nested">
+                            <li>
+                                <b>Conception</b>
+                                <ul>
+                                    <li>Sexo</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Fetal Development</b>
+                                <ul>
+                                    <li>In womb/egg/whatever</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Birth</b>
+                                <ul>
+                                    <li>How they come into the world</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3 class="species-h3">Growth Stages</h3>
+                        <ul class="species-list species-list--nested">
+                            <li>
+                                <b>[Infant | Age]</b>
+                                <ul>
+                                    <li>After birth</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>[Baby | Age]</b>
+                                <ul>
+                                    <li>If necessary: Stage of total dependency</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>[Toddler | Age]</b>
+                                <ul>
+                                    <li>If necessary: Stage of partial dependency</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>[Adolescent / Pre-Puberty | Age]</b>
+                                <ul>
+                                    <li>If necessary: Stage of partial independence</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>[Teenager / Post-Puberty | Age]</b>
+                                <ul>
+                                    <li>If necessary: Stage of near-total independence</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>[Young Adult | Age]</b>
+                                <ul>
+                                    <li>Stage of total independence</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>[Adult | Age]</b>
+                                <ul>
+                                    <li>Stage of complete physical growth</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>[Senior | Age]</b>
+                                <ul>
+                                    <li>Stage of bodily deterioration and mental refinement</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>[Death | Age]</b>
+                                <ul>
+                                    <li>Stage of ceased biological function</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h3 class="species-h3">Culture</h3>
+                        <p>
+                            Culture surrounding sex and reproduction
+                        </p>
+
+                        <h3 class="species-h3">Interspecies Fertility</h3>
+                        <p>
+                            Logistics of interspecies mating, whether possible, impossible, or theoretical
+                        </p>
+                    </div>
+                </div>
+
+                <aside class="species-slim-image" aria-label="Side image">
+                    <div class="species-image__frame species-image__frame--tall">
+                        <img src="https://i.pinimg.com/736x/8e/af/cc/8eafccc3a5f615be0e3696d59597b579.jpg" alt="" />
+                    </div>
+                </aside>
+            </section>
+
+            <!-- ================= Preferences + Side Image ================= -->
+            <section class="species-split" id="preferences">
+                <div class="section species-block">
+                    <div class="species-head">
+                        <h2><i class="fa-solid fa-temperature-half"></i> Preferences</h2>
+                    </div>
+
+                    <div class="species-body">
+                        <div class="species-kv">
+                            <h3 class="species-h3">Temperature</h3>
+                            <p>
+                                -
+                            </p>
+
+                            <h3 class="species-h3">Habitat</h3>
+                            <p>
+                                -
+                            </p>
+
+                            <h3 class="species-h3">Diet</h3>
+                            <p>
+                                -
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="species-image" aria-label="Side image">
+                    <div class="species-image__frame">
+                        <img src="https://i.pinimg.com/736x/6e/89/14/6e8914eb235894864111d73aab1c12c9.jpg" alt="" />
+                    </div>
+                </aside>
+            </section>
+
+            <!-- ================= Culture (Customs / Taboos) ================= -->
+            <section class="section species-block" id="culture">
+                <div class="species-head">
+                    <h2><i class="fa-solid fa-people-group"></i> Culture: Customs / Taboos</h2>
+                    <!-- Use anchors for deep-links like #customs-marriage -->
+                </div>
+
+                <div class="species-body">
+                    <h3 class="species-h3" id="customs-marriage">Marriage</h3>
+                    <ul class="species-list species-list--nested">
+                        <li>
+                            <ul>
+                                <li>Do they have monogamy, polygamy, group marriages, or no formalized mating at all?</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>What are the ceremonies surrounding them like?</b>
+                            <ul>
+                                <li>-</li>
+                                <li class="line-danger">Taboos</li>
+                                <ul>
+                                    <li>-</li>
+
+                                </ul>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>What can they NOT do?</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>What is frowned upon?</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>What is expected?</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 class="species-h3">Dating</h3>
+                    <ul class="species-list species-list--nested">
+                            <li>
+                                <b>Are relationships based on love, duty, alliances, or genetics?</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>What are the parameters?</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>What do they dislike or won't follow?</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>What is expected?</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>What isn't allowed or frowned upon?</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+                    </ul>
+
+                    <h3 class="species-h3">Gender Roles</h3>
+                    <ul class="species-list species-list--nested">
+                        <li>
+                            <b>What is the expectations given there are two different sexes?</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>What isn't allowed?</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 class="species-h3">Family Structure</h3>
+                    <ul class="species-list species-list--nested">
+                        <li>
+                            <b>Are children raised by parents, communal groups, the state, or something else? Is parenting a revered duty or a
+                            necessary burden?</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>What is considered improper?</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 class="species-h3">Communication & Etiquette</h3>
+                    <ul class="species-list species-list--nested">
+                        <li>
+                            <b>Greetings</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Eye Contact</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Body Language</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Manners</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>To lie or to speak truth? To strangers or kin?</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Rude language</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Things you should never say</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 class="species-h3">Food</h3>
+                    <ul class="species-list species-list--nested">
+                        <li>
+                            <b>Restrictions (like holidays or for politeness)</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Table Manners</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Acquiring food</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Meal prep</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Butchering (if applicable)</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Forbidden food</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 class="species-h3" id="customs-death">Spirituality</h3>
+                    <ul class="species-list">
+                        <li>
+                            <b>Funerary Practice</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Afterlife</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Taboos about death</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Deities</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Worship</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Rituals</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Superstitions</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 class="species-h3">Work & Play</h3>
+                    <ul class="species-list species-list--nested">
+                        <li>
+                            <b>Trade or Currency?</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Division of labor</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Leisure and Entertainment</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Economic Philosophy</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Philanthropy</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 class="species-h3">Warfare & Conflict</h3>
+                    <ul class="species-list species-list--nested">
+                        <li>
+                            <b>Violence</b>
+                            <ul>
+                                <li>Dueling</li>
+                                <li>Combat</li>
+                                <li>Ethics</li>
+                                <li>Revenge</li>
+                                <li>Crime</li>
+                                <li>Weapons</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Governance</b>
+                            <ul>
+                                <li>What is considered order?</li>
+                                <li>Ethos</li>
+                                <li>Logos</li>
+                                <li>Pathos</li>
+                                <li>Diplomacy</li>
+                                <li>How are problems resolved?</li>
+                                <li>What is justice?</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 class="species-h3">Technology & Research</h3>
+                    <ul class="species-list species-list--nested">
+                        <li>
+                            <b>What is progress?</b>
+                            <ul>
+                                <li>Do they embrace change or resist it? Is technology sacred, feared, or mundane?</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Medical practices</b>
+                            <ul>
+                                <li>Do they heal with science, magic, or community rituals? Is body modification (cybernetics, tattoos, genetic editing)
+                                normal or taboo?
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Research Ethics</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>Relationship with Technology</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>What intelligence level is expected?</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <b>What types of knowledge are revered or scorned?</b>
+                            <ul>
+                                <li>-</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h3 class="species-h3">Social Structure</h3>
+                    <ul class="species-list species-list--nested">
+                        <li>
+                            <ul>
+                                <li>Whether or not there is a hierarchy, if it is enforced, poorly or strictly, and based on what characteristic</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ================= Facts + Side Image ================= -->
+            <section class="species-split" id="facts">
+                <div class="section species-block">
+                    <div class="species-head">
+                        <h2><i class="fa-solid fa-book-atlas"></i> Facts</h2>
+                    </div>
+
+                    <div class="species-body">
+                        <h3 class="species-h3">Origin</h3>
+                        <p>-</p>
+
+                        <h3 class="species-h3">Distribution</h3>
+                        <p>-</p>
+
+                        <h3 class="species-h3">Technological Capacity</h3>
+                        <ul class="species-list">
+                            <li class="line-danger"> Ability</li>
+                            <ul>
+                                <li>Reasoning</li>
+                                <li>Factual or Theoretical capacity for reaching space-age</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="species-image" aria-label="Side image">
+                    <div class="species-image__frame">
+                        <img src="https://i.pinimg.com/736x/2c/a9/20/2ca920e20bc6a0feed52336100363fc0.jpg" alt="" />
+                    </div>
+                </aside>
+            </section>
+
+            <!-- ================= Stats ================= -->
+            <section class="section species-block" id="stats">
+                <div class="species-head">
+                    <h2><i class="fa-solid fa-chart-simple"></i> Stats</h2>
+                    <!-- Set --val per row (0–100) -->
+                </div>
+
+                <div class="species-body species-stats">
+                    <div class="stat-row" style="--val:90"><span>Strength</span>
+                        <div class="bar"><i></i></div><b>90</b>
+                    </div>
+                    <div class="stat-row" style="--val:90"><span>Stamina</span>
+                        <div class="bar"><i></i></div><b>90</b>
+                    </div>
+                    <div class="stat-row" style="--val:90"><span>Vitality</span>
+                        <div class="bar"><i></i></div><b>90</b>
+                    </div>
+                    <div class="stat-row" style="--val:90"><span>Defense</span>
+                        <div class="bar"><i></i></div><b>90</b>
+                    </div>
+                    <div class="stat-row" style="--val:90"><span>Agility</span>
+                        <div class="bar"><i></i></div><b>90</b>
+                    </div>
+                    <div class="stat-row" style="--val:90"><span>Speed</span>
+                        <div class="bar"><i></i></div><b>90</b>
+                    </div>
+                    <div class="stat-row" style="--val:70"><span>Intelligence</span>
+                        <div class="bar"><i></i></div><b>70</b>
+                    </div>
+                    <div class="stat-row" style="--val:100"><span>Cooperation</span>
+                        <div class="bar"><i></i></div><b>100</b>
+                    </div>
+                    <div class="stat-row" style="--val:90"><span>Magic</span>
+                        <div class="bar"><i></i></div><b>90</b>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= Notes ================= -->
+            <section class="section species-block" id="notes">
+                <div class="species-head">
+                    <h2><i class="fa-solid fa-pencil"></i> Notes</h2>
+                </div>
+                <div class="species-body">
+                    <ul class="species-list">
+                        <li>-</li>
+                        <li>-</li>
+                        <li>-</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ================= Notable Members (4-up like your example) ================= -->
+            <section class="section species-block" id="members">
+                <div class="species-head">
+                    <h2><i class="fa-solid fa-certificate"></i> Notable Members of the Species</h2>
+                    <!-- Square icons recommended (1:1) -->
+                </div>
+
+                <div class="species-members">
+                    <a class="member" href="LINK" aria-label="Member 1">
+                        <img src="IMAGEURL" alt="" />
+                        <span>Full Name</span>
+                    </a>
+
+                    <a class="member" href="LINK" aria-label="Member 2">
+                        <img src="IMAGEURL" alt="" />
+                        <span>Full Name</span>
+                    </a>
+
+                    <a class="member" href="LINK" aria-label="Member 3">
+                        <img src="IMAGEURL" alt="" />
+                        <span>Full Name</span>
+                    </a>
+
+                    <a class="member" href="LINK" aria-label="Member 4">
+                        <img src="IMAGEURL" alt="" />
+                        <span>Full Name</span>
+                    </a>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p> Format Referenced from <a href="https://toyhou.se/11894348.magic-system">Aurorean</a></p>
+            </footer>
+
+        </div>
+    </main>
+
+    <!-- (Optional) tiny enhancement: close other <details> when one opens -->
+    <script>
+        document.querySelectorAll('[data-accordion]').forEach(acc => {
+            acc.addEventListener('toggle', (e) => {
+                if (e.target.tagName !== 'DETAILS' || !e.target.open) return;
+                acc.querySelectorAll('details').forEach(d => { if (d !== e.target) d.open = false; });
+            }, true);
+        });
+    </script>
+</body>
+
+</html>

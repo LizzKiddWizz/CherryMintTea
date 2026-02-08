@@ -61,10 +61,27 @@
                 <!-- ===== MAIN ROW ===== -->
                 <div class="loc-main">
 
-                    <!-- IMAGE -->
-                    <div class="loc-image"
-                        style="background-image:url('https://cdn.discordapp.com/attachments/1089310599743275109/1205694954882600991/image.png');">
-                        <div class="loc-image-frame"></div>
+                    <!-- LEFT COLUMN: IMAGE + ADDRESS -->
+                    <div class="loc-left">
+                    
+                        <!-- IMAGE -->
+                        <div class="loc-image"
+                            style="background-image:url('https://cdn.discordapp.com/attachments/1089310599743275109/1205694954882600991/image.png');">
+                            <div class="loc-image-frame"></div>
+                        </div>
+                    
+                        <!-- ADDRESS BOX -->
+                        <section class="loc-address" aria-label="Address">
+                            <h2 class="loc-address-title">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Address
+                            </h2>
+                    
+                            <div class="loc-address-lines">
+                                <div>Address Line</div>
+                            </div>
+                        </section>
+                    
                     </div>
 
                     <!-- INFO -->
@@ -248,6 +265,10 @@
                 </section>
 
             </section>
+
+            <footer class="footer">
+                <p> Format Referenced from <a href="https://toyhou.se/SparklyCodes">SparklyCodes</a></p>
+            </footer>
 
         </main>
 

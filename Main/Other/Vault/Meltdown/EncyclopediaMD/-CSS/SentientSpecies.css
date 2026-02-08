@@ -1,0 +1,390 @@
+/* =========================================================
+   Species.css — complements your GLOBAL ProjectPage-Character.css
+   Scope: .species-page / .species-*
+   ========================================================= */
+
+.species-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.species-hero__inner {
+    position: relative;
+    padding: 22px 18px;
+    text-align: center;
+}
+
+.species-hero__lines {
+    position: absolute;
+    inset: 10px;
+    border-radius: calc(var(--radius) - 6px);
+    border: 1px solid rgba(122, 162, 255, .14);
+    background:
+        radial-gradient(600px 200px at 20% 0%, rgba(45, 226, 230, .10), transparent 55%),
+        radial-gradient(600px 200px at 80% 100%, rgba(255, 92, 122, .08), transparent 55%);
+    pointer-events: none;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, .85), rgba(0, 0, 0, .55));
+    opacity: .85;
+}
+
+.species-name {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: .10em;
+    text-transform: uppercase;
+    color: rgba(234, 238, 248, .98);
+}
+
+.species-binomial {
+    margin: 8px 0 0;
+    font-size: 20px;
+    letter-spacing: .08em;
+    font-weight: 800;
+    color: rgba(234, 238, 248, .92);
+    text-transform: uppercase;
+}
+
+.species-pron {
+    margin: 6px 0 0;
+    letter-spacing: .08em;
+    color: rgba(169, 176, 195, .86);
+    font-weight: 700;
+}
+
+/* Page tweaks */
+.species-page .content {
+    min-width: 0;
+}
+
+/* Head row inside each section */
+.species-head {
+    display: grid;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.species-head h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.species-subhead {
+    margin: 0;
+    color: rgba(169, 176, 195, .84);
+    font-size: 13px;
+}
+
+/* Split sections (content + image) */
+.species-split {
+    display: grid;
+    grid-template-columns: 1.35fr .65fr;
+    gap: 18px;
+    align-items: stretch;
+    margin-bottom: 18px;
+}
+
+.species-image__frame {
+    border-radius: var(--radius);
+    border: 1px solid var(--card-border);
+    background: var(--card-surface);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    height: 100%;
+    min-height: 260px;
+}
+
+.species-image__frame img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Trio row: image | wide content | image */
+.species-trio {
+    display: grid;
+    grid-template-columns: .55fr 1.4fr .55fr;
+    gap: 18px;
+    align-items: stretch;
+    margin-bottom: 18px;
+}
+
+.species-image__frame--tall {
+    min-height: 420px;
+}
+
+/* Anatomy accordion */
+.species-accordion {
+    display: grid;
+    gap: 10px;
+}
+
+.species-item {
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(122, 162, 255, .16);
+    background: rgba(122, 162, 255, .05);
+    overflow: hidden;
+}
+
+.species-item summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 12px;
+    font-weight: 900;
+    letter-spacing: .04em;
+    color: rgba(234, 238, 248, .92);
+}
+
+.species-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.species-caret {
+    opacity: .8;
+    transition: transform .15s ease, opacity .15s ease;
+}
+
+.species-item[open] .species-caret {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+.species-item__body {
+    padding: 0 12px 12px;
+    color: rgba(169, 176, 195, .90);
+}
+
+/* Key-value grid */
+.species-kv {
+    display: grid;
+    gap: 10px;
+}
+
+.kv {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(234, 238, 248, .12);
+    background: rgba(234, 238, 248, .04);
+}
+
+.kv .k {
+    font-weight: 900;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: rgba(234, 238, 248, .88);
+}
+
+.kv .v {
+    color: rgba(169, 176, 195, .90);
+}
+
+.species-h3 {
+    margin: 14px 0 6px;
+    font-size: 15px;
+    letter-spacing: .04em;
+    color: rgba(234, 238, 248, .92);
+}
+
+.species-list {
+    margin: 8px 0 0 18px;
+    color: rgba(169, 176, 195, .92);
+}
+
+.species-warn {
+    margin-top: 8px;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 92, 122, .26);
+    background: rgba(255, 92, 122, .08);
+}
+
+/* Stats rows */
+.species-stats {
+    display: grid;
+    gap: 10px;
+}
+
+.stat-row {
+    display: grid;
+    grid-template-columns: 170px 1fr 42px;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(122, 162, 255, .14);
+    background: rgba(122, 162, 255, .06);
+}
+
+.stat-row>span {
+    font-weight: 900;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: rgba(234, 238, 248, .90);
+}
+
+.stat-row>b {
+    text-align: right;
+    color: rgba(234, 238, 248, .88);
+}
+
+.bar {
+    height: 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(234, 238, 248, .14);
+    background: rgba(7, 8, 12, .35);
+    overflow: hidden;
+}
+
+.bar i {
+    display: block;
+    height: 100%;
+    width: calc(var(--val) * 1%);
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--main), var(--danger), var(--accent));
+}
+
+/* Notable member grid */
+.species-members {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.member {
+    display: grid;
+    gap: 8px;
+    justify-items: center;
+    padding: 12px;
+    border-radius: var(--radius);
+    border: 1px solid rgba(122, 162, 255, .16);
+    background: rgba(122, 162, 255, .06);
+    text-decoration: none;
+    transition: transform .14s ease, border-color .14s ease, background .14s ease;
+}
+
+.member:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    border-color: rgba(122, 162, 255, .34);
+    background: rgba(122, 162, 255, .10);
+}
+
+.member img {
+    width: 124px;
+    height: 124px;
+    border-radius: 999px;
+    object-fit: cover;
+    border: 4px solid rgba(122, 162, 255, .28);
+    background: rgba(7, 8, 12, .35);
+}
+
+.member span {
+    text-align: center;
+    font-weight: 850;
+    color: rgba(234, 238, 248, .92);
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+    .species-split {
+        grid-template-columns: 1fr;
+    }
+
+    .species-trio {
+        grid-template-columns: 1fr;
+    }
+
+    .species-image__frame--tall {
+        min-height: 260px;
+    }
+
+    .species-members {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stat-row {
+        grid-template-columns: 140px 1fr 42px;
+    }
+
+    .kv {
+        grid-template-columns: 140px 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .species-members {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .stat-row>b {
+        text-align: left;
+    }
+}
+
+/* Parent items: no bullets */
+.species-list--nested {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 30px;
+}
+
+.species-list--nested>li {
+    margin-bottom: 10px;
+}
+
+/* Child lists: normal bullets + indentation */
+.species-list--nested>li>ul {
+    list-style: circle;
+    margin: 6px 0 0 20px;
+    padding-left: 16px;
+}
+
+/* ===== Line-level coloring (text + bullet) ===== */
+
+.line-danger {
+    color: rgba(255, 92, 122, .95);
+}
+
+.line-danger::marker {
+    color: var(--danger);
+}
+
+.line-warn {
+    color: rgba(255, 180, 120, .95);
+}
+
+.line-warn::marker {
+    color: rgba(255, 180, 120, .95);
+}
+
+.line-accent {
+    color: var(--accent);
+}
+
+.line-accent::marker {
+    color: var(--accent);
+}
+
+.line-muted {
+    color: rgba(169, 176, 195, .85);
+}
+
+.line-muted::marker {
+    color: rgba(169, 176, 195, .65);
+}
