@@ -20,7 +20,7 @@ To Do:
         [X] Sera
         [] Stein
 [X] Finish FAQ
-[] Create MD profile templates
+[X] Create MD profile templates
     [X] Main Characters
     [X] Side Characters
     [X] Background Characters
@@ -49,8 +49,8 @@ To Do:
             [X] Non-Combat
     [X] Location
     [X] Sentient Species
-    [] Animals
-    [] Plants
+    [X] Animals
+    [X] Plants
 [] Finish one MD profile per area
     - Athalmus
         [-] Hisleschtevatkana Constanza

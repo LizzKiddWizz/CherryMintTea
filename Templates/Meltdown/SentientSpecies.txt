@@ -250,6 +250,13 @@
                             </li>
 
                             <li>
+                                <b>Mating</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+
+                            <li>
                                 <b>Social</b>
                                 <ul>
                                     <li>-</li>
@@ -263,8 +270,21 @@
                                 </ul>
                             </li>
 
+                            <li><b>Locomotion</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+
                             <li>
                                 <b>Exploration</b>
+                                <ul>
+                                    <li>-</li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <b>Predator-Prey</b>
                                 <ul>
                                     <li>-</li>
                                 </ul>
@@ -327,6 +347,12 @@
                                 <b>Pursuit</b>
                                 <ul>
                                     <li>How they choose to capture the others' attention</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Demonstration/Verification</b>
+                                <ul>
+                                    <li>How they come to want one another</li>
                                 </ul>
                             </li>
                             <li>
@@ -456,8 +482,7 @@
                     </div>
 
                     <div class="species-body">
-                        <div class="species-kv">
-                            <h3 class="species-h3">Temperature</h3>
+                        <h3 class="species-h3">Temperature</h3>
                             <p>
                                 -
                             </p>
@@ -471,7 +496,6 @@
                             <p>
                                 -
                             </p>
-                        </div>
                     </div>
                 </div>
 
