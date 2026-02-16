@@ -23,7 +23,7 @@ To Do:
 [] Create MD profile templates
     [X] Main Characters
     [X] Side Characters
-    [-] Background Characters
+    [X] Background Characters
         [X] Athalmus
         [X] Ascension
             [X] Ascencia
@@ -48,7 +48,7 @@ To Do:
             [X] Combat
             [X] Non-Combat
     [X] Location
-    [-] Sentient Species
+    [X] Sentient Species
     [] Animals
     [] Plants
 [] Finish one MD profile per area
