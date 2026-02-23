@@ -86,7 +86,7 @@
 
                         <div class="friend-links">
                             <a class="friend-link" href="#" target="_blank" rel="noopener">
-                                <span class="friend-link-icon">↗</span>
+                                <span class="friend-link-icon"><i class="fa-brands fa-x-twitter"></i></span>
                                 <span class="friend-link-text">
                                     <strong>Twitter / X</strong>
                                     <em>@handle</em>
@@ -94,7 +94,7 @@
                             </a>
 
                             <a class="friend-link" href="#" target="_blank" rel="noopener">
-                                <span class="friend-link-icon">↗</span>
+                                <span class="friend-link-icon"><i class="fa-brands fa-instagram"></i></span>
                                 <span class="friend-link-text">
                                     <strong>Instagram</strong>
                                     <em>@handle</em>
@@ -102,9 +102,9 @@
                             </a>
 
                             <a class="friend-link" href="#" target="_blank" rel="noopener">
-                                <span class="friend-link-icon">↗</span>
+                                <span class="friend-link-icon"><i class="fa-solid fa-sitemap"></i></span>
                                 <span class="friend-link-text">
-                                    <strong>Portfolio</strong>
+                                    <strong>Personal Website</strong>
                                     <em>website.com</em>
                                 </span>
                             </a>

@@ -8,7 +8,7 @@ To Do:
 [-] Finish Home Page
     [-] Add images
 [-] Finish Projects Page
-    [] Add images
+    [-] Add images
 [-] Finish Affiliations Page
     [] Add images
 [-] Finish Friend Profiles
@@ -17,7 +17,7 @@ To Do:
         [-] Aso
         [] Bell
         [X] Jaed
-        [-] Sera
+        [X] Sera
         [] Stein
 [X] Finish FAQ
 [X] Create MD profile templates

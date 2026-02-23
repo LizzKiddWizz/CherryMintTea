@@ -839,7 +839,6 @@ details p {
 
 .friend-chibi {
     position: absolute;
-    bottom: -250px;
     right: -6px;
     /* pulls it upward to overlap the section edge */
     width: 180px;
@@ -875,6 +874,17 @@ details p {
 
 .friend-left {
     position: relative;
+}
+
+.friend-left .friend-chibi {
+    position: absolute;
+    bottom: 100;
+    right: -6px;
+    /* or 0 if you want it flush */
+    width: 180px;
+    height: auto;
+    z-index: 3;
+    pointer-events: none;
 }
 
 /* --- SOCIAL LINK LIST --- */
