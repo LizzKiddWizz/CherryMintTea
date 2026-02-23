@@ -6,7 +6,7 @@ To Do:
 [X] Add Projector Asset to template
 [X] Create Friend Profile Templates
 [-] Finish Home Page
-    [] Add images
+    [-] Add images
 [-] Finish Projects Page
     [] Add images
 [-] Finish Affiliations Page
@@ -17,7 +17,7 @@ To Do:
         [-] Aso
         [] Bell
         [X] Jaed
-        [X] Sera
+        [-] Sera
         [] Stein
 [X] Finish FAQ
 [X] Create MD profile templates
