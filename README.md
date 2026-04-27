@@ -5,8 +5,8 @@ To Do:
 [X] Figure out how to get github page to work
 [X] Add Projector Asset to template
 [X] Create Friend Profile Templates
-[-] Finish Home Page
-    [-] Add images
+[X] Finish Home Page
+    [X] Add images
 [-] Finish Projects Page
     [-] Add images
 [-] Finish Affiliations Page
