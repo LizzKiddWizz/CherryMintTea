@@ -51,9 +51,9 @@ To Do:
     [X] Sentient Species
     [X] Animals
     [X] Plants
-[] Finish one MD profile per area
+[-] Finish one MD profile per area
     - Athalmus
-        [-] Hisleschtevatkana Constanza
+        [=] Hisleschtevatkana Constanza
         [-] Una Atlanta
         [-] Mayim Blanka
     - Ascension
